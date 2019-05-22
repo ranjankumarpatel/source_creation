@@ -1,0 +1,87 @@
+[
+  {
+    "pojo": "Admin",
+    "fields": "emailId;adminId;adminId_ENCRYPTED;adminName;status;genGate",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "Client",
+    "fields": "clientId;clientEmail;clientId_ENCRYPTED;status;clientName;genGate",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "ClientUserMapper",
+    "fields": "cumId;cumId_ENCRYPTED;genDate;status",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "Competency",
+    "fields": "genDate;status;competencyId;competencyName;competencyId_ENCRYPTED",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "CompetencyStatementMapper",
+    "fields": "csmId_ENCRYPTED;genDate;status;csmId",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "EmailTemplate",
+    "fields": "emailId;emailContent;projectName;emailSub;timestamp;emailTitle;status",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "Locale",
+    "fields": "locales;localeScript;languageId;LanguageId_ENCRYPTED",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "Option",
+    "fields": "weightage;optId;genDate;optName;status;optId_ENCRYPTED",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "OptionGroup",
+    "fields": "optGrpId_ENCRYPTED;genDate;optGrpName;status;optGrpId",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "Project",
+    "fields": "projectName;genDate;projectId;status;projectId_ENCRYPTED",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "ProjectUserMapper",
+    "fields": "pumId;genDate;submissionDate;status;pumId_ENCRYPTED;submissionStatus",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "Statement",
+    "fields": "statementId_ENCRYPTED;name;genDate;status;statementId",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "StatementLocale",
+    "fields": "localeScript;slocId;slocId_ENCRYPTED",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "Template",
+    "fields": "description;genDate;templateName;templateId;status;templateId_ENCRYPTED",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "TemplateOptionLocale",
+    "fields": "localeScript;tolocId_ENCRYPTED;tolocId",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "User",
+    "fields": "userId_ENCRYPTED;userEmail;status;userId;genGate;userName",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "UserResponseStore",
+    "fields": "ursId;ursId_ENCRYPTED;genGate",
+    "genCol": "adminId"
+  }
+]

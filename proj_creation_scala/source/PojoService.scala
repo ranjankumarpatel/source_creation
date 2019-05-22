@@ -4,7 +4,7 @@ import $base_package .model.$pojo
 
 trait $pojo Service {
 
-
+  def findById($genId: Long): $pojo
 
   def insert$pojo($pojo_lower: $pojo): Unit
 

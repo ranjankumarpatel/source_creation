@@ -10,35 +10,34 @@ import org.springframework.transaction.annotation.{Propagation, Transactional}
 import scala.collection.JavaConversions._
 
 @Service
-class CompetencyServiceImpl extends CompetencyService {
+class $pojo ServiceImpl extends $pojo Service {
 
   @Autowired
-  private var competencyRepository: CompetencyRepository = _
+  private var $pojo_lower Repository: $pojo Repository = _
 
-  override def findByTempId(templateId: Long): List[Competency] = {
+  override def findById($genId: Long): $pojo = {
 
-    competencyRepository.findByTemplate(new Template(templateId)).toList
+    $pojo_lower Repository.findOne(new $pojo($genId))
 
   }
 
 
   @Transactional(propagation = Propagation.REQUIRED)
-  override def insertCompetency(competency: Competency): Unit = {
+  override def insert$pojo ($pojo_lower: $pojo ): Unit = {
 
-    competency.setStatus("Y")
-    competencyRepository.save(competency)
+    $pojo_lower.setGenDate(DateUtility.getCurrentTimeStamp)
+    $pojo_lower.setStatus("Y")
+    $pojo_lower Repository.save($pojo_lower)
 
   }
 
   @Transactional(propagation = Propagation.REQUIRED)
-  override def updateCompetency(competency: Competency): Unit = {
-    var chkCompetency: Competency = competencyRepository.findOne(competency.getCompetencyId)
+  override def update $pojo ($pojo_lower: $pojo ): Unit = {
+    var update $pojo : $pojo  = $pojo_lower Repository.findOne()
 
-    chkCompetency.setStatus("Y")
-    chkCompetency.setCompetencyName(competency.getCompetencyName)
-    chkCompetency.setTemplate(competency.getTemplate)
 
-    competencyRepository.save(chkCompetency)
+
+    $pojo_lower Repository.save(update $pojo )
 
   }
 
