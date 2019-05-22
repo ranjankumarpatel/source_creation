@@ -8,15 +8,15 @@ import org.springframework.stereotype.Component
 class $pojo Json {
 
   val filterProvider = new SimpleFilterProvider()
-  addFilter(filterProvider, "$pojo_lower Filter", Set(), "$pojo")
+  addFilter(filterProvider, "$pojo_camel Filter", Set(), "$pojo")
 
 
-  def getJson($pojo_lower: $pojo): String = {
-    getObjectMapper(filterProvider).writeValueAsString($pojo_lower)
+  def getJson($pojo_camel: $pojo): String = {
+    getObjectMapper(filterProvider).writeValueAsString($pojo_camel)
   }
 
-  def getJson($pojo_lower: List[$pojo]): String = {
-    getObjectMapper(filterProvider).writeValueAsString($pojo_lower)
+  def getJson($pojo_camel: List[$pojo]): String = {
+    getObjectMapper(filterProvider).writeValueAsString($pojo_camel)
   }
 
 }

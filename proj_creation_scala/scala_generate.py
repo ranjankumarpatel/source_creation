@@ -12,17 +12,19 @@ def replace_string(path, tup):
     with open(path, "r") as file:
         text = file.read()
         # print(text)
+        pojo_camel = tup.pojo[0].lower() + tup.pojo[1:]
         pojo_lower = tup.pojo.lower()
-        out_text = Template(text).substitute(pojo=tup.pojo, pojo_lower=pojo_lower, base_package=base_package,
+        out_text = Template(text).substitute(pojo=tup.pojo, pojo_camel=pojo_camel, pojo_lower=pojo_lower,
+                                             base_package=base_package,
                                              genId=tup.genCol) \
             .replace("{} ".format(tup.pojo), tup.pojo) \
-            .replace("{} ".format(pojo_lower), pojo_lower) \
+            .replace("{} ".format(pojo_camel), pojo_camel) \
             .replace("{} ".format(base_package), base_package)
         return out_text
 
 
 for tup in df.itertuples():
-    # print(tup)
+    print(tup)
     # print(out_text)
     with open("target/json/{0}Json.scala".format(tup.pojo), "w") as out_file:
         out_text = replace_string("source/PojoJson.scala", tup)

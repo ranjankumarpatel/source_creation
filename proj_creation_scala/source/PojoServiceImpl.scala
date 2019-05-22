@@ -13,31 +13,31 @@ import scala.collection.JavaConversions._
 class $pojo ServiceImpl extends $pojo Service {
 
   @Autowired
-  private var $pojo_lower Repository: $pojo Repository = _
+  private var $pojo_camel Repository: $pojo Repository = _
 
   override def findById($genId: Long): $pojo = {
 
-    $pojo_lower Repository.findOne(new $pojo($genId))
+    $pojo_camel Repository.findOne(new $pojo($genId))
 
   }
 
 
   @Transactional(propagation = Propagation.REQUIRED)
-  override def insert$pojo ($pojo_lower: $pojo ): Unit = {
+  override def insert$pojo ($pojo_camel: $pojo ): Unit = {
 
-    $pojo_lower.setGenDate(DateUtility.getCurrentTimeStamp)
-    $pojo_lower.setStatus("Y")
-    $pojo_lower Repository.save($pojo_lower)
+    $pojo_camel.setGenDate(DateUtility.getCurrentTimeStamp)
+    $pojo_camel.setStatus("Y")
+    $pojo_camel Repository.save($pojo_camel)
 
   }
 
   @Transactional(propagation = Propagation.REQUIRED)
-  override def update $pojo ($pojo_lower: $pojo ): Unit = {
-    var update $pojo : $pojo  = $pojo_lower Repository.findOne()
+  override def update $pojo ($pojo_camel: $pojo ): Unit = {
+    var update $pojo : $pojo  = $pojo_camel Repository.findOne()
 
 
 
-    $pojo_lower Repository.save(update $pojo )
+    $pojo_camel Repository.save(update $pojo )
 
   }
 

@@ -16,22 +16,22 @@ import org.springframework.web.bind.annotation._
 class Rest $pojo Controller {
 
   @Autowired
-  private var $pojo_lower Service: $pojo Service = _
+  private var $pojo_camel Service: $pojo Service = _
 
 
   @Autowired
-  private var $pojo_lower Repository: $pojo Repository = _
+  private var $pojo_camel Repository: $pojo Repository = _
 
   @Autowired
-  private var $pojo_lower Json: $pojo Json = _
+  private var $pojo_camel Json: $pojo Json = _
 
 
 
   @Transactional(propagation = Propagation.REQUIRED)
   @PostMapping(path = Array("/insert"), produces = Array(MediaType.APPLICATION_JSON_UTF8_VALUE))
-  def insert$pojo(@RequestBody $pojo_lower : $pojo): ResponseEntity[String] = {
+  def insert$pojo(@RequestBody $pojo_camel : $pojo): ResponseEntity[String] = {
     try {
-      $pojo_lower Service.insert$pojo( $pojo_lower )
+      $pojo_camel Service.insert$pojo( $pojo_camel )
       ResponseEntity.status(HttpStatus.OK).body(JsonUtil.toJson(Map("message" -> "$pojo  Inserted Successfully")))
     } catch {
       case e: Exception => e.printStackTrace()
@@ -42,9 +42,9 @@ class Rest $pojo Controller {
 
   @Transactional(propagation = Propagation.REQUIRED)
   @PostMapping(path = Array("/update"), produces = Array(MediaType.APPLICATION_JSON_UTF8_VALUE))
-  def insert$pojo(@RequestBody $pojo_lower : $pojo): ResponseEntity[String] = {
+  def insert$pojo(@RequestBody $pojo_camel : $pojo): ResponseEntity[String] = {
     try {
-      $pojo_lower Service.update$pojo( $pojo_lower )
+      $pojo_camel Service.update$pojo( $pojo_camel )
       ResponseEntity.status(HttpStatus.OK).body(JsonUtil.toJson(Map("message" -> "$pojo  Updated Successfully")))
     } catch {
       case e: Exception => e.printStackTrace()
@@ -59,8 +59,8 @@ class Rest $pojo Controller {
   def findById(@PathVariable("$genId") enc$genId: String): String = {
     val $genId = AESEncryption.decrypt(enc$genId).toLong
 
-    val $pojo_lower = $pojo_lower Repository.findOne($genId)
-    $pojo_lower Json.getJson($pojo_lower)
+    val $pojo_camel = $pojo_camel Repository.findOne($genId)
+    $pojo_camel Json.getJson($pojo_camel)
 
   }
 
@@ -68,7 +68,7 @@ class Rest $pojo Controller {
  @Transactional(readOnly = true)
   @GetMapping(path = Array("/all"))
   def findAll: String = {
-    $pojo_lower Json.getJson($pojo_lower Repository.findAll().toList)
+    $pojo_camel Json.getJson($pojo_camel Repository.findAll().toList)
   }
 
 }
