@@ -1,0 +1,62 @@
+[
+  {
+    "pojo": "Admin",
+    "fields": "emailId;name;genDate;adminId;status",
+    "genCol": "adminId"
+  },
+  {
+    "pojo": "Client",
+    "fields": "emailId;name;clientId;genDate;status",
+    "genCol": "clientId"
+  },
+  {
+    "pojo": "ClientUserMapper",
+    "fields": "cumId;genDate;status",
+    "genCol": "cumId"
+  },
+  {
+    "pojo": "Excercise",
+    "fields": "exerciseId;question;instruction;genDate;status",
+    "genCol": "exerciseId"
+  },
+  {
+    "pojo": "Project",
+    "fields": "projectName;genDate;projectId;projectInstruction;status",
+    "genCol": "projectId"
+  },
+  {
+    "pojo": "ProjectUserMapper",
+    "fields": "pumId;genDate;completionTime;status;proctorStatus",
+    "genCol": "pumId"
+  },
+  {
+    "pojo": "PumTimerBackup",
+    "fields": "timmerBackupId;genDate;status",
+    "genCol": "timmerBackupId"
+  },
+  {
+    "pojo": "Template",
+    "fields": "instruction;genDate;templateName;templateId;status",
+    "genCol": "templateId"
+  },
+  {
+    "pojo": "TemplateCaseMaterial",
+    "fields": "caseName;caseId;genDate;mimeType;status;caseType",
+    "genCol": "caseId"
+  },
+  {
+    "pojo": "TemplateTimer",
+    "fields": "genDate;timmerId;status",
+    "genCol": "timmerId"
+  },
+  {
+    "pojo": "UserInfo",
+    "fields": "emailId;name;username;genDate;status;generatedBy;userId",
+    "genCol": "userId"
+  },
+  {
+    "pojo": "UserResponse",
+    "fields": "responseId;responseStore;genDate;status",
+    "genCol": "responseId"
+  }
+]

@@ -1,12 +1,12 @@
 package $base_package .service.impl
 
-import $base_package .model.{Competency, Template}
-import $base_package .repository.CompetencyRepository
-import $base_package .service.business.CompetencyService
+import $base_package .model.$pojo
+import $base_package .repository.$pojo Repository
+import $base_package .service.business.$pojo Service
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.{Propagation, Transactional}
-
+import org.app.utility.util.DateUtility
 import scala.collection.JavaConversions._
 
 @Service
@@ -17,7 +17,7 @@ class $pojo ServiceImpl extends $pojo Service {
 
   override def findById($genId: Long): $pojo = {
 
-    $pojo_camel Repository.findOne(new $pojo($genId))
+    $pojo_camel Repository.findOne($genId)
 
   }
 
@@ -32,12 +32,12 @@ class $pojo ServiceImpl extends $pojo Service {
   }
 
   @Transactional(propagation = Propagation.REQUIRED)
-  override def update $pojo ($pojo_camel: $pojo ): Unit = {
-    var update $pojo : $pojo  = $pojo_camel Repository.findOne()
+  override def update$pojo ($pojo_camel: $pojo ): Unit = {
+    var update$pojo : $pojo  = $pojo_camel Repository.findOne($pojo_camel.get$genId_camel)
 
 
 
-    $pojo_camel Repository.save(update $pojo )
+    $pojo_camel Repository.save(update$pojo )
 
   }
 

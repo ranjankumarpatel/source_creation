@@ -10,10 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.{HttpStatus, MediaType, ResponseEntity}
 import org.springframework.transaction.annotation.{Propagation, Transactional}
 import org.springframework.web.bind.annotation._
+import scala.collection.JavaConversions._
 
 @RequestMapping(path = Array("/rest/$pojo_lower"), produces = Array(MediaType.APPLICATION_JSON_UTF8_VALUE))
 @RestController
-class Rest $pojo Controller {
+class Rest$pojo Controller {
 
   @Autowired
   private var $pojo_camel Service: $pojo Service = _
@@ -42,7 +43,7 @@ class Rest $pojo Controller {
 
   @Transactional(propagation = Propagation.REQUIRED)
   @PostMapping(path = Array("/update"), produces = Array(MediaType.APPLICATION_JSON_UTF8_VALUE))
-  def insert$pojo(@RequestBody $pojo_camel : $pojo): ResponseEntity[String] = {
+  def update$pojo(@RequestBody $pojo_camel : $pojo): ResponseEntity[String] = {
     try {
       $pojo_camel Service.update$pojo( $pojo_camel )
       ResponseEntity.status(HttpStatus.OK).body(JsonUtil.toJson(Map("message" -> "$pojo  Updated Successfully")))

@@ -1,6 +1,7 @@
 package $base_package .service.business
 
 import $base_package .model.$pojo
+import scala.collection.JavaConversions._
 
 trait $pojo Service {
 
