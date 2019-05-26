@@ -51,7 +51,7 @@ for pojo in df.pojo.drop_duplicates():
 
     df_service = df[df.pojo == pojo]
 
-    factory = ",".join(df_service.method.values)
+    factory = ",".join(df_service.method.values + "Factory")
     factoryUrl = ",".join(df_service.path.values)
 
     serv = service_script.format(service=service, factory=factory, factoryUrl=factoryUrl)
