@@ -7,38 +7,14 @@ with open("D:/git/source_creation/proj_creation_scala/project_jsons/casestudy2-c
 
 json_data = json.loads(text)
 print(json_data)
-arr = []
-for i in json_data:
-    arr.extend(i)
-print(arr)
 
-df = pd.DataFrame(arr)
-
+df = pd.DataFrame(json_data)
 
 # print(df.head())
 
 
-def get_path(data):
-    str = data.replace("@org.springframework.web.bind.annotation.", "") \
-        .replace("PostMapping(", "") \
-        .replace("GetMapping(", "") \
-        .replace(",", "") \
-        .replace("params=[]", "") \
-        .replace("produces=[]", "") \
-        .replace("headers=[]", "") \
-        .replace("value=[]", "") \
-        .replace("name=", "") \
-        .replace("consumes=[application/json;charset=UTF-8]", "") \
-        .replace(")", "") \
-        .replace("path=", "") \
-        .replace("[", "") \
-        .replace("]", "") \
-        .replace("}", "").replace("{", ":").strip()
-
-    return str
-
-
-df.path = df.annotation.map(get_path)
+df["request_path"] = df.classPath + df.path
+df["request_path"] = df.request_path.map(lambda x: x.replace(""))
 print(df.head())
 
 service_script = """<script type="text/javascript"
@@ -51,8 +27,9 @@ for pojo in df.pojo.drop_duplicates():
 
     df_service = df[df.pojo == pojo]
 
-    factory = ",".join(df_service.method.values + "Factory")
-    factoryUrl = ",".join(df_service.path.values)
+    factory_prefix = pojo.lower().replace("controller", "").replace("rest", "")
+    factory = ",".join(factory_prefix + "_" + df_service.method.values + "Factory")
+    factoryUrl = ",".join(df_service.request_path.values)
 
     serv = service_script.format(service=service, factory=factory, factoryUrl=factoryUrl)
     script.append(serv)
