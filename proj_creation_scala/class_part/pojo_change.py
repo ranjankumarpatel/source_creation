@@ -57,4 +57,7 @@ for pojo_dict in df.to_dict(orient="records"):
         "{} ".format(pojo_dict.get("genCol")), pojo_dict.get("genCol"))
     arr.insert(str_index, str_insert)
 
-    print("\n".join(arr))
+    pojo_change = "\n".join(arr)
+    print(pojo_change)
+    with open("D:/git/source_creation/proj_creation_scala/class_part/{}.java".format(pojo), "r") as w_file:
+        w_file.write(pojo_change)
