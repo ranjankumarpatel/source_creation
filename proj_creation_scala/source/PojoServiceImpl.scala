@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.{Propagation, Transactional}
 import org.app.utility.util.DateUtility
 import scala.collection.JavaConversions._
+import com.ttn.assess2.model._
 
 @Service
 class $pojo ServiceImpl extends $pojo Service {
@@ -40,5 +41,7 @@ class $pojo ServiceImpl extends $pojo Service {
     $pojo_camel Repository.save(update$pojo )
 
   }
+
+  $code
 
 }

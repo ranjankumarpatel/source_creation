@@ -1,4 +1,4 @@
-package $base_package .controller.rest
+package $base_package .controller
 
 import $base_package .model.$pojo
 import $base_package .repository.$pojo Repository
@@ -11,6 +11,8 @@ import org.springframework.http.{HttpStatus, MediaType, ResponseEntity}
 import org.springframework.transaction.annotation.{Propagation, Transactional}
 import org.springframework.web.bind.annotation._
 import scala.collection.JavaConversions._
+import $base_package .model._
+import java.lang
 
 @RequestMapping(path = Array("/rest/$pojo_lower"), produces = Array(MediaType.APPLICATION_JSON_UTF8_VALUE))
 @RestController
@@ -71,5 +73,7 @@ class Rest$pojo Controller {
   def findAll: String = {
     $pojo_camel Json.getJson($pojo_camel Repository.findAll().toList)
   }
+
+  $code
 
 }

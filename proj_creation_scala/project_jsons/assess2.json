@@ -1,0 +1,68 @@
+[
+  {
+    "pojo": "Admin",
+    "fields": "adminId;genDate;adminName;status",
+    "genCol": "adminId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Assessor",
+    "fields": "assessorId;genDate;status;assessorName",
+    "genCol": "assessorId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Batch",
+    "fields": "batchName;genDate;status;batchId",
+    "genCol": "batchId",
+    "manyToOne": "client"
+  },
+  {
+    "pojo": "BatchParticipantMapper",
+    "fields": "genDate;status;bpmId",
+    "genCol": "bpmId",
+    "manyToOne": "clientUserMapper,batch"
+  },
+  {
+    "pojo": "Client",
+    "fields": "clientId;genDate;clientEmail;status;clientName",
+    "genCol": "clientId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "ClientUserMapper",
+    "fields": "cumId;genDate;status",
+    "genCol": "cumId",
+    "manyToOne": "userInfo,client"
+  },
+  {
+    "pojo": "ProjectManager",
+    "fields": "pmName;genDate;pmId;status",
+    "genCol": "pmId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Tool",
+    "fields": "toolType;integrationName;toolId;toolInstruction;toolAccessType;genDate;callStatus;status;toolEncryptionStatus;toolName;toolTranscriptStatus",
+    "genCol": "toolId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "ToolApi",
+    "fields": "toolApiId;toolApiVariables;toolApiConsumeJsonFormat;toolApiMethodType;genDate;toolApiUrl;pumIdVariable;status;toolApiName",
+    "genCol": "toolApiId",
+    "manyToOne": "tool"
+  },
+  {
+    "pojo": "ToolPackage",
+    "fields": "genDate;tpId;status;toolPackageName",
+    "genCol": "tpId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "UserInfo",
+    "fields": "genDate;userEmail;status;userId;userName",
+    "genCol": "userId",
+    "manyToOne": ""
+  }
+]

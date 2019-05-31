@@ -2,6 +2,7 @@ package $base_package .service.business
 
 import $base_package .model.$pojo
 import scala.collection.JavaConversions._
+import com.ttn.assess2.model._
 
 trait $pojo Service {
 
@@ -10,6 +11,8 @@ trait $pojo Service {
   def insert$pojo($pojo_camel: $pojo): Unit
 
   def update$pojo($pojo_camel: $pojo): Unit
+
+$code
 
 
 }

@@ -9,11 +9,11 @@ def camel_case(str):
 
 # pojo = "Admin"
 
-df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/casestudy2.json", orient="records")
+df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/assess2.json", orient="records")
 print(df.head(1))
 for pojo_dict in df.to_dict(orient="records"):
     pojo = pojo_dict.get("pojo")
-    with open("D:/git/source_creation/proj_creation_scala/class_part/{}.java".format(pojo), "r") as file:
+    with open("D:/eclipse-workspace/assess2/src/com/ttn/assess2/model/{}.java".format(pojo), "r") as file:
         text = file.read()
     arr = text.splitlines()
     print(arr)
@@ -22,14 +22,16 @@ for pojo_dict in df.to_dict(orient="records"):
     class_str = [x for x in arr if "public class" in x][0]
     print(class_str)
     str_index = arr.index(class_str)
-    arr.insert(str_index, '@JsonFilter("{}Filter")'.format(pojo.lower()))
+    pojo_camel = pojo[0].lower() + pojo[1:]
+    arr.insert(str_index, '@JsonFilter("{}Filter")'.format(pojo_camel))
 
     # import
     class_str = [x for x in arr if "package" in x][0]
     print(class_str)
-    str_index = arr.index(class_str)
+    str_index = arr.index(class_str) + 1
     str_insert = """import com.fasterxml.jackson.annotation.JsonFilter;
     import com.fasterxml.jackson.annotation.JsonProperty;
+    import org.app.utility.security.AESEncryption;
     """
     arr.insert(str_index, str_insert)
 
@@ -59,5 +61,6 @@ for pojo_dict in df.to_dict(orient="records"):
 
     pojo_change = "\n".join(arr)
     print(pojo_change)
-    with open("D:/git/source_creation/proj_creation_scala/class_part/{}.java".format(pojo), "r") as w_file:
+    with open("D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/model/{}.java".format(pojo),
+              "w") as w_file:
         w_file.write(pojo_change)
