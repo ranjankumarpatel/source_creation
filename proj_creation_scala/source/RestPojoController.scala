@@ -31,7 +31,7 @@ class Rest$pojo Controller {
 
 
   @Transactional(propagation = Propagation.REQUIRED)
-  @PostMapping(path = Array("/insert"), produces = Array(MediaType.APPLICATION_JSON_UTF8_VALUE))
+  @PostMapping(path = Array("/insert"), consumes = Array(MediaType.APPLICATION_JSON_UTF8_VALUE))
   def insert$pojo(@RequestBody $pojo_camel : $pojo): ResponseEntity[String] = {
     try {
       $pojo_camel Service.insert$pojo( $pojo_camel )

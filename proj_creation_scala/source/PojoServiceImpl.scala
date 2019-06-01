@@ -36,7 +36,9 @@ class $pojo ServiceImpl extends $pojo Service {
   override def update$pojo ($pojo_camel: $pojo ): Unit = {
     var update$pojo : $pojo  = $pojo_camel Repository.findOne($pojo_camel.get$genId_camel)
 
+    update$pojo.setGenDate(DateUtility.getCurrentTimeStamp)
 
+    $get_set_script
 
     $pojo_camel Repository.save(update$pojo )
 

@@ -13,7 +13,7 @@ def camel_case(str):
     return str[0].upper() + str[1:]
 
 
-def replace_string(path, tup, code):
+def replace_string(path, tup, code, get_set_script):
     with open(path, "r") as file:
         text = file.read()
         # print(text)
@@ -21,18 +21,19 @@ def replace_string(path, tup, code):
         pojo_lower = tup.pojo.lower()
         out_text = Template(text).substitute(pojo=tup.pojo, pojo_camel=pojo_camel, pojo_lower=pojo_lower,
                                              base_package=base_package,
-                                             genId=tup.genCol, genId_camel=camel_case(tup.genCol), code=code) \
+                                             genId=tup.genCol, genId_camel=camel_case(tup.genCol), code=code,
+                                             get_set_script=get_set_script) \
             .replace("{} ".format(tup.pojo), tup.pojo) \
             .replace("{} ".format(pojo_camel), pojo_camel) \
             .replace("{} ".format(base_package), base_package)
         return out_text
 
 
-dirs = ["D:/aws_git/assess2/assess2-author-service/src/main/java/com/ttn/assess2/controller",
-        "D:/aws_git/assess2/assess2-author-service/src/main/java/com/ttn/assess2/service/impl",
-        # "D:/aws_git/assess2/assess2-author-service/src/main/java/com/ttn/assess2/service/json",
-        "D:/aws_git/assess2/assess2-author-service/src/main/java/com/ttn/assess2/repository",
-        "D:/aws_git/assess2/assess2-author-service/src/main/java/com/ttn/assess2/service/business"]
+dirs = ["D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/controller",
+        "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/service/impl",
+        # "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/service/json",
+        "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/repository",
+        "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/service/business"]
 for dir in dirs:
     filelist = [f for f in os.listdir(dir) if f.endswith(".scala")]
     for f in filelist:
@@ -44,14 +45,14 @@ for tup in df.itertuples():
     print(tup)
     # print(out_text)
     with open(
-            "D:/aws_git/assess2/assess2-author-service/src/main/java/com/ttn/assess2/service/json/{0}Json.scala".format(
-                    tup.pojo), "w") as out_file:
-        out_text = replace_string("source/PojoJson.scala", tup, "")
+            "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/service/json/{0}Json.scala".format(
+                tup.pojo), "w") as out_file:
+        out_text = replace_string("source/PojoJson.scala", tup, "", "")
         out_file.write(out_text)
 
     with open(
-            "D:/aws_git/assess2/assess2-author-service/src/main/java/com/ttn/assess2/repository/{0}Repository.scala".format(
-                    tup.pojo), "w") as out_file:
+            "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/repository/{0}Repository.scala".format(
+                tup.pojo), "w") as out_file:
         mone_arr = []
         if tup.manyToOne != "":
             for mone in tup.manyToOne.split(","):
@@ -60,12 +61,12 @@ for tup in df.itertuples():
                 mone_arr.append(repo_text)
         code_text = "\n".join(mone_arr)
 
-        out_text = replace_string("source/PojoRepository.scala", tup, code_text)
+        out_text = replace_string("source/PojoRepository.scala", tup, code_text, "")
 
         out_file.write(out_text)
 
     with open(
-            "D:/aws_git/assess2/assess2-author-service/src/main/java/com/ttn/assess2/service/business/{0}Service.scala".format(
+            "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/service/business/{0}Service.scala".format(
                 tup.pojo), "w") as out_file:
         mone_arr = []
         if tup.manyToOne != "":
@@ -75,13 +76,21 @@ for tup in df.itertuples():
                 mone_arr.append(repo_text)
         code_text = "\n".join(mone_arr)
 
-        out_text = replace_string("source/PojoService.scala", tup, code_text)
+        out_text = replace_string("source/PojoService.scala", tup, code_text, "")
         out_file.write(out_text)
 
     with open(
-            "D:/aws_git/assess2/assess2-author-service/src/main/java/com/ttn/assess2/service/impl/{0}ServiceImpl.scala".format(
+            "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/service/impl/{0}ServiceImpl.scala".format(
                 tup.pojo), "w") as out_file:
 
+        get_set_arr = []
+        for field in [x for x in tup.fields.split(";") if x not in [tup.genCol, "genDate"]]:
+            col_camel = camel_case(field)
+            get_set_arr.append(
+                """update{pojo}.set{col_camel}({pojo_camel}.get{col_camel})""".format(pojo=tup.pojo,
+                                                                                      pojo_camel=pojo_camel,
+                                                                                      col_camel=col_camel))
+        get_set_script = "\n".join(get_set_arr)
         mone_arr = []
         if tup.manyToOne != "":
             for mone in tup.manyToOne.split(","):
@@ -93,11 +102,11 @@ for tup in df.itertuples():
                 mone_arr.append(repo_text)
         code_text = "\n".join(mone_arr)
 
-        out_text = replace_string("source/PojoServiceImpl.scala", tup, code_text)
+        out_text = replace_string("source/PojoServiceImpl.scala", tup, code_text, get_set_script)
         out_file.write(out_text)
 
     with open(
-            "D:/aws_git/assess2/assess2-author-service/src/main/java/com/ttn/assess2/controller/Rest{0}Controller.scala".format(
+            "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/controller/Rest{0}Controller.scala".format(
                 tup.pojo), "w") as out_file:
 
         mone_arr = []
@@ -119,5 +128,5 @@ for tup in df.itertuples():
                 mone_arr.append(repo_text)
         code_text = "\n".join(mone_arr)
 
-        out_text = replace_string("source/RestPojoController.scala", tup, code_text)
+        out_text = replace_string("source/RestPojoController.scala", tup, code_text, "")
         out_file.write(out_text)
