@@ -48,7 +48,7 @@ app.controller('$pojo Ctrl', function (_scope, $pojo_lower _findAllFactory, $poj
     };
 
 
-    _scope.update$pojo = function () {
+    _scope.change$pojo = function () {
 
         if (formSubmit("update$pojo Form")) {
             $pojo_lower _update$pojo Factory.save(_scope.update$pojo, function (data) {
