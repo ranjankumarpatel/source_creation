@@ -4,40 +4,55 @@ import java.io.File
 
 import org.apache.commons.io.FileUtils
 import org.service.utility.json.JsonUtil
+import org.springframework.web.bind.annotation.{GetMapping, PostMapping, RequestMapping}
 
 import scala.collection.JavaConversions._
 
 
 object GenerateFactory extends App {
   val arr = Array[String]("scala")
-  val pojoNames = FileUtils.listFiles(new File("D:/aws_git/casestudy_v2/caseStudy2-service/src/main/java/com/ttn/casestudy2/controller"), arr, true).map(_.getName.replaceFirst(".scala", ""))
+  val pojoNames = FileUtils.listFiles(new File("D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/controller"), arr, true).map(_.getName.replaceFirst(".scala", ""))
 
   println(pojoNames)
 
-  case class ClassMethod(pojo: String, method: String, returnType: String, annotation: String, annotationMethod: String, path: String)
+  case class ClassMethod(pojo: String, method: String, returnType: String, annotation: String, annotationMethod: String, path: String, classPath: String)
 
-  val annotatedMethods = pojoNames.map(pojo => {
+  val annotatedMethods = pojoNames.flatMap(pojo => {
 
-    Class.forName(s"com.ttn.casestudy2.controller.$pojo").getDeclaredMethods.flatMap(x => {
+    val classGen = Class.forName(s"com.ttn.assess2.controller.$pojo")
+    println(classGen)
 
-      val annotation = x.getDeclaredAnnotations.filter(_.annotationType().getCanonicalName.contains("web"))
-      //      annotation.foreach(println)
-      //      println(x.getDeclaringClass.getSimpleName)
+    val classPath = classGen.getDeclaredAnnotation(classOf[RequestMapping]).path().mkString(",")
+    println(classPath)
+
+    classGen.getDeclaredMethods.map(x => {
+
+      var methodPath = ""
+      var annotationMethod = ""
+      var annotationClass = ""
+
+      val getAnnot = x.getDeclaredAnnotation(classOf[GetMapping])
+      if (getAnnot != null) {
+        methodPath = getAnnot.path().mkString(",")
+        annotationMethod = "GetMapping"
+        annotationClass = getAnnot.toString
+      }
+
+      val postAnnot = x.getDeclaredAnnotation(classOf[PostMapping])
+      if (postAnnot != null) {
+        methodPath = postAnnot.path().mkString(",")
+        annotationMethod = "PostMapping"
+        annotationClass = postAnnot.toString
+      }
+
+      if (getAnnot != null || postAnnot != null) {
+        ClassMethod(pojo = pojo, method = x.getName, returnType = x.getReturnType.getName, annotation = annotationClass, annotationMethod = annotationMethod, path = methodPath, classPath = classPath)
+      } else {
+        null
+      }
 
 
-      annotation.map(a => {
-
-
-        val path = a.annotationType().getMethod("path")
-        val annotationClass = a.annotationType().getSimpleName
-
-        path.getDefaultValue.asInstanceOf[Array[String]].foreach(println)
-
-        ClassMethod(pojo = pojo, method = x.getName, returnType = x.getReturnType.getName, annotation = a.toString, annotationMethod = annotationClass, path = "")
-      }).toList
-
-
-    })
+    }).filterNot(_ == null)
 
 
   })
