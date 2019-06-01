@@ -2,7 +2,7 @@ package $base_package .service.business
 
 import $base_package .model.$pojo
 import scala.collection.JavaConversions._
-import com.ttn.assess2.model._
+import $base_package .model._
 
 trait $pojo Service {
 

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.{Propagation, Transactional}
 import org.app.utility.util.DateUtility
 import scala.collection.JavaConversions._
-import com.ttn.assess2.model._
+import $base_package .model._
 
 @Service
 class $pojo ServiceImpl extends $pojo Service {
