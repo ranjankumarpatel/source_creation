@@ -77,9 +77,9 @@ for tup in df.itertuples():
         repo_text = """<div class="form-group">
                                         <label for="insert-{col}" class="control-label">{col}:</label>
                                         <input type="text" class="form-control" id="insert-{col}"
-                                            data-ng-model="new{pojo}.{col}">
+                                            data-ng-model="update{pojo}.{col}">
                                     </div>""".format(pojo=tup.pojo, pojo_lower=pojo_lower, col=col)
-        col_insert_arr.append(repo_text)
+        col_update_arr.append(repo_text)
     code_update_text = "\n".join(col_update_arr)
 
     out_text = replace_string("D:/git/source_creation/proj_creation_scala/source/pojo.html", tup, "", code_th_text,

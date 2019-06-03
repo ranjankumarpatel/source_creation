@@ -8,6 +8,8 @@ base_package = "com.ttn.assess2"
 df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/assess2.json", orient="records")
 print(df)
 
+target_path = "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2"
+
 
 def camel_case(str):
     return str[0].upper() + str[1:]
@@ -29,11 +31,11 @@ def replace_string(path, tup, code, get_set_script):
         return out_text
 
 
-dirs = ["D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/controller",
-        "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/service/impl",
+dirs = [target_path + "/controller",
+        target_path + "/service/impl",
         # "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/service/json",
-        "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/repository",
-        "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/service/business"]
+        target_path + "/repository",
+        target_path + "/service/business"]
 for dir in dirs:
     filelist = [f for f in os.listdir(dir) if f.endswith(".scala")]
     for f in filelist:
@@ -45,13 +47,13 @@ for tup in df.itertuples():
     print(tup)
     # print(out_text)
     with open(
-            "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/service/json/{0}Json.scala".format(
+            target_path + "/service/json/{0}Json.scala".format(
                 tup.pojo), "w") as out_file:
         out_text = replace_string("source/PojoJson.scala", tup, "", "")
         out_file.write(out_text)
 
     with open(
-            "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/repository/{0}Repository.scala".format(
+            target_path + "/repository/{0}Repository.scala".format(
                 tup.pojo), "w") as out_file:
         mone_arr = []
         if tup.manyToOne != "":
@@ -66,7 +68,7 @@ for tup in df.itertuples():
         out_file.write(out_text)
 
     with open(
-            "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/service/business/{0}Service.scala".format(
+            target_path + "/service/business/{0}Service.scala".format(
                 tup.pojo), "w") as out_file:
         mone_arr = []
         if tup.manyToOne != "":
@@ -80,7 +82,7 @@ for tup in df.itertuples():
         out_file.write(out_text)
 
     with open(
-            "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/service/impl/{0}ServiceImpl.scala".format(
+            target_path + "/service/impl/{0}ServiceImpl.scala".format(
                 tup.pojo), "w") as out_file:
 
         get_set_arr = []
@@ -106,7 +108,7 @@ for tup in df.itertuples():
         out_file.write(out_text)
 
     with open(
-            "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/controller/Rest{0}Controller.scala".format(
+            target_path + "/controller/Rest{0}Controller.scala".format(
                 tup.pojo), "w") as out_file:
 
         mone_arr = []
