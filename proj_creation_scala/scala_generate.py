@@ -117,7 +117,7 @@ for tup in df.itertuples():
 
                 repo_text = Template("""\t@Transactional(readOnly = true)
                 \t@GetMapping(path = Array("/$mone_lower/{$moneid}"))
-                \tdef findBy$moneClass($moneid : lang.Long):String = {
+                \tdef findBy$moneClass(@PathVariable("$moneid") $moneid : lang.Long):String = {
                         val $pojo s = $pojo_camel Service.findBy$moneClass(new $moneClass($moneid))
                         $pojo_camel Json.getJson($pojo s)
                         }""").substitute(
