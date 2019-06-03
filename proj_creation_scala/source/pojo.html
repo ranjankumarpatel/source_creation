@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html id="ng-app" data-ng-app="MyApp" class="no-js" lang="en">
+
+
+<head>
+    <% include ../../partials/head %>
+
+
+    <link href="/public/dist/css/pages/inbox.css" rel="stylesheet">
+
+    <link href="/public/dist/css/pages/tab-page.css" rel="stylesheet">
+    <style>
+        .custom-control-label {
+            position: initial;
+            margin-bottom: 0;
+        }
+
+
+    </style>
+</head>
+
+<body class="horizontal-nav fixed-layout skin-default-dark" data-ng-controller="CommonCtrl">
+
+<!-- Preloader - style you can find in spinners.css -->
+
+
+<% include ../../partials/preloader %>
+
+<!-- Main wrapper - style you can find in pages.scss -->
+
+<div id="main-wrapper" data-ng-controller1="UserCommonCtrl">
+
+
+    <% include ../../partials/header %>
+
+    <!-- End Topbar header -->
+
+
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+
+
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+
+
+    <!-- Page wrapper  -->
+    <% include ../../partials/sidebar %>
+    <div class="page-wrapper" data-ng-controller="$pojo Ctrl">
+
+        <!-- Container fluid  -->
+
+        <div class="container-fluid">
+
+            <!-- Bread crumb and right sidebar toggle -->
+
+            <div class="text-right">
+                <button type="button" class="btn waves-effect waves-light btn-info m-b-10 m-t-10"
+                        data-toggle="modal" data-target="#insert$pojo">Add New
+                </button>
+
+            </div>
+
+            <!--modal start-->
+
+
+            <!--modal end-->
+            <!-- End Bread crumb and right sidebar toggle -->
+
+
+            <!-- Start Page Content -->
+
+
+            <div class="row">
+
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+
+                        $code_th_text
+
+                        <th>Action</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr data-ng-repeat="$pojo_lower   in $pojo_lower s">
+
+                        $code_td_text
+
+                        <td>
+                            <button type="button" class="btn waves-effect waves-light btn-info"
+                                    data-toggle="modal" data-target="#update$pojo FormModal"
+                                    data-ng-click="edit$pojo($pojo_lower)">Edit
+                            </button>
+                        </td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info dropdown-toggle"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti-settings"></i> Action
+                                </button>
+                                <div class="animated flipInX" x-placement="bottom-start">
+
+                                    <a target="blank"
+                                       href="{{$pojo_lower.$genId _ENCRYPTED}}">Access</a>
+
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+        </div>
+        <!-- edit modal start-->
+
+        <div class="modal fade" id="insert$pojo FormModal" role="dialog" aria-labelledby="insert$pojo FormModalLabel">
+            <div class="modal-dialog" role="document">
+
+                <div class="modal-content">
+                    <form id="insert$pojo Form" name="insert$pojo Form" data-ng-submit="insert$pojo()">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="insert$pojo FormModalLabel">Add $pojo</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+
+                            $code_insert_text
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="Submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal fade" id="update$pojo FormModal" role="dialog" aria-labelledby="update$pojo FormModalLabel">
+            <div class="modal-dialog" role="document">
+
+                <div class="modal-content">
+                    <form role="form" id="update$pojo Form" name="update$pojo Form" data-ng-submit="change$pojo()">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="exampleModalLabel2">Update $pojo</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+
+                            $code_update_text
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <!--modal end-->
+    </div>
+
+    <!-- End Page wrapper  -->
+
+
+    <!-- footer -->
+
+    <% include ../../partials/footer %>
+
+    <!-- End footer -->
+
+</div>
+
+<!-- End Wrapper -->
+
+
+<!-- All Jquery -->
+
+
+<% include ../../scripts/script %>
+<% include ../../scripts/angular-services %>
+
+
+<script src="/public/angular/common.js"></script>
+<script src="/public/angular/controller/admin/$pojo_lower-controller.js"></script>
+
+
+</body>
+
+
+</html>
