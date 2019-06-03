@@ -16,6 +16,7 @@
         }
 
 
+
     </style>
 </head>
 
@@ -71,51 +72,55 @@
 
             <div class="row">
 
-
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-
-                        $code_th_text
-
-                        <th>Action</th>
-                        <th>Status</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    <tr data-ng-repeat="$pojo_lower   in $pojo_lower s">
-
-                        $code_td_text
-
-                        <td>
-                            <button type="button" class="btn waves-effect waves-light btn-info"
-                                    data-toggle="modal" data-target="#update$pojo FormModal"
-                                    data-ng-click="edit$pojo($pojo_lower)">Edit
-                            </button>
-                        </td>
-                        <td>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-info dropdown-toggle"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="ti-settings"></i> Action
-                                </button>
-                                <div class="animated flipInX" x-placement="bottom-start">
-
-                                    <a target="blank"
-                                       href="{{$pojo_lower.$genId _ENCRYPTED}}">Access</a>
+                <div class="card">
+                    <div class="card-body">
 
 
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+
+                                $code_th_text
+
+                                <th>Action</th>
+                                <th>Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <tr data-ng-repeat="$pojo_lower   in $pojo_lower s">
+
+                                $code_td_text
+
+                                <td>
+                                    <button type="button" class="btn waves-effect waves-light btn-info"
+                                            data-toggle="modal" data-target="#update$pojo FormModal"
+                                            data-ng-click="edit$pojo($pojo_lower)">Edit
+                                    </button>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-info dropdown-toggle"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="ti-settings"></i> Action
+                                        </button>
+                                        <div class="animated flipInX" x-placement="bottom-start">
+
+                                            <a target="blank"
+                                               href="{{$pojo_lower.$genId _ENCRYPTED}}">Access</a>
 
 
-                    </tbody>
-                </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
 
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
 
 
