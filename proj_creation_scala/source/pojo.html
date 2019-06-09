@@ -17,6 +17,8 @@
 
 
 
+
+
     </style>
 </head>
 
@@ -29,7 +31,7 @@
 
 <!-- Main wrapper - style you can find in pages.scss -->
 
-<div id="main-wrapper" data-ng-controller1="UserCommonCtrl">
+<div id="main-wrapper" data-ng-controller1="AdminCommonCtrl">
 
 
     <% include ../../partials/header %>
@@ -55,7 +57,7 @@
 
             <div class="text-right">
                 <button type="button" class="btn waves-effect waves-light btn-info m-b-10 m-t-10"
-                        data-toggle="modal" data-target="#insert$pojo">Add New
+                        data-toggle="modal" data-target="#insert$pojo FormModal">Add New
                 </button>
 
             </div>
@@ -72,53 +74,58 @@
 
             <div class="row">
 
-                <div class="card">
-                    <div class="card-body">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
 
 
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-
-                                $code_th_text
-
-                                <th>Action</th>
-                                <th>Status</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-
-                            <tr data-ng-repeat="$pojo_lower   in $pojo_lower s">
-
-                                $code_td_text
-
-                                <td>
-                                    <button type="button" class="btn waves-effect waves-light btn-info"
-                                            data-toggle="modal" data-target="#update$pojo FormModal"
-                                            data-ng-click="edit$pojo($pojo_lower)">Edit
-                                    </button>
-                                </td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-info dropdown-toggle"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="ti-settings"></i> Action
-                                        </button>
-                                        <div class="animated flipInX" x-placement="bottom-start">
-
-                                            <a target="blank"
-                                               href="{{$pojo_lower.$genId _ENCRYPTED}}">Access</a>
+                            <table class="table">
+                                <thead>
+                                <tr>
 
 
+                                    $code_th_text
+
+                                    <th>Action</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr data-ng-repeat="$pojo_lower   in $pojo_lower s">
+
+                                    $code_td_text
+
+                                    <td>
+
+
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-info dropdown-toggle"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Action
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <button class="dropdown-item" data-toggle="modal"
+                                                        data-target="#update$pojo FormModal"
+                                                        data-ng-click="edit$pojo($pojo_lower)"><i
+                                                        class="fa fa-edit"></i> Edit
+                                                </button>
+                                                <a class="dropdown-item" href="#">Another action</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item"
+                                                   href="{{$pojo_lower.$genId _ENCRYPTED}}">Access</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                            </tr>
 
 
-                            </tbody>
-                        </table>
+                                    </td>
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,7 +152,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="Submit" class="btn btn-info">Submit</button>
+                            <button type="submit" class="btn btn-info">Submit</button>
                         </div>
                     </form>
                 </div>

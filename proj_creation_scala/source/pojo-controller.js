@@ -11,7 +11,9 @@ app.controller('$pojo Ctrl', function (_scope, $pojo_lower _findAllFactory, $poj
             _scope.$pojo_lower s = data;
 
         });
-    }
+    };
+
+    _scope.findAll();
 
 
     _scope.findById = function ($genId) {
@@ -29,7 +31,7 @@ app.controller('$pojo Ctrl', function (_scope, $pojo_lower _findAllFactory, $poj
             $pojo_lower _insert$pojo Factory.save(_scope.new$pojo, function (data) {
                 alertMessage("success","success", "$pojo  inserted successfully");
 
-
+_scope.findAll();
             }, function (error) {
                 alertMessage("error", "$pojo  Insertion error", "Please try again");
             })
@@ -53,7 +55,7 @@ app.controller('$pojo Ctrl', function (_scope, $pojo_lower _findAllFactory, $poj
         if (formSubmit("update$pojo Form")) {
             $pojo_lower _update$pojo Factory.save(_scope.update$pojo, function (data) {
                 alertMessage("success","success", "$pojo  updated successfully");
-
+_scope.findAll();
 
             }, function (error) {
                 alertMessage("error","$pojo  Updation error","Please try again");

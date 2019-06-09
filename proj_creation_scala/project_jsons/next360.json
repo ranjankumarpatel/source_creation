@@ -1,0 +1,182 @@
+[
+  {
+    "pojo": "AdminView",
+    "fields": "emailId;genDate;adminId;adminId_ENCRYPTED;status",
+    "genCol": "adminId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "ClientBenchmarkScore",
+    "fields": "bmsId_ENCRYPTED;genDate;status;benchmarkScore;bmsId",
+    "genCol": "bmsId",
+    "manyToOne": "competency,productClientInfoView"
+  },
+  {
+    "pojo": "ClientReportCustomization",
+    "fields": "infoPageText;lastPageStatus;genDate;lastPageText;ttnLogoStatus;competencyInfoPageText;reportCustomId;lastPageLogoStatus;clientLogoStatus;status;stmtInfoPageText;reportCustomId_ENCRYPTED",
+    "genCol": "reportCustomId",
+    "manyToOne": "productClientInfoView"
+  },
+  {
+    "pojo": "ClientSurveyTemplateMapper",
+    "fields": "stmId;genDate;status;stmId_ENCRYPTED",
+    "genCol": "stmId",
+    "manyToOne": "surveyTemplate,productClientInfoView"
+  },
+  {
+    "pojo": "Competency",
+    "fields": "instruction;genDate;visibilityStatus;status;defination;competencyId;title;competencyId_ENCRYPTED",
+    "genCol": "competencyId",
+    "manyToOne": "productClientInfoView,adminView"
+  },
+  {
+    "pojo": "CompetencyReport",
+    "fields": "crId_ENCRYPTED;crId;genDate;lower;statement;upper;status",
+    "genCol": "crId",
+    "manyToOne": "competency"
+  },
+  {
+    "pojo": "CompetencyStatementsMapper",
+    "fields": "csmId_ENCRYPTED;genDate;status;csmId",
+    "genCol": "csmId",
+    "manyToOne": "statement,competency"
+  },
+  {
+    "pojo": "EmailService",
+    "fields": "emailContent;projectName;emailSub;emailTitle;genDate;status;etId_ENCRYPTED;etId",
+    "genCol": "etId",
+    "manyToOne": "productClientInfoView,adminView"
+  },
+  {
+    "pojo": "Group",
+    "fields": "genDate;groupId;groupId_ENCRYPTED;groupName;status",
+    "genCol": "groupId",
+    "manyToOne": "reportTemplate,productClientInfoView"
+  },
+  {
+    "pojo": "ProductClientInfoView",
+    "fields": "clientId;genDate;clientEmail;logo;excludeRate;clientId_ENCRYPTED;status;clientName;clientInstruction;planStatus",
+    "genCol": "clientId",
+    "manyToOne": "reportTemplate"
+  },
+  {
+    "pojo": "Project",
+    "fields": "projStatus;relVisibilityStatus;projName;genDate;projStartDate;reportStatus;reportType;emailTemplate;status;projId;projEndDate;validation;projId_ENCRYPTED",
+    "genCol": "projId",
+    "manyToOne": "surveyTemplate,userClientMapperView,group"
+  },
+  {
+    "pojo": "ProjectCompetencySubjectiveMapper",
+    "fields": "genDate;statement;status;pcsmId_ENCRYPTED;pcsmId",
+    "genCol": "pcsmId",
+    "manyToOne": "project,surveyCompetencyMapper"
+  },
+  {
+    "pojo": "Relation",
+    "fields": "relId;relVisibilityStatus;genDate;relId_ENCRYPTED;status;relName",
+    "genCol": "relId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "ReportTemplate",
+    "fields": "rtId_ENCRYPTED;genDate;templateJson;templateName;rtId;status",
+    "genCol": "rtId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Respondent",
+    "fields": "resEmail;genDate;resId;status;autoReminderStatus;resId_ENCRYPTED;resName",
+    "genCol": "resId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "RespondentCompetencySubjective",
+    "fields": "genDate;rcsId_ENCRYPTED;status;rcsId;comments",
+    "genCol": "rcsId",
+    "manyToOne": "respondentFsRelMapper,projectCompetencySubjectiveMapper"
+  },
+  {
+    "pojo": "RespondentFeedback",
+    "fields": "rate;genDate;rfId;rfId_ENCRYPTED;status",
+    "genCol": "rfId",
+    "manyToOne": "respondentFsRelMapper,competencyStatementsMapper"
+  },
+  {
+    "pojo": "RespondentFeedbackSubjective",
+    "fields": "rfsId_ENCRYPTED;subjective;genDate;status;rfsId",
+    "genCol": "rfsId",
+    "manyToOne": "surveySubjectiveMapper,respondentFsRelMapper"
+  },
+  {
+    "pojo": "RespondentFsRelMapper",
+    "fields": "rfrmInvitationDtstamp;genDate;rfrmInvitationStatus;rfrmId;rfrmId_ENCRYPTED;status;rfrmSubmitStatus",
+    "genCol": "rfrmId",
+    "manyToOne": "project,respondent,relation"
+  },
+  {
+    "pojo": "ScaleGroup",
+    "fields": "scaleGrpId;genDate;scaleGrpTitle;scaleGrpId_ENCRYPTED;status;scaleGrpVisibilityStatus",
+    "genCol": "scaleGrpId",
+    "manyToOne": "productClientInfoView,adminView"
+  },
+  {
+    "pojo": "ScaleRate",
+    "fields": "scaleTitle;genDate;status;scaleValueId_ENCRYPTED;scaleValue;scaleValueId",
+    "genCol": "scaleValueId",
+    "manyToOne": "scaleGroup"
+  },
+  {
+    "pojo": "ScaleScorePakage",
+    "fields": "sspId;pkgName;sspId_ENCRYPTED;genDate;status",
+    "genCol": "sspId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "ScaleScorePakageDetail",
+    "fields": "sspdId;genDate;min;max;status;sspdId_ENCRYPTED;level",
+    "genCol": "sspdId",
+    "manyToOne": "scaleScorePakage"
+  },
+  {
+    "pojo": "Statement",
+    "fields": "stmtId_ENCRYPTED;genDate;statement;visibilityStatus;status;stmtType;stmtId",
+    "genCol": "stmtId",
+    "manyToOne": "productClientInfoView,adminView"
+  },
+  {
+    "pojo": "SurveyCompetencyMapper",
+    "fields": "scmId;genDate;status;scmId_ENCRYPTED",
+    "genCol": "scmId",
+    "manyToOne": "surveyTemplate,competency"
+  },
+  {
+    "pojo": "SurveyScaleMapper",
+    "fields": "genDate;ssmId;status;ssmId_ENCRYPTED",
+    "genCol": "ssmId",
+    "manyToOne": "surveyTemplate,scaleGroup"
+  },
+  {
+    "pojo": "SurveySubjectiveMapper",
+    "fields": "ssubmId;ssubmId_ENCRYPTED;genDate;status",
+    "genCol": "ssubmId",
+    "manyToOne": "surveyTemplate,statement"
+  },
+  {
+    "pojo": "SurveyTemplate",
+    "fields": "stVisibilityStatus;genDate;stId;stId_ENCRYPTED;status;stTitle",
+    "genCol": "stId",
+    "manyToOne": "productClientInfoView,adminView"
+  },
+  {
+    "pojo": "UserClientMapperView",
+    "fields": "ucmId;genDate;ucmId_ENCRYPTED;status",
+    "genCol": "ucmId",
+    "manyToOne": "userInfo,productClientInfoView"
+  },
+  {
+    "pojo": "UserInfo",
+    "fields": "name;email;userId_ENCRYPTED;genDate;status;userId",
+    "genCol": "userId",
+    "manyToOne": ""
+  }
+]

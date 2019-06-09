@@ -3,12 +3,12 @@ from string import Template
 
 import pandas as pd
 
-base_package = "com.ttn.assess2"
+base_package = "com.ttn.next360"
 
-df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/assess2.json", orient="records")
+df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/next360.json", orient="records")
 print(df)
 
-target_path = "D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2"
+target_path = "D:/aws_git/next360/next360-author-service/src/main/java/com/ttn/next360"
 
 
 def camel_case(str):
@@ -86,7 +86,8 @@ for tup in df.itertuples():
                 tup.pojo), "w") as out_file:
 
         get_set_arr = []
-        for field in [x for x in tup.fields.split(";") if x not in [tup.genCol, "genDate"]]:
+        for field in [x for x in tup.fields.split(";") if
+                      (x not in [tup.genCol, "genDate"] and ("_ENCRYPTED" not in x))]:
             col_camel = camel_case(field)
             get_set_arr.append(
                 """update{pojo}.set{col_camel}({pojo_camel}.get{col_camel})""".format(pojo=tup.pojo,
@@ -114,6 +115,7 @@ for tup in df.itertuples():
         mone_arr = []
         if tup.manyToOne != "":
             for mone in tup.manyToOne.split(","):
+                print(mone)
                 mone_df = df[df.pojo == camel_case(mone)].to_dict(orient="records")[0]
                 print(mone_df)
 

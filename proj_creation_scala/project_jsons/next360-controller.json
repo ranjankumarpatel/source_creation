@@ -1,0 +1,1487 @@
+[
+  {
+    "pojo": "RestAdminViewController",
+    "method": "updateAdminView",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/adminview"
+  },
+  {
+    "pojo": "RestAdminViewController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{adminId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{adminId}",
+    "classPath": "/rest/adminview"
+  },
+  {
+    "pojo": "RestAdminViewController",
+    "method": "insertAdminView",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/adminview"
+  },
+  {
+    "pojo": "RestAdminViewController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/adminview"
+  },
+  {
+    "pojo": "RestClientBenchmarkScoreController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{bmsId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{bmsId}",
+    "classPath": "/rest/clientbenchmarkscore"
+  },
+  {
+    "pojo": "RestClientBenchmarkScoreController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/clientbenchmarkscore"
+  },
+  {
+    "pojo": "RestClientBenchmarkScoreController",
+    "method": "findByCompetency",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/competency/{competencyId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/competency/{competencyId}",
+    "classPath": "/rest/clientbenchmarkscore"
+  },
+  {
+    "pojo": "RestClientBenchmarkScoreController",
+    "method": "updateClientBenchmarkScore",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/clientbenchmarkscore"
+  },
+  {
+    "pojo": "RestClientBenchmarkScoreController",
+    "method": "findByProductClientInfoView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/productclientinfoview/{clientId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/productclientinfoview/{clientId}",
+    "classPath": "/rest/clientbenchmarkscore"
+  },
+  {
+    "pojo": "RestClientBenchmarkScoreController",
+    "method": "insertClientBenchmarkScore",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/clientbenchmarkscore"
+  },
+  {
+    "pojo": "RestClientReportCustomizationController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{reportCustomId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{reportCustomId}",
+    "classPath": "/rest/clientreportcustomization"
+  },
+  {
+    "pojo": "RestClientReportCustomizationController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/clientreportcustomization"
+  },
+  {
+    "pojo": "RestClientReportCustomizationController",
+    "method": "insertClientReportCustomization",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/clientreportcustomization"
+  },
+  {
+    "pojo": "RestClientReportCustomizationController",
+    "method": "updateClientReportCustomization",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/clientreportcustomization"
+  },
+  {
+    "pojo": "RestClientReportCustomizationController",
+    "method": "findByProductClientInfoView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/productclientinfoview/{clientId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/productclientinfoview/{clientId}",
+    "classPath": "/rest/clientreportcustomization"
+  },
+  {
+    "pojo": "RestClientSurveyTemplateMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{stmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{stmId}",
+    "classPath": "/rest/clientsurveytemplatemapper"
+  },
+  {
+    "pojo": "RestClientSurveyTemplateMapperController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/clientsurveytemplatemapper"
+  },
+  {
+    "pojo": "RestClientSurveyTemplateMapperController",
+    "method": "findBySurveyTemplate",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/surveytemplate/{stId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/surveytemplate/{stId}",
+    "classPath": "/rest/clientsurveytemplatemapper"
+  },
+  {
+    "pojo": "RestClientSurveyTemplateMapperController",
+    "method": "findByProductClientInfoView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/productclientinfoview/{clientId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/productclientinfoview/{clientId}",
+    "classPath": "/rest/clientsurveytemplatemapper"
+  },
+  {
+    "pojo": "RestClientSurveyTemplateMapperController",
+    "method": "updateClientSurveyTemplateMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/clientsurveytemplatemapper"
+  },
+  {
+    "pojo": "RestClientSurveyTemplateMapperController",
+    "method": "insertClientSurveyTemplateMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/clientsurveytemplatemapper"
+  },
+  {
+    "pojo": "RestCompetencyController",
+    "method": "updateCompetency",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/competency"
+  },
+  {
+    "pojo": "RestCompetencyController",
+    "method": "insertCompetency",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/competency"
+  },
+  {
+    "pojo": "RestCompetencyController",
+    "method": "findByAdminView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/adminview/{adminId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/adminview/{adminId}",
+    "classPath": "/rest/competency"
+  },
+  {
+    "pojo": "RestCompetencyController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{competencyId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{competencyId}",
+    "classPath": "/rest/competency"
+  },
+  {
+    "pojo": "RestCompetencyController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/competency"
+  },
+  {
+    "pojo": "RestCompetencyController",
+    "method": "findByProductClientInfoView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/productclientinfoview/{clientId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/productclientinfoview/{clientId}",
+    "classPath": "/rest/competency"
+  },
+  {
+    "pojo": "RestCompetencyReportController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{crId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{crId}",
+    "classPath": "/rest/competencyreport"
+  },
+  {
+    "pojo": "RestCompetencyReportController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/competencyreport"
+  },
+  {
+    "pojo": "RestCompetencyReportController",
+    "method": "findByCompetency",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/competency/{competencyId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/competency/{competencyId}",
+    "classPath": "/rest/competencyreport"
+  },
+  {
+    "pojo": "RestCompetencyReportController",
+    "method": "updateCompetencyReport",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/competencyreport"
+  },
+  {
+    "pojo": "RestCompetencyReportController",
+    "method": "insertCompetencyReport",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/competencyreport"
+  },
+  {
+    "pojo": "RestCompetencyStatementsMapperController",
+    "method": "findByStatement",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/statement/{stmtId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/statement/{stmtId}",
+    "classPath": "/rest/competencystatementsmapper"
+  },
+  {
+    "pojo": "RestCompetencyStatementsMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{csmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{csmId}",
+    "classPath": "/rest/competencystatementsmapper"
+  },
+  {
+    "pojo": "RestCompetencyStatementsMapperController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/competencystatementsmapper"
+  },
+  {
+    "pojo": "RestCompetencyStatementsMapperController",
+    "method": "findByCompetency",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/competency/{competencyId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/competency/{competencyId}",
+    "classPath": "/rest/competencystatementsmapper"
+  },
+  {
+    "pojo": "RestCompetencyStatementsMapperController",
+    "method": "updateCompetencyStatementsMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/competencystatementsmapper"
+  },
+  {
+    "pojo": "RestCompetencyStatementsMapperController",
+    "method": "insertCompetencyStatementsMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/competencystatementsmapper"
+  },
+  {
+    "pojo": "RestEmailServiceController",
+    "method": "findByAdminView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/adminview/{adminId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/adminview/{adminId}",
+    "classPath": "/rest/emailservice"
+  },
+  {
+    "pojo": "RestEmailServiceController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{etId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{etId}",
+    "classPath": "/rest/emailservice"
+  },
+  {
+    "pojo": "RestEmailServiceController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/emailservice"
+  },
+  {
+    "pojo": "RestEmailServiceController",
+    "method": "updateEmailService",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/emailservice"
+  },
+  {
+    "pojo": "RestEmailServiceController",
+    "method": "insertEmailService",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/emailservice"
+  },
+  {
+    "pojo": "RestEmailServiceController",
+    "method": "findByProductClientInfoView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/productclientinfoview/{clientId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/productclientinfoview/{clientId}",
+    "classPath": "/rest/emailservice"
+  },
+  {
+    "pojo": "RestGroupController",
+    "method": "updateGroup",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/group"
+  },
+  {
+    "pojo": "RestGroupController",
+    "method": "insertGroup",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/group"
+  },
+  {
+    "pojo": "RestGroupController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{groupId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{groupId}",
+    "classPath": "/rest/group"
+  },
+  {
+    "pojo": "RestGroupController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/group"
+  },
+  {
+    "pojo": "RestGroupController",
+    "method": "findByReportTemplate",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/reporttemplate/{rtId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/reporttemplate/{rtId}",
+    "classPath": "/rest/group"
+  },
+  {
+    "pojo": "RestGroupController",
+    "method": "findByProductClientInfoView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/productclientinfoview/{clientId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/productclientinfoview/{clientId}",
+    "classPath": "/rest/group"
+  },
+  {
+    "pojo": "RestProductClientInfoViewController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{clientId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{clientId}",
+    "classPath": "/rest/productclientinfoview"
+  },
+  {
+    "pojo": "RestProductClientInfoViewController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/productclientinfoview"
+  },
+  {
+    "pojo": "RestProductClientInfoViewController",
+    "method": "findByReportTemplate",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/reporttemplate/{rtId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/reporttemplate/{rtId}",
+    "classPath": "/rest/productclientinfoview"
+  },
+  {
+    "pojo": "RestProductClientInfoViewController",
+    "method": "insertProductClientInfoView",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/productclientinfoview"
+  },
+  {
+    "pojo": "RestProductClientInfoViewController",
+    "method": "updateProductClientInfoView",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/productclientinfoview"
+  },
+  {
+    "pojo": "RestProjectCompetencySubjectiveMapperController",
+    "method": "findByProject",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/project/{projId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/project/{projId}",
+    "classPath": "/rest/projectcompetencysubjectivemapper"
+  },
+  {
+    "pojo": "RestProjectCompetencySubjectiveMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{pcsmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{pcsmId}",
+    "classPath": "/rest/projectcompetencysubjectivemapper"
+  },
+  {
+    "pojo": "RestProjectCompetencySubjectiveMapperController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/projectcompetencysubjectivemapper"
+  },
+  {
+    "pojo": "RestProjectCompetencySubjectiveMapperController",
+    "method": "insertProjectCompetencySubjectiveMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/projectcompetencysubjectivemapper"
+  },
+  {
+    "pojo": "RestProjectCompetencySubjectiveMapperController",
+    "method": "updateProjectCompetencySubjectiveMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/projectcompetencysubjectivemapper"
+  },
+  {
+    "pojo": "RestProjectCompetencySubjectiveMapperController",
+    "method": "findBySurveyCompetencyMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/surveycompetencymapper/{scmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/surveycompetencymapper/{scmId}",
+    "classPath": "/rest/projectcompetencysubjectivemapper"
+  },
+  {
+    "pojo": "RestProjectController",
+    "method": "insertProject",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/project"
+  },
+  {
+    "pojo": "RestProjectController",
+    "method": "updateProject",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/project"
+  },
+  {
+    "pojo": "RestProjectController",
+    "method": "findByGroup",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/group/{groupId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/group/{groupId}",
+    "classPath": "/rest/project"
+  },
+  {
+    "pojo": "RestProjectController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{projId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{projId}",
+    "classPath": "/rest/project"
+  },
+  {
+    "pojo": "RestProjectController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/project"
+  },
+  {
+    "pojo": "RestProjectController",
+    "method": "findBySurveyTemplate",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/surveytemplate/{stId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/surveytemplate/{stId}",
+    "classPath": "/rest/project"
+  },
+  {
+    "pojo": "RestProjectController",
+    "method": "findByUserClientMapperView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/userclientmapperview/{ucmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/userclientmapperview/{ucmId}",
+    "classPath": "/rest/project"
+  },
+  {
+    "pojo": "RestRelationController",
+    "method": "insertRelation",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/relation"
+  },
+  {
+    "pojo": "RestRelationController",
+    "method": "updateRelation",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/relation"
+  },
+  {
+    "pojo": "RestRelationController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{relId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{relId}",
+    "classPath": "/rest/relation"
+  },
+  {
+    "pojo": "RestRelationController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/relation"
+  },
+  {
+    "pojo": "RestReportTemplateController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{rtId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{rtId}",
+    "classPath": "/rest/reporttemplate"
+  },
+  {
+    "pojo": "RestReportTemplateController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/reporttemplate"
+  },
+  {
+    "pojo": "RestReportTemplateController",
+    "method": "updateReportTemplate",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/reporttemplate"
+  },
+  {
+    "pojo": "RestReportTemplateController",
+    "method": "insertReportTemplate",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/reporttemplate"
+  },
+  {
+    "pojo": "RestRespondentCompetencySubjectiveController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{rcsId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{rcsId}",
+    "classPath": "/rest/respondentcompetencysubjective"
+  },
+  {
+    "pojo": "RestRespondentCompetencySubjectiveController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/respondentcompetencysubjective"
+  },
+  {
+    "pojo": "RestRespondentCompetencySubjectiveController",
+    "method": "insertRespondentCompetencySubjective",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/respondentcompetencysubjective"
+  },
+  {
+    "pojo": "RestRespondentCompetencySubjectiveController",
+    "method": "findByProjectCompetencySubjectiveMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/projectcompetencysubjectivemapper/{pcsmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/projectcompetencysubjectivemapper/{pcsmId}",
+    "classPath": "/rest/respondentcompetencysubjective"
+  },
+  {
+    "pojo": "RestRespondentCompetencySubjectiveController",
+    "method": "updateRespondentCompetencySubjective",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/respondentcompetencysubjective"
+  },
+  {
+    "pojo": "RestRespondentCompetencySubjectiveController",
+    "method": "findByRespondentFsRelMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/respondentfsrelmapper/{rfrmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/respondentfsrelmapper/{rfrmId}",
+    "classPath": "/rest/respondentcompetencysubjective"
+  },
+  {
+    "pojo": "RestRespondentController",
+    "method": "insertRespondent",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/respondent"
+  },
+  {
+    "pojo": "RestRespondentController",
+    "method": "updateRespondent",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/respondent"
+  },
+  {
+    "pojo": "RestRespondentController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{resId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{resId}",
+    "classPath": "/rest/respondent"
+  },
+  {
+    "pojo": "RestRespondentController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/respondent"
+  },
+  {
+    "pojo": "RestRespondentFeedbackController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{rfId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{rfId}",
+    "classPath": "/rest/respondentfeedback"
+  },
+  {
+    "pojo": "RestRespondentFeedbackController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/respondentfeedback"
+  },
+  {
+    "pojo": "RestRespondentFeedbackController",
+    "method": "findByRespondentFsRelMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/respondentfsrelmapper/{rfrmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/respondentfsrelmapper/{rfrmId}",
+    "classPath": "/rest/respondentfeedback"
+  },
+  {
+    "pojo": "RestRespondentFeedbackController",
+    "method": "findByCompetencyStatementsMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/competencystatementsmapper/{csmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/competencystatementsmapper/{csmId}",
+    "classPath": "/rest/respondentfeedback"
+  },
+  {
+    "pojo": "RestRespondentFeedbackController",
+    "method": "updateRespondentFeedback",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/respondentfeedback"
+  },
+  {
+    "pojo": "RestRespondentFeedbackController",
+    "method": "insertRespondentFeedback",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/respondentfeedback"
+  },
+  {
+    "pojo": "RestRespondentFeedbackSubjectiveController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{rfsId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{rfsId}",
+    "classPath": "/rest/respondentfeedbacksubjective"
+  },
+  {
+    "pojo": "RestRespondentFeedbackSubjectiveController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/respondentfeedbacksubjective"
+  },
+  {
+    "pojo": "RestRespondentFeedbackSubjectiveController",
+    "method": "insertRespondentFeedbackSubjective",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/respondentfeedbacksubjective"
+  },
+  {
+    "pojo": "RestRespondentFeedbackSubjectiveController",
+    "method": "updateRespondentFeedbackSubjective",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/respondentfeedbacksubjective"
+  },
+  {
+    "pojo": "RestRespondentFeedbackSubjectiveController",
+    "method": "findByRespondentFsRelMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/respondentfsrelmapper/{rfrmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/respondentfsrelmapper/{rfrmId}",
+    "classPath": "/rest/respondentfeedbacksubjective"
+  },
+  {
+    "pojo": "RestRespondentFeedbackSubjectiveController",
+    "method": "findBySurveySubjectiveMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/surveysubjectivemapper/{ssubmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/surveysubjectivemapper/{ssubmId}",
+    "classPath": "/rest/respondentfeedbacksubjective"
+  },
+  {
+    "pojo": "RestRespondentFsRelMapperController",
+    "method": "findByProject",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/project/{projId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/project/{projId}",
+    "classPath": "/rest/respondentfsrelmapper"
+  },
+  {
+    "pojo": "RestRespondentFsRelMapperController",
+    "method": "findByRelation",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/relation/{relId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/relation/{relId}",
+    "classPath": "/rest/respondentfsrelmapper"
+  },
+  {
+    "pojo": "RestRespondentFsRelMapperController",
+    "method": "findByRespondent",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/respondent/{resId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/respondent/{resId}",
+    "classPath": "/rest/respondentfsrelmapper"
+  },
+  {
+    "pojo": "RestRespondentFsRelMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{rfrmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{rfrmId}",
+    "classPath": "/rest/respondentfsrelmapper"
+  },
+  {
+    "pojo": "RestRespondentFsRelMapperController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/respondentfsrelmapper"
+  },
+  {
+    "pojo": "RestRespondentFsRelMapperController",
+    "method": "insertRespondentFsRelMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/respondentfsrelmapper"
+  },
+  {
+    "pojo": "RestRespondentFsRelMapperController",
+    "method": "updateRespondentFsRelMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/respondentfsrelmapper"
+  },
+  {
+    "pojo": "RestScaleGroupController",
+    "method": "insertScaleGroup",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/scalegroup"
+  },
+  {
+    "pojo": "RestScaleGroupController",
+    "method": "updateScaleGroup",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/scalegroup"
+  },
+  {
+    "pojo": "RestScaleGroupController",
+    "method": "findByAdminView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/adminview/{adminId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/adminview/{adminId}",
+    "classPath": "/rest/scalegroup"
+  },
+  {
+    "pojo": "RestScaleGroupController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{scaleGrpId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{scaleGrpId}",
+    "classPath": "/rest/scalegroup"
+  },
+  {
+    "pojo": "RestScaleGroupController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/scalegroup"
+  },
+  {
+    "pojo": "RestScaleGroupController",
+    "method": "findByProductClientInfoView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/productclientinfoview/{clientId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/productclientinfoview/{clientId}",
+    "classPath": "/rest/scalegroup"
+  },
+  {
+    "pojo": "RestScaleRateController",
+    "method": "insertScaleRate",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/scalerate"
+  },
+  {
+    "pojo": "RestScaleRateController",
+    "method": "findByScaleGroup",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/scalegroup/{scaleGrpId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/scalegroup/{scaleGrpId}",
+    "classPath": "/rest/scalerate"
+  },
+  {
+    "pojo": "RestScaleRateController",
+    "method": "updateScaleRate",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/scalerate"
+  },
+  {
+    "pojo": "RestScaleRateController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{scaleValueId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{scaleValueId}",
+    "classPath": "/rest/scalerate"
+  },
+  {
+    "pojo": "RestScaleRateController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/scalerate"
+  },
+  {
+    "pojo": "RestScaleScorePakageController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{sspId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{sspId}",
+    "classPath": "/rest/scalescorepakage"
+  },
+  {
+    "pojo": "RestScaleScorePakageController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/scalescorepakage"
+  },
+  {
+    "pojo": "RestScaleScorePakageController",
+    "method": "insertScaleScorePakage",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/scalescorepakage"
+  },
+  {
+    "pojo": "RestScaleScorePakageController",
+    "method": "updateScaleScorePakage",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/scalescorepakage"
+  },
+  {
+    "pojo": "RestScaleScorePakageDetailController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{sspdId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{sspdId}",
+    "classPath": "/rest/scalescorepakagedetail"
+  },
+  {
+    "pojo": "RestScaleScorePakageDetailController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/scalescorepakagedetail"
+  },
+  {
+    "pojo": "RestScaleScorePakageDetailController",
+    "method": "insertScaleScorePakageDetail",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/scalescorepakagedetail"
+  },
+  {
+    "pojo": "RestScaleScorePakageDetailController",
+    "method": "findByScaleScorePakage",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/scalescorepakage/{sspId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/scalescorepakage/{sspId}",
+    "classPath": "/rest/scalescorepakagedetail"
+  },
+  {
+    "pojo": "RestScaleScorePakageDetailController",
+    "method": "updateScaleScorePakageDetail",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/scalescorepakagedetail"
+  },
+  {
+    "pojo": "RestStatementController",
+    "method": "insertStatement",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/statement"
+  },
+  {
+    "pojo": "RestStatementController",
+    "method": "updateStatement",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/statement"
+  },
+  {
+    "pojo": "RestStatementController",
+    "method": "findByAdminView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/adminview/{adminId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/adminview/{adminId}",
+    "classPath": "/rest/statement"
+  },
+  {
+    "pojo": "RestStatementController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{stmtId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{stmtId}",
+    "classPath": "/rest/statement"
+  },
+  {
+    "pojo": "RestStatementController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/statement"
+  },
+  {
+    "pojo": "RestStatementController",
+    "method": "findByProductClientInfoView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/productclientinfoview/{clientId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/productclientinfoview/{clientId}",
+    "classPath": "/rest/statement"
+  },
+  {
+    "pojo": "RestSurveyCompetencyMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{scmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{scmId}",
+    "classPath": "/rest/surveycompetencymapper"
+  },
+  {
+    "pojo": "RestSurveyCompetencyMapperController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/surveycompetencymapper"
+  },
+  {
+    "pojo": "RestSurveyCompetencyMapperController",
+    "method": "findByCompetency",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/competency/{competencyId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/competency/{competencyId}",
+    "classPath": "/rest/surveycompetencymapper"
+  },
+  {
+    "pojo": "RestSurveyCompetencyMapperController",
+    "method": "findBySurveyTemplate",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/surveytemplate/{stId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/surveytemplate/{stId}",
+    "classPath": "/rest/surveycompetencymapper"
+  },
+  {
+    "pojo": "RestSurveyCompetencyMapperController",
+    "method": "insertSurveyCompetencyMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/surveycompetencymapper"
+  },
+  {
+    "pojo": "RestSurveyCompetencyMapperController",
+    "method": "updateSurveyCompetencyMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/surveycompetencymapper"
+  },
+  {
+    "pojo": "RestSurveyScaleMapperController",
+    "method": "findByScaleGroup",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/scalegroup/{scaleGrpId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/scalegroup/{scaleGrpId}",
+    "classPath": "/rest/surveyscalemapper"
+  },
+  {
+    "pojo": "RestSurveyScaleMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{ssmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{ssmId}",
+    "classPath": "/rest/surveyscalemapper"
+  },
+  {
+    "pojo": "RestSurveyScaleMapperController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/surveyscalemapper"
+  },
+  {
+    "pojo": "RestSurveyScaleMapperController",
+    "method": "findBySurveyTemplate",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/surveytemplate/{stId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/surveytemplate/{stId}",
+    "classPath": "/rest/surveyscalemapper"
+  },
+  {
+    "pojo": "RestSurveyScaleMapperController",
+    "method": "insertSurveyScaleMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/surveyscalemapper"
+  },
+  {
+    "pojo": "RestSurveyScaleMapperController",
+    "method": "updateSurveyScaleMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/surveyscalemapper"
+  },
+  {
+    "pojo": "RestSurveySubjectiveMapperController",
+    "method": "findByStatement",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/statement/{stmtId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/statement/{stmtId}",
+    "classPath": "/rest/surveysubjectivemapper"
+  },
+  {
+    "pojo": "RestSurveySubjectiveMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{ssubmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{ssubmId}",
+    "classPath": "/rest/surveysubjectivemapper"
+  },
+  {
+    "pojo": "RestSurveySubjectiveMapperController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/surveysubjectivemapper"
+  },
+  {
+    "pojo": "RestSurveySubjectiveMapperController",
+    "method": "findBySurveyTemplate",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/surveytemplate/{stId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/surveytemplate/{stId}",
+    "classPath": "/rest/surveysubjectivemapper"
+  },
+  {
+    "pojo": "RestSurveySubjectiveMapperController",
+    "method": "insertSurveySubjectiveMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/surveysubjectivemapper"
+  },
+  {
+    "pojo": "RestSurveySubjectiveMapperController",
+    "method": "updateSurveySubjectiveMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/surveysubjectivemapper"
+  },
+  {
+    "pojo": "RestSurveyTemplateController",
+    "method": "findByAdminView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/adminview/{adminId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/adminview/{adminId}",
+    "classPath": "/rest/surveytemplate"
+  },
+  {
+    "pojo": "RestSurveyTemplateController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{stId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{stId}",
+    "classPath": "/rest/surveytemplate"
+  },
+  {
+    "pojo": "RestSurveyTemplateController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/surveytemplate"
+  },
+  {
+    "pojo": "RestSurveyTemplateController",
+    "method": "findByProductClientInfoView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/productclientinfoview/{clientId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/productclientinfoview/{clientId}",
+    "classPath": "/rest/surveytemplate"
+  },
+  {
+    "pojo": "RestSurveyTemplateController",
+    "method": "insertSurveyTemplate",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/surveytemplate"
+  },
+  {
+    "pojo": "RestSurveyTemplateController",
+    "method": "updateSurveyTemplate",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/surveytemplate"
+  },
+  {
+    "pojo": "RestUserClientMapperViewController",
+    "method": "findByUserInfo",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/userinfo/{userId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/userinfo/{userId}",
+    "classPath": "/rest/userclientmapperview"
+  },
+  {
+    "pojo": "RestUserClientMapperViewController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{ucmId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{ucmId}",
+    "classPath": "/rest/userclientmapperview"
+  },
+  {
+    "pojo": "RestUserClientMapperViewController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/userclientmapperview"
+  },
+  {
+    "pojo": "RestUserClientMapperViewController",
+    "method": "findByProductClientInfoView",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/productclientinfoview/{clientId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/productclientinfoview/{clientId}",
+    "classPath": "/rest/userclientmapperview"
+  },
+  {
+    "pojo": "RestUserClientMapperViewController",
+    "method": "updateUserClientMapperView",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/userclientmapperview"
+  },
+  {
+    "pojo": "RestUserClientMapperViewController",
+    "method": "insertUserClientMapperView",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/userclientmapperview"
+  },
+  {
+    "pojo": "RestUserInfoController",
+    "method": "updateUserInfo",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/update], headers=[], name=, produces=[application/json;charset=UTF-8], params=[], value=[], consumes=[])",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/userinfo"
+  },
+  {
+    "pojo": "RestUserInfoController",
+    "method": "insertUserInfo",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path=[/insert], headers=[], name=, produces=[], params=[], value=[], consumes=[application/json;charset=UTF-8])",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/userinfo"
+  },
+  {
+    "pojo": "RestUserInfoController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/id/{userId}], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{userId}",
+    "classPath": "/rest/userinfo"
+  },
+  {
+    "pojo": "RestUserInfoController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(name=, produces=[], path=[/all], headers=[], params=[], value=[])",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/userinfo"
+  }
+]
