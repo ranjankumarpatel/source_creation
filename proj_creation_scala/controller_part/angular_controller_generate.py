@@ -3,7 +3,7 @@ from string import Template
 
 import pandas as pd
 
-with open("D:/git/source_creation/proj_creation_scala/project_jsons/next360.json", "r") as file:
+with open("D:/git/source_creation/proj_creation_scala/project_jsons/roleplay2.json", "r") as file:
     text = file.read()
 
 json_data = json.loads(text)
@@ -44,6 +44,6 @@ for tup in df.itertuples():
     print(out_text)
 
     with open(
-            "D:/aws_git/next360/360_author_node/public/angular/controller/admin/{0}-controller.js".format(
+            "D:/aws_git/roleplay_v2/roleplayv2-author-node-angular/public/angular/controller/{0}-controller.js".format(
                 tup.pojo.lower()), "w") as out_file:
         out_file.write(out_text)

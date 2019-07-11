@@ -1,0 +1,56 @@
+[
+  {
+    "pojo": "Admin",
+    "fields": "emailId;genDate;adminId;adminId_ENCRYPTED;status",
+    "genCol": "adminId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Client",
+    "fields": "emailId;name;clientId;genDate;clientId_ENCRYPTED;status;password",
+    "genCol": "clientId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Project",
+    "fields": "projectName;genDate;projectId;projectInstruction;status;projectId_ENCRYPTED",
+    "genCol": "projectId",
+    "manyToOne": "template,client"
+  },
+  {
+    "pojo": "ProjectUserMapper",
+    "fields": "genDate;pumId_ENCRYPTED;status;pumId",
+    "genCol": "pumId",
+    "manyToOne": "userInfo,project"
+  },
+  {
+    "pojo": "RoleplayResponse",
+    "fields": "genDate;roleplayResponseId_ENCRYPTED;roleplayResponseText;status;roleplayResponseId",
+    "genCol": "roleplayResponseId",
+    "manyToOne": "projectUserMapper"
+  },
+  {
+    "pojo": "Template",
+    "fields": "templateContent;genDate;templateName;templateId;status;templateId_ENCRYPTED",
+    "genCol": "templateId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Timer",
+    "fields": "roleplayTime;genDate;instructionTime;status;timerId;timerId_ENCRYPTED",
+    "genCol": "timerId",
+    "manyToOne": "template"
+  },
+  {
+    "pojo": "TimerBackup",
+    "fields": "genDate;instructionTime;timerBackupId;status;timerBackupId_ENCRYPTED;rolePlayTime",
+    "genCol": "timerBackupId",
+    "manyToOne": "projectUserMapper"
+  },
+  {
+    "pojo": "UserInfo",
+    "fields": "name;email;username;userId_ENCRYPTED;genDate;status;userId;password",
+    "genCol": "userId",
+    "manyToOne": ""
+  }
+]

@@ -3,12 +3,12 @@ from string import Template
 
 import pandas as pd
 
-base_package = "com.ttn.next360"
+base_package = "com.ttn.roleplay"
 
-df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/next360.json", orient="records")
+df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/roleplay2.json", orient="records")
 print(df)
 
-target_path = "D:/aws_git/next360/next360-author-service/src/main/java/com/ttn/next360"
+target_path = "D:/aws_git/roleplay_v2/roleplayv2-service/src/main/java/com/ttn/roleplay"
 
 
 def camel_case(str):
@@ -87,7 +87,7 @@ for tup in df.itertuples():
 
         get_set_arr = []
         for field in [x for x in tup.fields.split(";") if
-                      (x not in [tup.genCol, "genDate"] and ("_ENCRYPTED" not in x))]:
+                      (x not in [tup.genCol, "genDate", "status"] and ("_ENCRYPTED" not in x))]:
             col_camel = camel_case(field)
             get_set_arr.append(
                 """update{pojo}.set{col_camel}({pojo_camel}.get{col_camel})""".format(pojo=tup.pojo,
