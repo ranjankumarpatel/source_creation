@@ -11,7 +11,7 @@ import scala.collection.JavaConversions._
 
 object GenerateFactory extends App {
   val arr = Array[String]("scala")
-  val pojoNames = FileUtils.listFiles(new File("D:/aws_git/assess2/assess2-service/src/main/java/com/ttn/assess2/controller"), arr, true).map(_.getName.replaceFirst(".scala", ""))
+  val pojoNames = FileUtils.listFiles(new File("/home/biswajyoti/gitlab/ttpi2/PersonalityInventory/src/main/java/com/ttn/ttpi2/controller/rest"), arr, true).map(_.getName.replaceFirst(".scala", ""))
 
   println(pojoNames)
 
@@ -19,7 +19,7 @@ object GenerateFactory extends App {
 
   val annotatedMethods = pojoNames.flatMap(pojo => {
 
-    val classGen = Class.forName(s"com.ttn.assess2.controller.$pojo")
+    val classGen = Class.forName(s"com.ttn.ttpi2.controller.$pojo")
     println(classGen)
 
     val classPath = classGen.getDeclaredAnnotation(classOf[RequestMapping]).path().mkString(",")
