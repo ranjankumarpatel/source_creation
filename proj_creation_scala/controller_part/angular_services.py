@@ -2,7 +2,7 @@ import json
 
 import pandas as pd
 
-with open("D:/git/source_creation/proj_creation_scala/project_jsons/assess2-controller.json", "r") as file:
+with open("D:/git/source_creation/proj_creation_scala/project_jsons/idp-controller.json", "r") as file:
     text = file.read()
 
 json_data = json.loads(text)
@@ -43,6 +43,6 @@ app_script = """<script type="text/javascript" src="/angular/app?services={servi
 script_text = service_text + "\n" + app_script
 print(script_text)
 
-with open("D:/aws_git/assess2/asses2-node-angular/views/scripts/angular-services.ejs",
+with open("D:/gitlab/idp/idp-node-angular/views/scripts/angular-services.ejs",
           "w") as script_file:
     script_file.write(script_text)

@@ -3,12 +3,12 @@ from string import Template
 
 import pandas as pd
 
-base_package = "com.ttn.roleplay"
+base_package = "com.ttn.idp"
 
-df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/roleplay2.json", orient="records")
+df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/idp.json", orient="records")
 print(df)
 
-target_path = "D:/aws_git/roleplay_v2/roleplayv2-service/src/main/java/com/ttn/roleplay"
+target_path = "D:/gitlab/idp/idp-service/src/main/java/com/ttn/idp"
 
 
 def camel_case(str):
@@ -41,6 +41,7 @@ for dir in dirs:
     for f in filelist:
         os.remove(os.path.join(dir, f))
 
+# raise Exception()
 for tup in df.itertuples():
     pojo_camel = tup.pojo[0].lower() + tup.pojo[1:]
     pojo_lower = tup.pojo.lower()
