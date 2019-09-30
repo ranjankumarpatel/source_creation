@@ -96,10 +96,10 @@ class $pojo View extends React.Component {
                     </tr>
                   </thead>
                   <tbody>
-                    {$pojo_lower s.map(activity => (
+                    {$pojo_lower s.map($pojo_lower => (
                       <tr key={$pojo_lower.{{id_fields}}}>
                       {% for field in fields %}
-                        <th scope="row">{activity.{{field}}}</th>
+                        <th scope="row">{$pojo_lower.{{field}}}</th>
                          {% endfor %}
 
                       </tr>
