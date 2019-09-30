@@ -3,7 +3,7 @@ var {{pojo}}Controller = {
 
 {% for tup in df.itertuples() %}
   {{tup.method}}: function({{tup.param}}) {
-    return fetch("http://localhost:8090{{tup.request_path}}", {
+    return fetch(`http://localhost:8090{{tup.request_path}}`, {
       method: "{{tup.type}}",
       headers: new Headers({
         Authorization: "Bearer fake-jwt-token"

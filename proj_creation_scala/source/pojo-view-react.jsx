@@ -25,8 +25,6 @@ class $pojo View extends React.Component {
 
   componentDidMount() {
     $pojo Controller.findAll()
-      // fetch("http://localhost:8090/rest/activity/all")
-      //   .then(res => res.json())
       .then(
         result => {
           this.setState({
