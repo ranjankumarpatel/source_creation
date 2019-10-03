@@ -28,20 +28,23 @@ def replace_string(path, tup, code):
         # print(text)
         pojo_camel = tup.pojo[0].lower() + tup.pojo[1:]
         pojo_lower = tup.pojo.lower()
-        out_text = Template(text).substitute(pojo=tup.pojo,
+
+        fields = [x for x in tup.fields.split(";") if "_" not in x]
+        id_fields = [x for x in tup.fields.split(";") if "_" in x][0].replace("_ENCRYPTED", "")
+        print(fields, id_fields)
+
+        out_text = Template(text).safe_substitute(pojo=tup.pojo,
                                              pojo_camel=pojo_camel,
                                              pojo_lower=pojo_lower,
                                              genId=tup.genCol,
-                                             code=code) \
+                                             code=code,id_fields=id_fields) \
             .replace("{} ".format(tup.pojo), tup.pojo) \
             .replace("{} ".format(pojo_lower), pojo_lower) \
             .replace("{} ".format(pojo_camel), pojo_camel) \
             .replace("_scope", "$scope") \
             .replace("_(", "$(")
 
-        fields = [x for x in tup.fields.split(";") if "_" not in x]
-        id_fields = [x for x in tup.fields.split(";") if "_" in x][0].replace("_ENCRYPTED", "")
-        print(fields, id_fields)
+
         out_text = JTemplate(out_text).render(fields=fields, id_fields=id_fields)
         return out_text
 
