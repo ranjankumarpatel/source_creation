@@ -1,0 +1,427 @@
+[
+  {
+    "blueprint": "userinfo.userinfo_profile_upload",
+    "path": "/rest/userinfo/upload/profile",
+    "type": "POST"
+  },
+  {
+    "blueprint": "userinfo.userinfo_email_validation",
+    "path": "/rest/userinfo/email/validation",
+    "type": "POST"
+  },
+  {
+    "blueprint": "user-demographic.user_demographic_insert",
+    "path": "/rest/user-demographic/insert",
+    "type": "POST"
+  },
+  {
+    "blueprint": "group_members.group_members_insert",
+    "path": "/rest/groupmembers/update-members",
+    "type": "POST"
+  },
+  {
+    "blueprint": "notification.notification_insert",
+    "path": "/rest/notification/insert",
+    "type": "POST"
+  },
+  {
+    "blueprint": "messagelike.insert_message_like",
+    "path": "/rest/messagelike/insertlike",
+    "type": "POST"
+  },
+  {
+    "blueprint": "group.detail_insert",
+    "path": "/rest/groupdetail/insert",
+    "type": "POST"
+  },
+  {
+    "blueprint": "messagelike.update_message_like",
+    "path": "/rest/messagelike/update",
+    "type": "POST"
+  },
+  {
+    "blueprint": "client_hr.validate_by_email",
+    "path": "/rest/client_hr/validate-email",
+    "type": "POST"
+  },
+  {
+    "blueprint": "dashboard.wipro_tracker_details",
+    "path": "/rest/dashboard/non-lms-point",
+    "type": "GET"
+  },
+  {
+    "blueprint": "oauth-app.app_login",
+    "path": "/rest/oauth-app/app-login",
+    "type": "GET,POST"
+  },
+  {
+    "blueprint": "dashboard.lms_wipro_tracker_details",
+    "path": "/rest/dashboard/lms-point",
+    "type": "GET"
+  },
+  {
+    "blueprint": "client_hr.username_password_auth",
+    "path": "/rest/client_hr/validate",
+    "type": "POST"
+  },
+  {
+    "blueprint": "userinfo.validata_user_email",
+    "path": "/rest/userinfo/validate-email",
+    "type": "POST"
+  },
+  {
+    "blueprint": "userinfo.username_password_auth",
+    "path": "/rest/userinfo/validate",
+    "type": "POST"
+  },
+  {
+    "blueprint": "message.upload_media",
+    "path": "/rest/message/upload",
+    "type": "POST"
+  },
+  {
+    "blueprint": "message.update_message",
+    "path": "/rest/message/update",
+    "type": "POST"
+  },
+  {
+    "blueprint": "comment.insert_comment",
+    "path": "/rest/comment/insert",
+    "type": "POST"
+  },
+  {
+    "blueprint": "comment.update_comment",
+    "path": "/rest/comment/update",
+    "type": "POST"
+  },
+  {
+    "blueprint": "task.view_task_list",
+    "path": "/rest/task/user",
+    "type": "GET"
+  },
+  {
+    "blueprint": "group.view_group_detail_list",
+    "path": "/rest/groupdetail/",
+    "type": "GET"
+  },
+  {
+    "blueprint": "group.view_group_detail_list",
+    "path": "/rest/groupdetail",
+    "type": "GET"
+  },
+  {
+    "blueprint": "messagelike.insert_message_like",
+    "path": "/rest/messagelike",
+    "type": "POST"
+  },
+  {
+    "blueprint": "client_hr.view_client_hr_list",
+    "path": "/rest/client_hr/",
+    "type": "GET"
+  },
+  {
+    "blueprint": "client_hr.view_client_hr_list",
+    "path": "/rest/client_hr",
+    "type": "GET"
+  },
+  {
+    "blueprint": "client_hr.client_hr_insert",
+    "path": "/rest/client_hr/",
+    "type": "POST"
+  },
+  {
+    "blueprint": "client_hr.client_hr_insert",
+    "path": "/rest/client_hr",
+    "type": "POST"
+  },
+  {
+    "blueprint": "userinfo.view_userinfo_list",
+    "path": "/rest/userinfo/",
+    "type": "GET"
+  },
+  {
+    "blueprint": "userinfo.view_userinfo_list",
+    "path": "/rest/userinfo",
+    "type": "GET"
+  },
+  {
+    "blueprint": "userinfo.userinfo_insert",
+    "path": "/rest/userinfo/",
+    "type": "POST"
+  },
+  {
+    "blueprint": "userinfo.userinfo_insert",
+    "path": "/rest/userinfo",
+    "type": "POST"
+  },
+  {
+    "blueprint": "message.find_messages",
+    "path": "/rest/message/",
+    "type": "GET"
+  },
+  {
+    "blueprint": "message.find_messages",
+    "path": "/rest/message",
+    "type": "GET"
+  },
+  {
+    "blueprint": "message.insert_message",
+    "path": "/rest/message/",
+    "type": "POST"
+  },
+  {
+    "blueprint": "message.insert_message",
+    "path": "/rest/message",
+    "type": "POST"
+  },
+  {
+    "blueprint": "logout",
+    "path": "/adfs/logout",
+    "type": "GET"
+  },
+  {
+    "blueprint": "client.view_client_list",
+    "path": "/rest/client/",
+    "type": "GET"
+  },
+  {
+    "blueprint": "client.view_client_list",
+    "path": "/rest/client",
+    "type": "GET"
+  },
+  {
+    "blueprint": "client.client_insert",
+    "path": "/rest/client/",
+    "type": "POST"
+  },
+  {
+    "blueprint": "client.client_insert",
+    "path": "/rest/client",
+    "type": "POST"
+  },
+  {
+    "blueprint": "docs.view_docs_list",
+    "path": "/rest/docs/",
+    "type": "GET"
+  },
+  {
+    "blueprint": "docs.view_docs_list",
+    "path": "/rest/docs",
+    "type": "GET"
+  },
+  {
+    "blueprint": "role.view_role_list",
+    "path": "/rest/role/",
+    "type": "GET"
+  },
+  {
+    "blueprint": "role.view_role_list",
+    "path": "/rest/role",
+    "type": "GET"
+  },
+  {
+    "blueprint": "role.role_insert",
+    "path": "/rest/role/",
+    "type": "POST"
+  },
+  {
+    "blueprint": "role.role_insert",
+    "path": "/rest/role",
+    "type": "POST"
+  },
+  {
+    "blueprint": "dump_environment",
+    "path": "/environment",
+    "type": "GET"
+  },
+  {
+    "blueprint": "check",
+    "path": "/healthcheck",
+    "type": "GET"
+  },
+  {
+    "blueprint": "site_map",
+    "path": "/site-map",
+    "type": "GET"
+  },
+  {
+    "blueprint": "home",
+    "path": "/",
+    "type": "GET"
+  },
+  {
+    "blueprint": "message.find_message_by_client_year_month",
+    "path": "/rest/message/client/<CLIENT_ID>/year-month",
+    "type": "GET"
+  },
+  {
+    "blueprint": "message.find_message_by_employee_year_month",
+    "path": "/rest/message/user/<UCM_ID>/year-month",
+    "type": "GET"
+  },
+  {
+    "blueprint": "comment_messagelike_count.count_messagelike",
+    "path": "/rest/comment_messagelike_count/user/<UCM_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "clientusermapper.get_userinfo_by_client",
+    "path": "/rest/clientusermapper/client/<CLIENT_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "notification.find_notification_emp_max_id",
+    "path": "/rest/notification/message/<UCM_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "control-list.group_detail_list_by_client",
+    "path": "/rest/control-list/client/<CLIENT_ID>/<ROLE_NAME>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "group.group_detail_list_by_client",
+    "path": "/rest/groupdetail/client/<CLIENT_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "messagelike.count_messagelike",
+    "path": "/rest/messagelike/count/<UCM_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "group.group_detail_list_by_employee",
+    "path": "/rest/groupdetail/user/<UCM_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "messagelike.find_like_by_employee",
+    "path": "/rest/messagelike/user/<UCM_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "userinfo.get_userinfo_photo",
+    "path": "/rest/userinfo/photo/<USER_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "userinfo.get_userinfo",
+    "path": "/rest/userinfo/id/<USER_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "message.find_message_by_client",
+    "path": "/rest/message/client/<CLIENT_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "message.message_remove",
+    "path": "/rest/message/remove/<MES_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "message.delete_message",
+    "path": "/rest/message/delete/<MES_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "comment.delete_comment",
+    "path": "/rest/comment/delete/<COMMENT_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "message.find_message_by_group",
+    "path": "/rest/message/group/<GROUP_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "message.find_message_by_employee",
+    "path": "/rest/message/user/<UCM_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "comment.find_comment_by_employee",
+    "path": "/rest/comment/user/<UCM_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "client.get_client_photo",
+    "path": "/rest/client/photo/<CLIENT_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "docs.docs_remove",
+    "path": "/rest/docs/remove/<DOCS_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "docs.docs_url_by_id",
+    "path": "/rest/docs/url/<DOCS_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "clientusermapper.get_client_user_mapper",
+    "path": "/rest/clientusermapper/<UCM_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "group.get_group_detail",
+    "pathō": "/rest/groupdetail/<GROUP_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "messagelike.find_comment_by_id",
+    "path": "/rest/messagelike/<LIKE_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "adfs.authorized_by_server",
+    "path": "/adfs/authorized/<client_id>/<ADFS_INTEGRATION_NAME>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "adfs.authorized",
+    "path": "/adfs/authorized/<client_id>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "client_hr.get_client",
+    "path": "/rest/client_hr/<HR_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "message.find_message_by_id",
+    "path": "/rest/message/<MES_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "comment.find_comment_by_id",
+    "path": "/rest/comment/<COMMENT_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "client.get_client",
+    "path": "/rest/client/<CLIENT_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "adfs.adfs_login",
+    "path": "/adfs/login/<client_id>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "docs.docs_by_id",
+    "path": "/rest/docs/<DOCS_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "role.get_role",
+    "path": "/rest/role/<ROLE_ID>",
+    "type": "GET"
+  },
+  {
+    "blueprint": "static",
+    "path": "/static/<path:filename>",
+    "type": "GET"
+  }
+]
