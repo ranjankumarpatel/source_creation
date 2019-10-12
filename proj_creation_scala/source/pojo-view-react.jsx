@@ -73,7 +73,7 @@ class $pojo View extends React.Component {
 });
           this.setState({
             isLoaded: true,
-            admins: result
+            $pojo_lower s: result
           });
 
         },
