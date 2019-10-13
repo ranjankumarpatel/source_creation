@@ -302,211 +302,205 @@
   {
     "blueprint": "message",
     "method": "find_message_by_client_year_month",
-    "path": "/rest/message/client/<CLIENT_ID>/year-month",
+    "path": "/rest/message/client/{CLIENT_ID}/year-month",
     "type": "GET"
   },
   {
     "blueprint": "message",
     "method": "find_message_by_employee_year_month",
-    "path": "/rest/message/user/<UCM_ID>/year-month",
+    "path": "/rest/message/user/{UCM_ID}/year-month",
     "type": "GET"
   },
   {
     "blueprint": "comment_messagelike_count",
     "method": "count_messagelike",
-    "path": "/rest/comment_messagelike_count/user/<UCM_ID>",
+    "path": "/rest/comment_messagelike_count/user/{UCM_ID}",
     "type": "GET"
   },
   {
     "blueprint": "clientusermapper",
     "method": "get_userinfo_by_client",
-    "path": "/rest/clientusermapper/client/<CLIENT_ID>",
+    "path": "/rest/clientusermapper/client/{CLIENT_ID}",
     "type": "GET"
   },
   {
     "blueprint": "notification",
     "method": "find_notification_emp_max_id",
-    "path": "/rest/notification/message/<UCM_ID>",
+    "path": "/rest/notification/message/{UCM_ID}",
     "type": "GET"
   },
   {
     "blueprint": "control-list",
     "method": "group_detail_list_by_client",
-    "path": "/rest/control-list/client/<CLIENT_ID>/<ROLE_NAME>",
+    "path": "/rest/control-list/client/{CLIENT_ID}/{ROLE_NAME}",
     "type": "GET"
   },
   {
     "blueprint": "group",
     "method": "group_detail_list_by_client",
-    "path": "/rest/groupdetail/client/<CLIENT_ID>",
+    "path": "/rest/groupdetail/client/{CLIENT_ID}",
     "type": "GET"
   },
   {
     "blueprint": "messagelike",
     "method": "count_messagelike",
-    "path": "/rest/messagelike/count/<UCM_ID>",
+    "path": "/rest/messagelike/count/{UCM_ID}",
     "type": "GET"
   },
   {
     "blueprint": "group",
     "method": "group_detail_list_by_employee",
-    "path": "/rest/groupdetail/user/<UCM_ID>",
+    "path": "/rest/groupdetail/user/{UCM_ID}",
     "type": "GET"
   },
   {
     "blueprint": "messagelike",
     "method": "find_like_by_employee",
-    "path": "/rest/messagelike/user/<UCM_ID>",
+    "path": "/rest/messagelike/user/{UCM_ID}",
     "type": "GET"
   },
   {
     "blueprint": "userinfo",
     "method": "get_userinfo_photo",
-    "path": "/rest/userinfo/photo/<USER_ID>",
+    "path": "/rest/userinfo/photo/{USER_ID}",
     "type": "GET"
   },
   {
     "blueprint": "userinfo",
     "method": "get_userinfo",
-    "path": "/rest/userinfo/id/<USER_ID>",
+    "path": "/rest/userinfo/id/{USER_ID}",
     "type": "GET"
   },
   {
     "blueprint": "message",
     "method": "find_message_by_client",
-    "path": "/rest/message/client/<CLIENT_ID>",
+    "path": "/rest/message/client/{CLIENT_ID}",
     "type": "GET"
   },
   {
     "blueprint": "message",
     "method": "message_remove",
-    "path": "/rest/message/remove/<MES_ID>",
+    "path": "/rest/message/remove/{MES_ID}",
     "type": "GET"
   },
   {
     "blueprint": "message",
     "method": "delete_message",
-    "path": "/rest/message/delete/<MES_ID>",
+    "path": "/rest/message/delete/{MES_ID}",
     "type": "GET"
   },
   {
     "blueprint": "comment",
     "method": "delete_comment",
-    "path": "/rest/comment/delete/<COMMENT_ID>",
+    "path": "/rest/comment/delete/{COMMENT_ID}",
     "type": "GET"
   },
   {
     "blueprint": "message",
     "method": "find_message_by_group",
-    "path": "/rest/message/group/<GROUP_ID>",
+    "path": "/rest/message/group/{GROUP_ID}",
     "type": "GET"
   },
   {
     "blueprint": "message",
     "method": "find_message_by_employee",
-    "path": "/rest/message/user/<UCM_ID>",
+    "path": "/rest/message/user/{UCM_ID}",
     "type": "GET"
   },
   {
     "blueprint": "comment",
     "method": "find_comment_by_employee",
-    "path": "/rest/comment/user/<UCM_ID>",
+    "path": "/rest/comment/user/{UCM_ID}",
     "type": "GET"
   },
   {
     "blueprint": "client",
     "method": "get_client_photo",
-    "path": "/rest/client/photo/<CLIENT_ID>",
+    "path": "/rest/client/photo/{CLIENT_ID}",
     "type": "GET"
   },
   {
     "blueprint": "docs",
     "method": "docs_remove",
-    "path": "/rest/docs/remove/<DOCS_ID>",
+    "path": "/rest/docs/remove/{DOCS_ID}",
     "type": "GET"
   },
   {
     "blueprint": "docs",
     "method": "docs_url_by_id",
-    "path": "/rest/docs/url/<DOCS_ID>",
+    "path": "/rest/docs/url/{DOCS_ID}",
     "type": "GET"
   },
   {
     "blueprint": "clientusermapper",
     "method": "get_client_user_mapper",
-    "path": "/rest/clientusermapper/<UCM_ID>",
+    "path": "/rest/clientusermapper/{UCM_ID}",
     "type": "GET"
   },
   {
     "blueprint": "group",
     "method": "get_group_detail",
-    "path": "/rest/groupdetail/<GROUP_ID>",
+    "path": "/rest/groupdetail/{GROUP_ID}",
     "type": "GET"
   },
   {
     "blueprint": "messagelike",
     "method": "find_comment_by_id",
-    "path": "/rest/messagelike/<LIKE_ID>",
+    "path": "/rest/messagelike/{LIKE_ID}",
     "type": "GET"
   },
   {
     "blueprint": "adfs",
     "method": "authorized_by_server",
-    "path": "/adfs/authorized/<client_id>/<ADFS_INTEGRATION_NAME>",
+    "path": "/adfs/authorized/{client_id}/{ADFS_INTEGRATION_NAME}",
     "type": "GET"
   },
   {
     "blueprint": "adfs",
     "method": "authorized",
-    "path": "/adfs/authorized/<client_id>",
+    "path": "/adfs/authorized/{client_id}",
     "type": "GET"
   },
   {
     "blueprint": "client_hr",
     "method": "get_client",
-    "path": "/rest/client_hr/<HR_ID>",
+    "path": "/rest/client_hr/{HR_ID}",
     "type": "GET"
   },
   {
     "blueprint": "message",
     "method": "find_message_by_id",
-    "path": "/rest/message/<MES_ID>",
+    "path": "/rest/message/{MES_ID}",
     "type": "GET"
   },
   {
     "blueprint": "comment",
     "method": "find_comment_by_id",
-    "path": "/rest/comment/<COMMENT_ID>",
+    "path": "/rest/comment/{COMMENT_ID}",
     "type": "GET"
   },
   {
     "blueprint": "client",
     "method": "get_client",
-    "path": "/rest/client/<CLIENT_ID>",
+    "path": "/rest/client/{CLIENT_ID}",
     "type": "GET"
   },
   {
     "blueprint": "adfs",
     "method": "adfs_login",
-    "path": "/adfs/login/<client_id>",
+    "path": "/adfs/login/{client_id}",
     "type": "GET"
   },
   {
     "blueprint": "docs",
     "method": "docs_by_id",
-    "path": "/rest/docs/<DOCS_ID>",
+    "path": "/rest/docs/{DOCS_ID}",
     "type": "GET"
   },
   {
     "blueprint": "role",
     "method": "get_role",
-    "path": "/rest/role/<ROLE_ID>",
-    "type": "GET"
-  },
-  {
-    "blueprint": "static",
-    "method": "static",
-    "path": "/static/<path:filename>",
+    "path": "/rest/role/{ROLE_ID}",
     "type": "GET"
   }
 ]
