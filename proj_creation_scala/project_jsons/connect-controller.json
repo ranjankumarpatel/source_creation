@@ -63,7 +63,7 @@
     "blueprint": "oauth-app",
     "method": "app_login",
     "path": "/rest/oauth-app/app-login",
-    "type": "POST,GET"
+    "type": "GET,POST"
   },
   {
     "blueprint": "dashboard",
@@ -122,38 +122,14 @@
   {
     "blueprint": "group",
     "method": "view_group_detail_list",
-    "path": "/rest/groupdetail/",
-    "type": "GET"
-  },
-  {
-    "blueprint": "group",
-    "method": "view_group_detail_list",
     "path": "/rest/groupdetail",
     "type": "GET"
   },
   {
-    "blueprint": "messagelike",
-    "method": "insert_message_like",
-    "path": "/rest/messagelike",
-    "type": "POST"
-  },
-  {
-    "blueprint": "client_hr",
-    "method": "view_client_hr_list",
-    "path": "/rest/client_hr/",
-    "type": "GET"
-  },
-  {
     "blueprint": "client_hr",
     "method": "view_client_hr_list",
     "path": "/rest/client_hr",
     "type": "GET"
-  },
-  {
-    "blueprint": "client_hr",
-    "method": "client_hr_insert",
-    "path": "/rest/client_hr/",
-    "type": "POST"
   },
   {
     "blueprint": "client_hr",
@@ -164,44 +140,20 @@
   {
     "blueprint": "userinfo",
     "method": "view_userinfo_list",
-    "path": "/rest/userinfo/",
-    "type": "GET"
-  },
-  {
-    "blueprint": "userinfo",
-    "method": "view_userinfo_list",
     "path": "/rest/userinfo",
     "type": "GET"
   },
   {
     "blueprint": "userinfo",
     "method": "userinfo_insert",
-    "path": "/rest/userinfo/",
-    "type": "POST"
-  },
-  {
-    "blueprint": "userinfo",
-    "method": "userinfo_insert",
     "path": "/rest/userinfo",
     "type": "POST"
-  },
-  {
-    "blueprint": "message",
-    "method": "find_messages",
-    "path": "/rest/message/",
-    "type": "GET"
   },
   {
     "blueprint": "message",
     "method": "find_messages",
     "path": "/rest/message",
     "type": "GET"
-  },
-  {
-    "blueprint": "message",
-    "method": "insert_message",
-    "path": "/rest/message/",
-    "type": "POST"
   },
   {
     "blueprint": "message",
@@ -218,32 +170,14 @@
   {
     "blueprint": "client",
     "method": "view_client_list",
-    "path": "/rest/client/",
-    "type": "GET"
-  },
-  {
-    "blueprint": "client",
-    "method": "view_client_list",
     "path": "/rest/client",
     "type": "GET"
   },
   {
     "blueprint": "client",
     "method": "client_insert",
-    "path": "/rest/client/",
-    "type": "POST"
-  },
-  {
-    "blueprint": "client",
-    "method": "client_insert",
     "path": "/rest/client",
     "type": "POST"
-  },
-  {
-    "blueprint": "docs",
-    "method": "view_docs_list",
-    "path": "/rest/docs/",
-    "type": "GET"
   },
   {
     "blueprint": "docs",
@@ -254,20 +188,8 @@
   {
     "blueprint": "role",
     "method": "view_role_list",
-    "path": "/rest/role/",
-    "type": "GET"
-  },
-  {
-    "blueprint": "role",
-    "method": "view_role_list",
     "path": "/rest/role",
     "type": "GET"
-  },
-  {
-    "blueprint": "role",
-    "method": "role_insert",
-    "path": "/rest/role/",
-    "type": "POST"
   },
   {
     "blueprint": "role",
@@ -296,7 +218,7 @@
   {
     "blueprint": "home",
     "method": "home",
-    "path": "/",
+    "path": "",
     "type": "GET"
   },
   {
@@ -501,6 +423,12 @@
     "blueprint": "role",
     "method": "get_role",
     "path": "/rest/role/{ROLE_ID}",
+    "type": "GET"
+  },
+  {
+    "blueprint": "static",
+    "method": "static",
+    "path": "/static/{path:filename}",
     "type": "GET"
   }
 ]
