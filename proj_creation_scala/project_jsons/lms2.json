@@ -1,0 +1,152 @@
+[
+  {
+    "pojo": "Admin",
+    "fields": "name;email;genDate;adminId;status",
+    "genCol": "adminId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Assignment",
+    "fields": "gradeAssignmentStatus;genDate;status;assignmentId",
+    "genCol": "assignmentId",
+    "manyToOne": "admin,client"
+  },
+  {
+    "pojo": "Chapter",
+    "fields": "ratingValue;chapterOrder;chapterName;chapterId;genDate;chapterDesc;status;mediaName",
+    "genCol": "chapterId",
+    "manyToOne": "instructor,mediaElement,client,section"
+  },
+  {
+    "pojo": "Client",
+    "fields": "clientId;genDate;clientEmail;status;clientName",
+    "genCol": "clientId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "ClientCourseMapper",
+    "fields": "genDate;status;ccomId",
+    "genCol": "ccomId",
+    "manyToOne": "client,course"
+  },
+  {
+    "pojo": "ClientGroup",
+    "fields": "genDate;groupId;groupName;status;groupDesc",
+    "genCol": "groupId",
+    "manyToOne": "client"
+  },
+  {
+    "pojo": "ClientInstructorMapper",
+    "fields": "genDate;status;cimId",
+    "genCol": "cimId",
+    "manyToOne": "instructor,client"
+  },
+  {
+    "pojo": "ClientUserMapper",
+    "fields": "cumId;genDate;status",
+    "genCol": "cumId",
+    "manyToOne": "userInfo,client"
+  },
+  {
+    "pojo": "Course",
+    "fields": "ratingValue;accessType;courseId;genDate;status;courseName;courseDesc",
+    "genCol": "courseId",
+    "manyToOne": "instructor,admin,client"
+  },
+  {
+    "pojo": "CourseCumMapper",
+    "fields": "genDate;pointValue;completionStatus;completionDate;status;cocummId",
+    "genCol": "cocummId",
+    "manyToOne": "clientUserMapper,course"
+  },
+  {
+    "pojo": "CourseElement",
+    "fields": "elementType;coeId",
+    "genCol": "coeId",
+    "manyToOne": "assignment,chapter,quiz,course"
+  },
+  {
+    "pojo": "GroupCourseMapper",
+    "fields": "gcomId;genDate;status",
+    "genCol": "gcomId",
+    "manyToOne": "clientGroup,course"
+  },
+  {
+    "pojo": "GroupCumMapper",
+    "fields": "genDate;gcummId;status",
+    "genCol": "gcummId",
+    "manyToOne": "clientUserMapper,clientGroup"
+  },
+  {
+    "pojo": "Instructor",
+    "fields": "biography;name;email;genDate;profilePicture;status;linkedinProfile;instructorId",
+    "genCol": "instructorId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "InstructorUserCourseElementResponse",
+    "fields": "gradePoint;genDate;iucoerId;completionStatus;completionDate;status",
+    "genCol": "iucoerId",
+    "manyToOne": "instructor,userCourseElementMapper"
+  },
+  {
+    "pojo": "MediaElement",
+    "fields": "genDate;mimeType;status;mediaId;mediaName",
+    "genCol": "mediaId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Question",
+    "fields": "questionId;questionPointValue;genDate;status;questionType;questionText",
+    "genCol": "questionId",
+    "manyToOne": "admin,quiz,mediaElement,client,assignment"
+  },
+  {
+    "pojo": "QuestionOption",
+    "fields": "optionText;optionValue;genDate;pointValue;optionId;status;correctness",
+    "genCol": "optionId",
+    "manyToOne": "question"
+  },
+  {
+    "pojo": "Quiz",
+    "fields": "name;genByType;genDate;status;quizId;quizOrder",
+    "genCol": "quizId",
+    "manyToOne": "admin,client"
+  },
+  {
+    "pojo": "Section",
+    "fields": "sectionDesc;sectionOrder;sectionName;genDate;status;sectionId",
+    "genCol": "sectionId",
+    "manyToOne": "course"
+  },
+  {
+    "pojo": "UserCourseElementAssignmentResponse",
+    "fields": "gradePoint;genDate;responseText;status;ucoearId",
+    "genCol": "ucoearId",
+    "manyToOne": "question,userCourseElementMapper"
+  },
+  {
+    "pojo": "UserCourseElementMapper",
+    "fields": "mediaElementBackUp;genDate;pointValue;completionStatus;ucoemId;completionDate;status",
+    "genCol": "ucoemId",
+    "manyToOne": "courseCumMapper,chapter"
+  },
+  {
+    "pojo": "UserCourseElementMapperTimeBackUp",
+    "fields": "lastSeenDate;genDate;ucoemtbuId;timeSpent;status;mediaBackUp",
+    "genCol": "ucoemtbuId",
+    "manyToOne": "userCourseElementMapper"
+  },
+  {
+    "pojo": "UserCourseElementQuizResponse",
+    "fields": "genDate;status;quizOrder;ucoeqrId",
+    "genCol": "ucoeqrId",
+    "manyToOne": "question,userCourseElementMapper,questionOption"
+  },
+  {
+    "pojo": "UserInfo",
+    "fields": "emailId;name;genDate;lastLoginTime;status;userId",
+    "genCol": "userId",
+    "manyToOne": ""
+  }
+]

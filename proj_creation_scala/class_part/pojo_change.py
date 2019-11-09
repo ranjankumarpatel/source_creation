@@ -9,7 +9,7 @@ def camel_case(str):
 
 # pojo = "Admin"
 
-df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/idp.json", orient="records")
+df = pd.read_json("F:/github/source_creation/proj_creation_scala/project_jsons/lms2.json", orient="records")
 print(df.head(1))
 for pojo_dict in df.to_dict(orient="records"):
     pojo = pojo_dict.get("pojo")

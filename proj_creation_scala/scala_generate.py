@@ -3,12 +3,12 @@ from string import Template
 
 import pandas as pd
 
-base_package = "com.ttn.idp"
+base_package = "com.ttn.lms"
 
-df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/idp.json", orient="records")
+df = pd.read_json("F:/github/source_creation/proj_creation_scala/project_jsons/lms2.json", orient="records")
 print(df)
 
-target_path = "D:/gitlab/idp/idp-service/src/main/java/com/ttn/idp"
+target_path = "F:/GIT/lms2/lms2-service/src/main/java/com/ttn/lms"
 
 
 def camel_case(str):
