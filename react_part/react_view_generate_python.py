@@ -30,7 +30,7 @@ def replace_string(path, tup, code):
         pojo_lower = tup.pojo.lower()
 
         fields = [x for x in tup.fields.split(";") if "_" not in x]
-        id_fields = tup.genCol
+        id_fields = [x for x in tup.fields.split(";") if "_" in x][0].replace("_ENCRYPTED", "")
         print(fields, id_fields)
 
         out_text = Template(text).safe_substitute(pojo=tup.pojo,

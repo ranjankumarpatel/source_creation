@@ -56,6 +56,6 @@ for pojo in df.pojo:
     print(out_text)
 
     with open(
-            "F:/GIT LAB/connect/connect-node-react/src/api/controller/{0}-controller.jsx".format(
+            "F:/GIT/lms2/lms2-node-react/src/api/controller/{0}-controller.jsx".format(
                 pojo.lower()), "w") as out_file:
         out_file.write(out_text)

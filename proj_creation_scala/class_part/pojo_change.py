@@ -13,7 +13,7 @@ df = pd.read_json("F:/github/source_creation/proj_creation_scala/project_jsons/l
 print(df.head(1))
 for pojo_dict in df.to_dict(orient="records"):
     pojo = pojo_dict.get("pojo")
-    with open("D:/eclipse-workspace/idp/src/com/ttn/idp/model/{}.java".format(pojo), "r") as file:
+    with open("F:/GIT/lms2/lms2-service/src/main/java/com/ttn/lms/model/{}.java".format(pojo), "r") as file:
         text = file.read()
     arr = text.splitlines()
     print(arr)
@@ -61,6 +61,6 @@ for pojo_dict in df.to_dict(orient="records"):
 
     pojo_change = "\n".join(arr)
     print(pojo_change)
-    with open("D:/gitlab/idp/idp-service/src/main/java/com/ttn/idp/model/{}.java".format(pojo),
+    with open("F:/GIT/lms2/lms2-service/src/main/java/com/ttn/lms/model/{}.java".format(pojo),
               "w") as w_file:
         w_file.write(pojo_change)

@@ -18,7 +18,7 @@ def extract_param(txt):
         return cbraces1
 
 
-with open("D:/git/source_creation/proj_creation_scala/project_jsons/idp-controller.json", "r") as file:
+with open("F:/github/source_creation/proj_creation_scala/project_jsons/lms2-controller.json", "r") as file:
     text = file.read()
 
 json_data = json.loads(text)
@@ -49,10 +49,10 @@ def replace_string(path, df, pojo):
 
 for pojo in df.pojo:
     df_pojo = df[df.pojo == pojo]
-    out_text = replace_string("D:/git/source_creation/proj_creation_scala/source/pojo-service-react.jsx", df_pojo, pojo)
+    out_text = replace_string("F:/github/source_creation/proj_creation_scala/source/pojo-service-react.jsx", df_pojo, pojo)
     print(out_text)
 
     with open(
-            "D:/gitlab/idp/idp-node-react/src/api/controller/{0}-controller.jsx".format(
+            "F:/GIT/lms2/lms2-node-react/src/api/controller/{0}-controller.jsx".format(
                 pojo.lower()), "w") as out_file:
         out_file.write(out_text)
