@@ -1,9 +1,11 @@
 import ApiUtils from '../ApiUtils';
+import conf_prop from '../../properties/properties'
+
 var {{pojo}}Controller = {
 
 {% for tup in df.itertuples() %}
   {{tup.method}}: function({{ pojo if tup.type=='post' else tup.param }}) {
-    return fetch(`http://localhost:8090{{tup.request_path}}`, {
+    return fetch(`${conf_prop.get("serviceUrl")}{{tup.request_path}}`, {
       method: "{{tup.type}}",
       {% if tup.type=='post' %}
       body: JSON.stringify({{pojo}}),

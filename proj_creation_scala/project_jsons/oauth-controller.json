@@ -1,0 +1,122 @@
+[
+  {
+    "blueprint": "reset",
+    "method": "reset_password_email_link",
+    "path": "/reset/email-link",
+    "type": "POST"
+  },
+  {
+    "blueprint": "reset",
+    "method": "reset_password_link",
+    "path": "/reset/reset-link",
+    "type": "GET"
+  },
+  {
+    "blueprint": "reset",
+    "method": "reset_password_with_email",
+    "path": "/reset/with-email",
+    "type": "POST"
+  },
+  {
+    "blueprint": "authorize",
+    "method": "authorize",
+    "path": "/oauth/authorize",
+    "type": "GET,POST"
+  },
+  {
+    "blueprint": "reset",
+    "method": "reset_password_old_pass",
+    "path": "/reset/with-old",
+    "type": "POST"
+  },
+  {
+    "blueprint": "revoke_token",
+    "method": "revoke_token",
+    "path": "/oauth/revoke",
+    "type": "POST"
+  },
+  {
+    "blueprint": "access_token",
+    "method": "access_token",
+    "path": "/oauth/token",
+    "type": "GET,POST"
+  },
+  {
+    "blueprint": "credential_api",
+    "method": "credential_api",
+    "path": "/api/credential",
+    "type": "POST"
+  },
+  {
+    "blueprint": "profile_api",
+    "method": "profile_api",
+    "path": "/api/profile",
+    "type": "GET"
+  },
+  {
+    "blueprint": "client_api",
+    "method": "client_api",
+    "path": "/api/client",
+    "type": "GET"
+  },
+  {
+    "blueprint": "method_api",
+    "method": "method_api",
+    "path": "/api/method",
+    "type": "GET,PUT,POST,DELETE"
+  },
+  {
+    "blueprint": "email_api",
+    "method": "email_api",
+    "path": "/api/email",
+    "type": "GET"
+  },
+  {
+    "blueprint": "error_handler",
+    "method": "error_handler",
+    "path": "/error-handler",
+    "type": "GET"
+  },
+  {
+    "blueprint": "unauthorized",
+    "method": "unauthorized",
+    "path": "/unauthorized",
+    "type": "GET"
+  },
+  {
+    "blueprint": "favicon",
+    "method": "favicon",
+    "path": "/favicon.ico",
+    "type": "GET"
+  },
+  {
+    "blueprint": "logout",
+    "method": "logout",
+    "path": "/logout",
+    "type": "GET"
+  },
+  {
+    "blueprint": "home",
+    "method": "home",
+    "path": "",
+    "type": "GET"
+  },
+  {
+    "blueprint": "switch_cum",
+    "method": "switch_cum",
+    "path": "/switch-cum/{CUM_ID}",
+    "type": "GET"
+  },
+  {
+    "blueprint": "static",
+    "method": "static",
+    "path": "/static/{path:filename}",
+    "type": "GET"
+  },
+  {
+    "blueprint": "do_login",
+    "method": "do_login",
+    "path": "/login/{client_id}",
+    "type": "POST"
+  }
+]
