@@ -3,12 +3,12 @@ from string import Template
 
 import pandas as pd
 
-base_package = "com.ttn.lms"
+base_package = "com.ttn.assess"
 
-df = pd.read_json("F:/github/source_creation/proj_creation_scala/project_jsons/lms2.json", orient="records")
+df = pd.read_json("/home/thinktalentuser/github/source_creation/proj_creation_scala/project_jsons/ability2.json", orient="records")
 print(df)
 
-target_path = "F:/GIT/lms2/lms2-service/src/main/java/com/ttn/lms"
+target_path = "/home/thinktalentuser/GitWorkSpace/ability/ability2-service-react/src/main/java/com/ttn/assess"
 
 
 def camel_case(str):
@@ -99,7 +99,7 @@ for tup in df.itertuples():
         if tup.manyToOne != "":
             for mone in tup.manyToOne.split(","):
                 repo_text = Template("""\toverride def findBy$moneClass($mone : $moneClass):List[$pojo] = {
-                $pojo_camel Repository.findBy$moneClass($mone).toList
+                $pojo_camel Repository.findBy$moneClass($mone).asScala.toList
                 }""").substitute(
                     pojo=tup.pojo, mone=mone, moneClass=camel_case(mone), pojo_camel=pojo_camel).replace(
                     "{} ".format(pojo_camel), pojo_camel)

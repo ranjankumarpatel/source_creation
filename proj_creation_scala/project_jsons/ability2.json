@@ -1,0 +1,230 @@
+[
+  {
+    "pojo": "ClientPackageMapper",
+    "fields": "cpmId_ENCRYPTED;accessStatus;cpmId",
+    "genCol": "cpmId",
+    "manyToOne": "testPackage,productClientInfoView"
+  },
+  {
+    "pojo": "Topic",
+    "fields": "noOfQuestions;timeStamp;topicName;topicId;gendate;topicId_ENCRYPTED;status",
+    "genCol": "topicId",
+    "manyToOne": "adminView,productClientInfoView"
+  },
+  {
+    "pojo": "UserInfo",
+    "fields": "loginStatus;name;photo;email;userId_ENCRYPTED;loginPassword;userId;loginStamp;status;userGenTimeStamp;reminderStatus",
+    "genCol": "userId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "PositionDemographicMap",
+    "fields": "demographicName;pdmId;demographicValue;pdmId_ENCRYPTED;status",
+    "genCol": "pdmId",
+    "manyToOne": "position"
+  },
+  {
+    "pojo": "TestQuestionLocale",
+    "fields": "qlocId;localeScript;qlocId_ENCRYPTED",
+    "genCol": "qlocId",
+    "manyToOne": "locale,testQuestion"
+  },
+  {
+    "pojo": "ClientUserRepository",
+    "fields": "curId;visibleStatus;cpId;curId_ENCRYPTED",
+    "genCol": "curId",
+    "manyToOne": "userInfo"
+  },
+  {
+    "pojo": "QuestLocales",
+    "fields": "qlId;locales;localeScript",
+    "genCol": "qlId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "PositionUserDemographicMap",
+    "fields": "pudmId_ENCRYPTED;pudmId;demographicValue",
+    "genCol": "pudmId",
+    "manyToOne": "positionUserMapper,positionDemographicMap"
+  },
+  {
+    "pojo": "Subject",
+    "fields": "subjectName;description;gendate;subjectId;status;subjectId_ENCRYPTED",
+    "genCol": "subjectId",
+    "manyToOne": "testMaster"
+  },
+  {
+    "pojo": "TestQuestOptLocale",
+    "fields": "qolId;localeScript;qolId_ENCRYPTED",
+    "genCol": "qolId",
+    "manyToOne": "testQuestionLocale,testQuestOpt,locale"
+  },
+  {
+    "pojo": "QuestionHelperLocale",
+    "fields": "qhlId_ENCRYPTED;qhlId;localeScript",
+    "genCol": "qhlId",
+    "manyToOne": "questionHelper,locale"
+  },
+  {
+    "pojo": "Position",
+    "fields": "positionId;endDate;positionName;selfRegMode;generatedDate;reportAuthCode;authCode;postionEmailTemp;proctoringStatus;positionId_ENCRYPTED;positionStatus;positionSupport;positionInstruction;startDate",
+    "genCol": "positionId",
+    "manyToOne": "positionReportCustomization,productClientInfoView"
+  },
+  {
+    "pojo": "TestQuestion",
+    "fields": "question;questionId;questionId_ENCRYPTED;typeQuestion;instruction;minWeight;maxWeight",
+    "genCol": "questionId",
+    "manyToOne": "testSet,questionHelper"
+  },
+  {
+    "pojo": "TestPackage",
+    "fields": "description;genDate;packageName;timeStamp;visibilityStatus;packageId_ENCRYPTED;status;keywords;packageId",
+    "genCol": "packageId",
+    "manyToOne": "adminView,productClientInfoView"
+  },
+  {
+    "pojo": "UserQuesAnsMapperTemp",
+    "fields": "testJson;tempAnsId;tempAnsId_ENCRYPTED",
+    "genCol": "tempAnsId",
+    "manyToOne": "testEligibility"
+  },
+  {
+    "pojo": "TestMaster",
+    "fields": "testName;testDuration;instruction;gendate;timeStamp;testMasterId_ENCRYPTED;testMasterId;testType;status;optionList;keywords;description;randomStatus",
+    "genCol": "testMasterId",
+    "manyToOne": "adminView,productClientInfoView"
+  },
+  {
+    "pojo": "AdminView",
+    "fields": "adminId;adminType;adminId_ENCRYPTED;adminPassword;loginIp;emailId;loginStamp;status",
+    "genCol": "adminId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "UserInfoDetail",
+    "fields": "uidId_ENCRYPTED;uidId;demographicFilterName;demographicFilterValue",
+    "genCol": "uidId",
+    "manyToOne": "userInfo"
+  },
+  {
+    "pojo": "UserTestScore",
+    "fields": "userScore;utsId;timeStamp;timeSpent;utsId_ENCRYPTED;totalScore;unAnswered;scorePercent",
+    "genCol": "utsId",
+    "manyToOne": "testEligibility"
+  },
+  {
+    "pojo": "QuestImg",
+    "fields": "imgName;imgId;imgId_ENCRYPTED",
+    "genCol": "imgId",
+    "manyToOne": "adminView,productClientInfoView"
+  },
+  {
+    "pojo": "SubjectTopicMap",
+    "fields": "stmId;stmId_ENCRYPTED",
+    "genCol": "stmId",
+    "manyToOne": "subject,topic"
+  },
+  {
+    "pojo": "TestElgTopicSetMap",
+    "fields": "testElgTopicSetId_ENCRYPTED;testElgTopicSetId",
+    "genCol": "testElgTopicSetId",
+    "manyToOne": "testSet,topic,subjectTopicMap,testEligibility"
+  },
+  {
+    "pojo": "ClientReportCustomization",
+    "fields": "reportClientLogoStatus;reportTablePageStatus;reportScaleCount;reportLastPageStatus;ccId;subjectReportStatus;reportSubjectCommentModeStatus;reportTableColorLegendStatus;reportClientLastPageText;reportTtLogoStatus;testReportStatus;ccId_ENCRYPTED;reportInfoPageText",
+    "genCol": "ccId",
+    "manyToOne": "productClientInfoView"
+  },
+  {
+    "pojo": "ProductClientInfoView",
+    "fields": "customizationStatus;clientGenTimeStamp;tempColor;clientLoginIp;planId;unusedLicence;authorStatus;planName;usedLicence;clientEmail;logo;id;clientPassword;id_ENCRYPTED;emailStatus;status;websiteUrl;clientName;parentId;planStatus;clientLoginStamp",
+    "genCol": "id",
+    "manyToOne": "clientReportCustomization"
+  },
+  {
+    "pojo": "QuestionHelper",
+    "fields": "qhId_ENCRYPTED;rootType;rootHtml;qhId",
+    "genCol": "qhId",
+    "manyToOne": "testSet"
+  },
+  {
+    "pojo": "PackageTestMapper",
+    "fields": "ptmId;ptmId_ENCRYPTED",
+    "genCol": "ptmId",
+    "manyToOne": "testMaster,testPackage"
+  },
+  {
+    "pojo": "TestEligibility",
+    "fields": "examStatus;testElgId;testAttendCount;recoveryCount;testCompletionDate;recoveryStatus;testElgId_ENCRYPTED",
+    "genCol": "testElgId",
+    "manyToOne": "positionUserMapper,packageTestMapper"
+  },
+  {
+    "pojo": "UserTestSubjectTopicScore",
+    "fields": "ustsId_ENCRYPTED;userScore;timeStamp;timeSpent;totalScore;unAnswered;ustsId",
+    "genCol": "ustsId",
+    "manyToOne": "subjectTopicMap,testEligibility"
+  },
+  {
+    "pojo": "PositionReportCustomization",
+    "fields": "reportClientLogoStatus;reportTablePageStatus;reportLastPageStatus;reportInfoPageText;reportSubjectCommentModeStatus;reportTableColorLegendStatus;reportClientLastPageText;reportTtLogoStatus;testReportStatus;prcId;reportScaleCount;prcId_ENCRYPTED;subjectReportStatus",
+    "genCol": "prcId",
+    "manyToOne": "position"
+  },
+  {
+    "pojo": "EmailService",
+    "fields": "emailSub;emailTitle;autoReminderStatus;etId_ENCRYPTED;etId;reminderTimePattern;emailContent;projectName",
+    "genCol": "etId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "TestSet",
+    "fields": "setNumber;setId;setStatus;genDate;setId_ENCRYPTED",
+    "genCol": "setId",
+    "manyToOne": "topic"
+  },
+  {
+    "pojo": "UserClientMapperView",
+    "fields": "ucmId_ENCRYPTED;ucmId;accessStatus",
+    "genCol": "ucmId",
+    "manyToOne": "userInfo,productClientInfoView"
+  },
+  {
+    "pojo": "PositionUserMapper",
+    "fields": "assignmentDate;emailSentDate;status;pumId_ENCRYPTED;lastReminderDate;pumId",
+    "genCol": "pumId",
+    "manyToOne": "userClientMapperView,position"
+  },
+  {
+    "pojo": "UserQuesAnsMapper",
+    "fields": "timeTaken;uqaId;uqaId_ENCRYPTED",
+    "genCol": "uqaId",
+    "manyToOne": "testQuestOpt,testEligibility,testQuestion"
+  },
+  {
+    "pojo": "TestQuestOpt",
+    "fields": "weight;tqoId;tqoId_ENCRYPTED;option",
+    "genCol": "tqoId",
+    "manyToOne": "testQuestion"
+  },
+  {
+    "pojo": "Locale",
+    "fields": "qlId;locales;qlId_ENCRYPTED;localeScript",
+    "genCol": "qlId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "SubjectReport",
+    "fields": "srId;min;max;srId_ENCRYPTED;reportText",
+    "genCol": "srId",
+    "manyToOne": "subject"
+  },
+  {
+    "pojo": "PositionTestMapper",
+    "fields": "tmId;tmId_ENCRYPTED",
+    "genCol": "tmId",
+    "manyToOne": "packageTestMapper,testPackage,position"
+  }
+]

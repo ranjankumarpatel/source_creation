@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.{Propagation, Transactional}
 import org.app.utility.util.DateUtility
-import scala.collection.JavaConversions._
+import scala.jdk.CollectionConverters._
 import $base_package .model._
 
 @Service
@@ -18,7 +18,7 @@ class $pojo ServiceImpl extends $pojo Service {
 
   override def findById($genId: Long): $pojo = {
 
-    $pojo_camel Repository.findOne($genId)
+    $pojo_camel Repository.getOne($genId)
 
   }
 
@@ -26,17 +26,17 @@ class $pojo ServiceImpl extends $pojo Service {
   @Transactional(propagation = Propagation.REQUIRED)
   override def insert$pojo ($pojo_camel: $pojo ): Unit = {
 
-    $pojo_camel.setGenDate(DateUtility.getCurrentTimeStamp)
-    $pojo_camel.setStatus("Y")
+    //$pojo_camel.setGenDate(DateUtility.getCurrentTimeStamp)
+    //$pojo_camel.setStatus("Y")
     $pojo_camel Repository.save($pojo_camel)
 
   }
 
   @Transactional(propagation = Propagation.REQUIRED)
   override def update$pojo ($pojo_camel: $pojo ): Unit = {
-    var update$pojo : $pojo  = $pojo_camel Repository.findOne($pojo_camel.get$genId_camel)
+    var update$pojo : $pojo  = $pojo_camel Repository.getOne($pojo_camel.get$genId_camel)
 
-    update$pojo.setGenDate(DateUtility.getCurrentTimeStamp)
+    //update$pojo.setGenDate(DateUtility.getCurrentTimeStamp)
 
     $get_set_script
 

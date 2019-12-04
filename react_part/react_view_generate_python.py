@@ -4,7 +4,7 @@ from string import Template
 import pandas as pd
 from jinja2 import Template as JTemplate
 
-with open("F:/github/source_creation/proj_creation_scala/project_jsons/lms2.json", "r") as file:
+with open("/home/thinktalentuser/github/source_creation/proj_creation_scala/project_jsons/lms2.json", "r") as file:
     text = file.read()
 
 json_data = json.loads(text)
@@ -50,7 +50,7 @@ def replace_string(path, tup, code):
 
 
 for tup in df.itertuples():
-    out_text = replace_string("F:/github/source_creation/proj_creation_scala/source/pojo-view-react.jsx", tup, "")
+    out_text = replace_string("/home/thinktalentuser/github/source_creation/proj_creation_scala/source/pojo-view-react.jsx", tup, "")
     print(out_text)
 
     with open(

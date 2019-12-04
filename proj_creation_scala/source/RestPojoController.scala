@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.{HttpStatus, MediaType, ResponseEntity}
 import org.springframework.transaction.annotation.{Propagation, Transactional}
 import org.springframework.web.bind.annotation._
-import scala.collection.JavaConversions._
+import scala.jdk.CollectionConverters._
 import $base_package .model._
 import java.lang
 
@@ -62,7 +62,7 @@ class Rest$pojo Controller {
   def findById(@PathVariable("$genId") enc$genId: String): String = {
     val $genId = AESEncryption.decrypt(enc$genId).toLong
 
-    val $pojo_camel = $pojo_camel Repository.findOne($genId)
+    val $pojo_camel = $pojo_camel Repository.getOne($genId)
     $pojo_camel Json.getJson($pojo_camel)
 
   }
@@ -71,7 +71,7 @@ class Rest$pojo Controller {
  @Transactional(readOnly = true)
   @GetMapping(path = Array("/all"))
   def findAll: String = {
-    $pojo_camel Json.getJson($pojo_camel Repository.findAll().toList)
+    $pojo_camel Json.getJson($pojo_camel Repository.findAll().asScala.toList)
   }
 
   $code

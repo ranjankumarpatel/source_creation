@@ -19,7 +19,7 @@ def extract_param(txt):
         return cbraces1
 
 
-with open("F:/github/source_creation/proj_creation_scala/project_jsons/connect-controller.json", "r",
+with open("/home/thinktalentuser/github/source_creation/proj_creation_scala/project_jsons/connect-controller.json", "r",
           encoding="utf8") as file:
     text = file.read()
 
@@ -51,7 +51,7 @@ def replace_string(path, df, pojo):
 
 for pojo in df.pojo:
     df_pojo = df[df.pojo == pojo]
-    out_text = replace_string("F:/github/source_creation/proj_creation_scala/source/pojo-service-react.jsx", df_pojo,
+    out_text = replace_string("/home/thinktalentuser/github/source_creation/proj_creation_scala/source/pojo-service-react.jsx", df_pojo,
                               pojo)
     print(out_text)
 
