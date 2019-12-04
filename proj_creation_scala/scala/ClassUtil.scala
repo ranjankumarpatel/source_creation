@@ -1,4 +1,4 @@
-package com.ttn.ttpi2.service
+package com.ttn.lms.service
 
 import java.lang.reflect.{Field, Method}
 
@@ -38,8 +38,18 @@ object ClassUtil {
 
 
     var propSet = mutable.Set[String]()
-    propSet.++=(Class.forName(s"com.ttn.ttpi2.model.$className").getDeclaredFields.filterNot(x => x.getName == "serialVersionUID").filter(includeTypeFilter).filterNot(excludeTypeFilter).map(_.getName).toSet)
-    propSet.++=(Class.forName(s"com.ttn.ttpi2.model.$className").getDeclaredMethods.filterNot(x => x.getName == "serialVersionUID").filter(includeMethodTypeFilter).map(_.getName).toSet)
+    propSet.++=(Class.forName(s"com.ttn.lms.model.$className").getDeclaredFields.filterNot(x => x.getName == "serialVersionUID").filter(includeTypeFilter).filterNot(excludeTypeFilter).map(_.getName).toSet)
+    propSet.++=(Class.forName(s"com.ttn.lms.model.$className").getDeclaredMethods.filterNot(x => x.getName == "serialVersionUID").filter(includeMethodTypeFilter).map(_.getName).toSet)
+
+    propSet.toSet
+  }
+
+  def getPropSet(className: Class[_]): Set[String] = {
+
+
+    var propSet = mutable.Set[String]()
+    propSet.++=(className.getDeclaredFields.filterNot(x => x.getName == "serialVersionUID").filter(includeTypeFilter).filterNot(excludeTypeFilter).map(_.getName).toSet)
+    propSet.++=(className.getDeclaredMethods.filterNot(x => x.getName == "serialVersionUID").filter(includeMethodTypeFilter).map(_.getName).toSet)
 
     propSet.toSet
   }
@@ -48,7 +58,7 @@ object ClassUtil {
 
 
     var propSet = mutable.Set[String]()
-    propSet.++=(Class.forName(s"com.ttn.ttpi2.model.$className")
+    propSet.++=(Class.forName(s"com.ttn.lms.model.$className")
       .getDeclaredFields.filterNot(x => x.getName == "serialVersionUID")
       .filterNot(x => x.getType.getSimpleName == "byte[]")
       .filterNot(includeTypeFilter)

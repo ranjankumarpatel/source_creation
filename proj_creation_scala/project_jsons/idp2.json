@@ -1,0 +1,92 @@
+[
+  {
+    "pojo": "Goal",
+    "fields": "goalType;genDate;goalId;goalName;lastUpdatedDate;status;goalId_ENCRYPTED",
+    "genCol": "goalId",
+    "manyToOne": "userClientMapper,client,admin"
+  },
+  {
+    "pojo": "SubCompetencyGoalMapper",
+    "fields": "scgmId;genDate;scgmId_ENCRYPTED;status",
+    "genCol": "scgmId",
+    "manyToOne": "goal,subCompetency"
+  },
+  {
+    "pojo": "UcmCompetencyGoalMapper",
+    "fields": "targetDate;ucgmId;genDate;status;ucgmId_ENCRYPTED;progress;lastUpdatedDate",
+    "genCol": "ucgmId",
+    "manyToOne": "competencySubCompetencyMapper,userClientMapper,subCompetencyGoalMapper"
+  },
+  {
+    "pojo": "Activity",
+    "fields": "managerStatus;activityName;genDate;activityId;activityType;status;activityId_ENCRYPTED;activityDesc",
+    "genCol": "activityId",
+    "manyToOne": "userClientMapper,activityTag,client,admin"
+  },
+  {
+    "pojo": "UcmSubCompetencyGoalActivityMapper",
+    "fields": "ucgmaId;genDate;ucgmaId_ENCRYPTED;status;progress;lastUpdatedDate",
+    "genCol": "ucgmaId",
+    "manyToOne": "activity,ucmCompetencyGoalMapper"
+  },
+  {
+    "pojo": "SubCompetency",
+    "fields": "genDate;scId;status;scName;scId_ENCRYPTED",
+    "genCol": "scId",
+    "manyToOne": "admin"
+  },
+  {
+    "pojo": "GoalActivityMapper",
+    "fields": "gamId_ENCRYPTED;genDate;gamId;status",
+    "genCol": "gamId",
+    "manyToOne": "goal,activity"
+  },
+  {
+    "pojo": "Admin",
+    "fields": "name;email;adminId_ENCRYPTED;status;genDate;adminId",
+    "genCol": "adminId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Client",
+    "fields": "clientId;genDate;clientEmail;clientId_ENCRYPTED;status;clientName",
+    "genCol": "clientId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "UserInfo",
+    "fields": "name;email;userId_ENCRYPTED;genDate;status;userId",
+    "genCol": "userId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "CompetencySubCompetencyMapper",
+    "fields": "cscmId_ENCRYPTED;cscmId;genDate;status",
+    "genCol": "cscmId",
+    "manyToOne": "competency,subCompetency"
+  },
+  {
+    "pojo": "Competency",
+    "fields": "genDate;status;competencyId_ENCRYPTED;competencyId;competencyName",
+    "genCol": "competencyId",
+    "manyToOne": "client,admin"
+  },
+  {
+    "pojo": "ActivityTag",
+    "fields": "activityTagLink;genDate;activityTagId_ENCRYPTED;status;activityTagType;activityTagId;activityTagDesc;activityTagName;activityTagColor",
+    "genCol": "activityTagId",
+    "manyToOne": "admin"
+  },
+  {
+    "pojo": "GoalClientMapper",
+    "fields": "gcmId;genDate;gcmId_ENCRYPTED;status",
+    "genCol": "gcmId",
+    "manyToOne": "goal,client"
+  },
+  {
+    "pojo": "UserClientMapper",
+    "fields": "ucmId_ENCRYPTED;ucmId;genDate;status",
+    "genCol": "ucmId",
+    "manyToOne": "userInfo,client"
+  }
+]
