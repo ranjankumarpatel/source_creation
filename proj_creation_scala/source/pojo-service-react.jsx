@@ -5,13 +5,15 @@ var {{pojo}}Controller = {
 
 {% for tup in df.itertuples() %}
   {{tup.method}}: function({{ pojo if tup.type=='post' else tup.param }}) {
+  const access_token = ApiUtils.getCookie("accessToken").access_token;
+
     return fetch(`${conf_prop.get("serviceUrl")}{{tup.request_path}}`, {
       method: "{{tup.type}}",
       {% if tup.type=='post' %}
       body: JSON.stringify({{pojo}}),
       {% endif %}
       headers: new Headers({
-        Authorization: "Bearer fake-jwt-token",
+         Authorization: `Bearer ${access_token}`,
         {% if tup.type=='post' %}
          'Content-Type': 'application/json'
         {% endif %}
