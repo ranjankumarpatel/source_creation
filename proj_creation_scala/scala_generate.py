@@ -3,12 +3,12 @@ from string import Template
 
 import pandas as pd
 
-base_package = "com.ttn.assess"
+base_package = "com.ttn.integr8"
 
-df = pd.read_json("/home/thinktalentuser/github/source_creation/proj_creation_scala/project_jsons/ability2.json", orient="records")
+df = pd.read_json("F:/AWS_CODE_COMMIT/New folder/source_creation/proj_creation_scala/project_jsons/integr8.json", orient="records")
 print(df)
 
-target_path = "/home/thinktalentuser/GitWorkSpace/ability/ability2-service-react/src/main/java/com/ttn/assess"
+target_path = "F:/AWS_CODE_COMMIT/New folder/integr8/integr8-service/src/main/java/com/ttn/integr8"
 
 
 def camel_case(str):

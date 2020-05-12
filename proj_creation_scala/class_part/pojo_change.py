@@ -9,13 +9,13 @@ def camel_case(str):
 
 # pojo = "Admin"
 
-df = pd.read_json("/home/thinktalentuser/github/source_creation/proj_creation_scala/project_jsons/ability2.json",
+df = pd.read_json("F:/AWS_CODE_COMMIT/New folder/source_creation/proj_creation_scala/project_jsons/integr8.json",
                   orient="records")
 print(df.head(1))
 for pojo_dict in df.to_dict(orient="records"):
     pojo = pojo_dict.get("pojo")
     with open(
-            "/home/thinktalentuser/GitWorkSpace/ability/model/{}.java".format(
+            "F:/AWS_CODE_COMMIT/New folder/integr8/integr8-service/src/main/java/com/ttn/integr8/model/{}.java".format(
                     pojo), "r") as file:
         text = file.read()
     arr = text.splitlines()
@@ -65,7 +65,7 @@ for pojo_dict in df.to_dict(orient="records"):
     pojo_change = "\n".join(arr)
     print(pojo_change)
     with open(
-            "/home/thinktalentuser/GitWorkSpace/ability/ability2-service-react/src/main/java/com/ttn/assess/model/{}.java".format(
+            "F:/AWS_CODE_COMMIT/New folder/integr8/integr8-service/src/main/java/com/ttn/integr8/model/{}.java".format(
                     pojo),
             "w") as w_file:
         w_file.write(pojo_change)

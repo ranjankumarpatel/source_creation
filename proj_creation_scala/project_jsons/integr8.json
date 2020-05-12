@@ -1,0 +1,164 @@
+[
+  {
+    "pojo": "BillingInstruction",
+    "fields": "billingInstruction;billingDocName;updateDate;status;biId_ENCRYPTED;biId",
+    "genCol": "biId",
+    "manyToOne": "userInfo,project"
+  },
+  {
+    "pojo": "Client",
+    "fields": "name;clientId;email;genDate;logo;clientId_ENCRYPTED;status",
+    "genCol": "clientId",
+    "manyToOne": "organisation"
+  },
+  {
+    "pojo": "ClientBilling",
+    "fields": "genDate;status;cbId;billingAddress;cbId_ENCRYPTED;billingName",
+    "genCol": "cbId",
+    "manyToOne": "client"
+  },
+  {
+    "pojo": "Contact",
+    "fields": "name;email;designation;genDate;status;contactId;contactNumber;contactId_ENCRYPTED",
+    "genCol": "contactId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "DocumentType",
+    "fields": "docTypeId;genDate;docTypeId_ENCRYPTED;status;docType",
+    "genCol": "docTypeId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "EmailService",
+    "fields": "emailSub;emailTitle;genDate;status;template;etId_ENCRYPTED;etId",
+    "genCol": "etId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "HealthType",
+    "fields": "healthId;status;healthId_ENCRYPTED;healthStatus;genDate",
+    "genCol": "healthId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Industry",
+    "fields": "indId_ENCRYPTED;status;industryName;indId;genDate",
+    "genCol": "indId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Organisation",
+    "fields": "name;genDate;orgId;status;orgId_ENCRYPTED",
+    "genCol": "orgId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Partner",
+    "fields": "genDate;partnerId;partnerId_ENCRYPTED;status",
+    "genCol": "partnerId",
+    "manyToOne": "userInfo,project"
+  },
+  {
+    "pojo": "PartnerSow",
+    "fields": "rate;psowId_ENCRYPTED;genDate;status;psowId;serviceDetails",
+    "genCol": "psowId",
+    "manyToOne": "userInfo,partner"
+  },
+  {
+    "pojo": "Project",
+    "fields": "noOfParticipants;projectName;endDate;projectCode;genDate;projectId;status;projectId_ENCRYPTED;startDate",
+    "genCol": "projectId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "ProjectClientMapper",
+    "fields": "genDate;pcmId;pcmId_ENCRYPTED;status",
+    "genCol": "pcmId",
+    "manyToOne": "client,project"
+  },
+  {
+    "pojo": "ProjectContactMapper",
+    "fields": "genDate;pconId;pconId_ENCRYPTED;status",
+    "genCol": "pconId",
+    "manyToOne": "contact,project"
+  },
+  {
+    "pojo": "ProjectDocument",
+    "fields": "genDate;fileName;docId_ENCRYPTED;status;docId",
+    "genCol": "docId",
+    "manyToOne": "documentType,project"
+  },
+  {
+    "pojo": "ProjectIndustryMapper",
+    "fields": "pimId_ENCRYPTED;pimId;genDate;status",
+    "genCol": "pimId",
+    "manyToOne": "project,industry"
+  },
+  {
+    "pojo": "ProjectInvoice",
+    "fields": "invoiceDocName;invoiceAmount;status;piId;piId_ENCRYPTED;genDate",
+    "genCol": "piId",
+    "manyToOne": "userInfo,project"
+  },
+  {
+    "pojo": "Projection",
+    "fields": "projectionAmount;genDate;projectionId;projectionId_ENCRYPTED;status",
+    "genCol": "projectionId",
+    "manyToOne": "userInfo,project"
+  },
+  {
+    "pojo": "ProjectService",
+    "fields": "unitCount;totalCost;unitCost;status;pservId_ENCRYPTED;pservId;genDate",
+    "genCol": "pservId",
+    "manyToOne": "serviceType,userInfo"
+  },
+  {
+    "pojo": "ProjectSolutionMapper",
+    "fields": "psmId;genDate;psmId_ENCRYPTED;status",
+    "genCol": "psmId",
+    "manyToOne": "solution,project"
+  },
+  {
+    "pojo": "ProjectStatus",
+    "fields": "pstatId;genDate;statusContent;status;pstatId_ENCRYPTED",
+    "genCol": "pstatId",
+    "manyToOne": "userInfo,project,healthType"
+  },
+  {
+    "pojo": "ProjectToolMapper",
+    "fields": "ptmId;genDate;ptmId_ENCRYPTED;status",
+    "genCol": "ptmId",
+    "manyToOne": "project,tool"
+  },
+  {
+    "pojo": "Role",
+    "fields": "internalName;status;roleId;roleId_ENCRYPTED;genDate;roleName",
+    "genCol": "roleId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "ServiceType",
+    "fields": "name;genDate;stId;stId_ENCRYPTED;status",
+    "genCol": "stId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Solution",
+    "fields": "psId;genDate;solution;psId_ENCRYPTED;status",
+    "genCol": "psId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Tool",
+    "fields": "genDate;status;toolName;toolId_ENCRYPTED;toolId",
+    "genCol": "toolId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "UserInfo",
+    "fields": "name;email;userId_ENCRYPTED;genDate;status;userId",
+    "genCol": "userId",
+    "manyToOne": "role"
+  }
+]

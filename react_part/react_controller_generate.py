@@ -18,7 +18,7 @@ def extract_param(txt):
         return cbraces1
 
 
-with open("/home/thinktalentuser/github/source_creation/proj_creation_scala/project_jsons/ability2-controller.json",
+with open("F:/AWS_CODE_COMMIT/New folder/source_creation/proj_creation_scala/project_jsons/integr8-controller.json",
           "r") as file:
     text = file.read()
 
@@ -52,10 +52,10 @@ def replace_string(path, df, pojo):
 for pojo in df.pojo:
     df_pojo = df[df.pojo == pojo]
     out_text = replace_string(
-        "/home/thinktalentuser/github/source_creation/proj_creation_scala/source/pojo-service-react.jsx", df_pojo, pojo)
+        "F:/AWS_CODE_COMMIT/New folder/source_creation/proj_creation_scala/source/pojo-service-react.jsx", df_pojo, pojo)
     print(out_text)
 
     with open(
-            "/home/thinktalentuser/GitWorkSpace/ability/ability2-react-react/src/api/controller/{0}-controller.jsx".format(
+            "F:/AWS_CODE_COMMIT/New folder/integr8/integr8-react/src/api/controller/{0}-controller.jsx".format(
                 pojo.lower()), "w") as out_file:
         out_file.write(out_text)
