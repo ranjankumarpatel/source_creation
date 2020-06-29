@@ -1,13 +1,14 @@
-import ApiUtils from '../ApiUtils';
-import conf_prop from '../../properties/properties'
+import ApiUtils from '../../../api/ApiUtils';
+import conf_prop from '../../../properties/properties';
+import "whatwg-fetch";
 
-var {{pojo}}Controller = {
+const VDC{{pojo}}Controller = {
 
 {% for tup in df.itertuples() %}
   {{tup.method}}: function({{ pojo if tup.type=='post' else tup.param }}) {
-  const access_token = ApiUtils.getCookie("accessToken").access_token;
+  const access_token = ApiUtils.getCookie("accessToken");
 
-    return fetch(`${conf_prop.get("serviceUrl")}{{tup.request_path}}`, {
+    return fetch(`${conf_prop.get("vdcServiceUrl")}{{tup.request_path}}`, {
       method: "{{tup.type}}",
       {% if tup.type=='post' %}
       body: JSON.stringify({{pojo}}),
@@ -23,4 +24,4 @@ var {{pojo}}Controller = {
 {% endfor %}
 };
 
-export default {{pojo}}Controller;
+export default VDC{{pojo}}Controller;

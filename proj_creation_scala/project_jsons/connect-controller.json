@@ -12,6 +12,18 @@
     "type": "POST"
   },
   {
+    "blueprint": "client-notification",
+    "method": "insert_client_notification",
+    "path": "/rest/client-notification/insert",
+    "type": "POST"
+  },
+  {
+    "blueprint": "client-notification",
+    "method": "update_client_notification",
+    "path": "/rest/client-notification/update",
+    "type": "POST"
+  },
+  {
     "blueprint": "user-demographic",
     "method": "user_demographic_insert",
     "path": "/rest/user-demographic/insert",
@@ -57,19 +69,25 @@
     "blueprint": "dashboard",
     "method": "wipro_tracker_details",
     "path": "/rest/dashboard/non-lms-point",
-    "type": "GET"
+    "type": "POST"
+  },
+  {
+    "blueprint": "dashboard",
+    "method": "bonus_point_tracker_details",
+    "path": "/rest/dashboard/bonus-point",
+    "type": "POST"
   },
   {
     "blueprint": "oauth-app",
     "method": "app_login",
     "path": "/rest/oauth-app/app-login",
-    "type": "GET,POST"
+    "type": "POST,GET"
   },
   {
     "blueprint": "dashboard",
     "method": "lms_wipro_tracker_details",
     "path": "/rest/dashboard/lms-point",
-    "type": "GET"
+    "type": "POST"
   },
   {
     "blueprint": "client_hr",
@@ -240,6 +258,36 @@
     "type": "GET"
   },
   {
+    "blueprint": "client-notification",
+    "method": "find_notification_by_employee",
+    "path": "/rest/client-notification/client/{UCM_ID}",
+    "type": "GET"
+  },
+  {
+    "blueprint": "client-notification",
+    "method": "delete_client_notification",
+    "path": "/rest/client-notification/delete/{CN_ID}",
+    "type": "GET"
+  },
+  {
+    "blueprint": "user-notification",
+    "method": "user_notification_insert_by_UCM_ID",
+    "path": "/rest/user-notification/insert_notification/{UCM_ID}",
+    "type": "GET"
+  },
+  {
+    "blueprint": "user-notification",
+    "method": "live_notification_details",
+    "path": "/rest/user-notification/live-notification/{UCM_ID}",
+    "type": "GET"
+  },
+  {
+    "blueprint": "user-notification",
+    "method": "get_user_notification_by_ucm",
+    "path": "/rest/user-notification/notification/{UCM_ID}",
+    "type": "GET"
+  },
+  {
     "blueprint": "clientusermapper",
     "method": "get_userinfo_by_client",
     "path": "/rest/clientusermapper/client/{CLIENT_ID}",
@@ -354,6 +402,12 @@
     "type": "GET"
   },
   {
+    "blueprint": "client-notification",
+    "method": "find_notification_by_cn_id",
+    "path": "/rest/client-notification/{CN_ID}",
+    "type": "GET"
+  },
+  {
     "blueprint": "clientusermapper",
     "method": "get_client_user_mapper",
     "path": "/rest/clientusermapper/{UCM_ID}",
@@ -375,13 +429,13 @@
     "blueprint": "adfs",
     "method": "authorized_by_server",
     "path": "/adfs/authorized/{client_id}/{ADFS_INTEGRATION_NAME}",
-    "type": "GET"
+    "type": "POST,GET"
   },
   {
     "blueprint": "adfs",
     "method": "authorized",
     "path": "/adfs/authorized/{client_id}",
-    "type": "GET"
+    "type": "POST,GET"
   },
   {
     "blueprint": "client_hr",

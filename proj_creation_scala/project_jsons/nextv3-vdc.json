@@ -1,0 +1,158 @@
+[
+  {
+    "pojo": "Admin",
+    "fields": "name;email;adminType;adminId_ENCRYPTED;status;updatedTimestamp;lastIp;mobile;genDate;adminId",
+    "genCol": "adminId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Batch",
+    "fields": "status;batchId;batchName;dcDate;batchId_ENCRYPTED;genDate",
+    "genCol": "batchId",
+    "manyToOne": "pmClientAdmin,client,toolPackage"
+  },
+  {
+    "pojo": "BatchAssessorMapper",
+    "fields": "bamId_ENCRYPTED;genDate;bamId;status",
+    "genCol": "bamId",
+    "manyToOne": "batch,assessorClientAdmin"
+  },
+  {
+    "pojo": "BatchParticipantMapper",
+    "fields": "bpmId;genDate;bpmId_ENCRYPTED;status",
+    "genCol": "bpmId",
+    "manyToOne": "userClientMapper,batch"
+  },
+  {
+    "pojo": "BatchParticipantToolAssessorMapper",
+    "fields": "accessStatus;bptamId;externalPumId;status;submissionStatus;assessorSubmissionStatus;toolDetails;genDate",
+    "genCol": "bptamId",
+    "manyToOne": "batchTpdMapper,batchParticipantMapper,batchAssessorMapper"
+  },
+  {
+    "pojo": "BatchTpdMapper",
+    "fields": "externalProjectId;btmId",
+    "genCol": "btmId",
+    "manyToOne": "toolPackageDetail,batch"
+  },
+  {
+    "pojo": "BplamCompetencyScore",
+    "fields": "genDate;bplamcsId;status",
+    "genCol": "bplamcsId",
+    "manyToOne": "score,competency,bpmLeadAssessorMapper"
+  },
+  {
+    "pojo": "BplamIndicatorScore",
+    "fields": "bplamisId;genDate;status",
+    "genCol": "bplamisId",
+    "manyToOne": "score,competencyIndicator,bpmLeadAssessorMapper"
+  },
+  {
+    "pojo": "BpmLeadAssessorMapper",
+    "fields": "bplamId;genDate;status",
+    "genCol": "bplamId",
+    "manyToOne": "batchParticipantMapper,batchAssessorMapper"
+  },
+  {
+    "pojo": "BptamCompetencyScore",
+    "fields": "genDate;bcsId;status",
+    "genCol": "bcsId",
+    "manyToOne": "score,competency,batchParticipantToolAssessorMapper"
+  },
+  {
+    "pojo": "BptamIndicatorScore",
+    "fields": "bisId;genDate;status",
+    "genCol": "bisId",
+    "manyToOne": "score,batchParticipantToolAssessorMapper,competencyIndicator"
+  },
+  {
+    "pojo": "Client",
+    "fields": "parentClientId;name;clientId;email;genDate;clientId_ENCRYPTED;status;updatedTimestamp;lastIp",
+    "genCol": "clientId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "ClientAdmin",
+    "fields": "clientAdminId_ENCRYPTED;genDate;clientAdminId;status;updatedTimestamp;accessIds",
+    "genCol": "clientAdminId",
+    "manyToOne": "userInfo,client"
+  },
+  {
+    "pojo": "Competency",
+    "fields": "genDate;competencyId;competencyName;status",
+    "genCol": "competencyId",
+    "manyToOne": "toolPackage"
+  },
+  {
+    "pojo": "CompetencyIndicator",
+    "fields": "indicatorId;genDate;indicatorStatement;status",
+    "genCol": "indicatorId",
+    "manyToOne": "competency"
+  },
+  {
+    "pojo": "CompetencyIndicatorObservation",
+    "fields": "genDate;status;scale;observationId_ENCRYPTED;observationId;observationStatement",
+    "genCol": "observationId",
+    "manyToOne": "competencyIndicator"
+  },
+  {
+    "pojo": "EmailService",
+    "fields": "emailSub;toolId;emailTitle;genDate;status;etId_ENCRYPTED;etId;emailContent;projectName",
+    "genCol": "etId",
+    "manyToOne": "client"
+  },
+  {
+    "pojo": "IndicatorToolMappper",
+    "fields": "itmId;genDate;itmId_ENCRYPTED;status",
+    "genCol": "itmId",
+    "manyToOne": "toolPackageDetail,competencyIndicator"
+  },
+  {
+    "pojo": "Material",
+    "fields": "materialId;materialName;genDate;materialId_ENCRYPTED;status;originalFileName",
+    "genCol": "materialId",
+    "manyToOne": "toolPackage"
+  },
+  {
+    "pojo": "Tool",
+    "fields": "toolType;integrationName;toolInstruction;genDate;status;toolName;toolId_ENCRYPTED;toolId",
+    "genCol": "toolId",
+    "manyToOne": "centralToolId"
+  },
+  {
+    "pojo": "ToolApi",
+    "fields": "projectIdVariable;toolApiId;toolApiVariables;toolApiConsumeJsonFormat;toolApiUrl;pumIdVariable;status;toolApiId_ENCRYPTED;toolApiName;toolApiMethodType;genDate",
+    "genCol": "toolApiId",
+    "manyToOne": "centralToolId,tool"
+  },
+  {
+    "pojo": "ToolPackage",
+    "fields": "tpId_ENCRYPTED;genDate;toolPackageName;status;tpId",
+    "genCol": "tpId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "ToolPackageDetail",
+    "fields": "name;genDate;externalTemplateId;status;tpdId_ENCRYPTED;tpdId",
+    "genCol": "tpdId",
+    "manyToOne": "tool,toolPackage"
+  },
+  {
+    "pojo": "UserClientMapper",
+    "fields": "genDate;ucmId;status;updatedTimestamp;ucmId_ENCRYPTED;userType",
+    "genCol": "ucmId",
+    "manyToOne": "userInfo,client"
+  },
+  {
+    "pojo": "UserInfo",
+    "fields": "name;email;userId_ENCRYPTED;genDate;status;updatedTimestamp;lastUcmId;userId",
+    "genCol": "userId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "VdcLocale",
+    "fields": "localeId_ENCRYPTED;locales;localeScript;localeId",
+    "genCol": "localeId",
+    "manyToOne": ""
+  }
+]

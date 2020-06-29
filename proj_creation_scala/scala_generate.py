@@ -5,10 +5,10 @@ import pandas as pd
 
 base_package = "com.ttn.integr8"
 
-df = pd.read_json("F:/AWS_CODE_COMMIT/New folder/source_creation/proj_creation_scala/project_jsons/integr8.json", orient="records")
+df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/nextv3-vdc.json", orient="records")
 print(df)
 
-target_path = "F:/AWS_CODE_COMMIT/New folder/integr8/integr8-service/src/main/java/com/ttn/integr8"
+target_path = "D:/git/source_creation/target"
 
 
 def camel_case(str):

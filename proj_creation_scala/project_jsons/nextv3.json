@@ -1,0 +1,116 @@
+[
+  {
+    "pojo": "Admin",
+    "fields": "name;email;adminType;adminId_ENCRYPTED;status;updatedTimestamp;lastIp;mobile;genDate;adminId",
+    "genCol": "adminId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "AdminAccessLog",
+    "fields": "ip;adminAccessId_ENCRYPTED;genDate;logoutTimestamp;deviceType;userAgent;status;adminAccessId;referer;loginTimestamp",
+    "genCol": "adminAccessId",
+    "manyToOne": "admin"
+  },
+  {
+    "pojo": "Client",
+    "fields": "name;clientId;email;genDate;clientId_ENCRYPTED;status;updatedTimestamp;lastIp",
+    "genCol": "clientId",
+    "manyToOne": "client"
+  },
+  {
+    "pojo": "ClientAdmin",
+    "fields": "clientAdminId_ENCRYPTED;genDate;clientAdminId;status;updatedTimestamp;accessIds",
+    "genCol": "clientAdminId",
+    "manyToOne": "userInfo,client"
+  },
+  {
+    "pojo": "ClientAdminAccess",
+    "fields": "caaId_ENCRYPTED;genDate;caaId;status",
+    "genCol": "caaId",
+    "manyToOne": "clientAdmin"
+  },
+  {
+    "pojo": "ClientAdminAccessControl",
+    "fields": "controlAccessId_ENCRYPTED;controlAccessId;genDate;status;updatedTimestamp",
+    "genCol": "controlAccessId",
+    "manyToOne": "clientAdmin"
+  },
+  {
+    "pojo": "ClientAdminAccessLog",
+    "fields": "ip;logId;genDate;logoutTimestamp;deviceType;userAgent;status;logId_ENCRYPTED;referer;loginTimestamp",
+    "genCol": "logId",
+    "manyToOne": "clientAdmin"
+  },
+  {
+    "pojo": "ClientAdminAuditLog",
+    "fields": "auditText;auditId;genDate;actingClientAdminId;status;auditId_ENCRYPTED",
+    "genCol": "auditId",
+    "manyToOne": "clientAdmin,admin"
+  },
+  {
+    "pojo": "ClientTemplateMapper",
+    "fields": "timestamp;tempId;status;ctmId_ENCRYPTED;ctmId",
+    "genCol": "ctmId",
+    "manyToOne": "client"
+  },
+  {
+    "pojo": "ClientToolMapper",
+    "fields": "credJson;genDate;externalClientId;status;ctmId_ENCRYPTED;ctmId;reportAutoStatus",
+    "genCol": "ctmId",
+    "manyToOne": "client,tool"
+  },
+  {
+    "pojo": "EmailService",
+    "fields": "emailSub;emailTitle;genDate;status;etId_ENCRYPTED;etId;emailContent;projectName",
+    "genCol": "etId",
+    "manyToOne": "client,tool"
+  },
+  {
+    "pojo": "Locale",
+    "fields": "localeId_ENCRYPTED;locales;localeScript;localeId",
+    "genCol": "localeId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "MasterAccessList",
+    "fields": "accessId;accessDesc;genDate;accessId_ENCRYPTED;status;accessKey;updatedTimestamp;accessName",
+    "genCol": "accessId",
+    "manyToOne": "tool"
+  },
+  {
+    "pojo": "Role",
+    "fields": "status;roleId;updatedTimestamp;accessIds;roleId_ENCRYPTED;genDate;roleName",
+    "genCol": "roleId",
+    "manyToOne": "client"
+  },
+  {
+    "pojo": "Tool",
+    "fields": "reportLink;toolCategory;authType;clientLink;toolName;userLink;serviceCategory;reportContent;toolId_ENCRYPTED;taskIcon;toolId;toolIcon;useCategory;toolDes;reportHeader",
+    "genCol": "toolId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "UcmAccessLog",
+    "fields": "ip;logId;genDate;logoutTimestamp;deviceType;userAgent;status;logId_ENCRYPTED;referer;loginTimestamp",
+    "genCol": "logId",
+    "manyToOne": "userClientMapper"
+  },
+  {
+    "pojo": "UcmAuditLog",
+    "fields": "auditText;auditId;genDate;status;auditId_ENCRYPTED",
+    "genCol": "auditId",
+    "manyToOne": "clientAdmin,userClientMapper,admin"
+  },
+  {
+    "pojo": "UserClientMapper",
+    "fields": "genDate;ucmId;status;updatedTimestamp;ucmId_ENCRYPTED;userType",
+    "genCol": "ucmId",
+    "manyToOne": "userInfo,client"
+  },
+  {
+    "pojo": "UserInfo",
+    "fields": "name;email;userId_ENCRYPTED;genDate;status;updatedTimestamp;lastUcmId;userId",
+    "genCol": "userId",
+    "manyToOne": ""
+  }
+]
