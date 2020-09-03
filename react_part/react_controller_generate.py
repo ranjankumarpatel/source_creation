@@ -18,7 +18,7 @@ def extract_param(txt):
         return cbraces1
 
 
-with open("D:/git/source_creation/proj_creation_scala/project_jsons/nextv3-vdc-controller.json",
+with open("D:/git/source_creation/proj_creation_scala/project_jsons/anchor2-author-controller.json",
           "r") as file:
     text = file.read()
 
@@ -56,6 +56,6 @@ for pojo in df.pojo:
     print(out_text)
 
     with open(
-            "D:/git/source_creation/target/controller/react/vdc-{0}-controller.jsx".format(
+            "D:/git/source_creation/target/react/controller/anchor-{0}-controller.jsx".format(
                 pojo.lower()), "w") as out_file:
         out_file.write(out_text)

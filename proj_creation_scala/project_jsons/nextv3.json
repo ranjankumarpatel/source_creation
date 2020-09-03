@@ -48,12 +48,6 @@
     "manyToOne": "clientAdmin,admin"
   },
   {
-    "pojo": "ClientTemplateMapper",
-    "fields": "timestamp;tempId;status;ctmId_ENCRYPTED;ctmId",
-    "genCol": "ctmId",
-    "manyToOne": "client"
-  },
-  {
     "pojo": "ClientToolMapper",
     "fields": "credJson;genDate;externalClientId;status;ctmId_ENCRYPTED;ctmId;reportAutoStatus",
     "genCol": "ctmId",
@@ -84,6 +78,12 @@
     "manyToOne": "client"
   },
   {
+    "pojo": "RoleAccessMapper",
+    "fields": "ramId_ENCRYPTED;genDate;ramId;status",
+    "genCol": "ramId",
+    "manyToOne": "role"
+  },
+  {
     "pojo": "Tool",
     "fields": "reportLink;toolCategory;authType;clientLink;toolName;userLink;serviceCategory;reportContent;toolId_ENCRYPTED;taskIcon;toolId;toolIcon;useCategory;toolDes;reportHeader",
     "genCol": "toolId",
@@ -109,7 +109,7 @@
   },
   {
     "pojo": "UserInfo",
-    "fields": "name;email;userId_ENCRYPTED;genDate;status;updatedTimestamp;lastUcmId;userId",
+    "fields": "name;email;userId_ENCRYPTED;genDate;passWord;status;lastUcmId;userId",
     "genCol": "userId",
     "manyToOne": ""
   }

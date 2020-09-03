@@ -18,7 +18,7 @@ def extract_param(txt):
         return cbraces1
 
 
-with open("D:/git/source_creation/proj_creation_scala/project_jsons/ability2.json", "r") as file:
+with open("D:/git/source_creation/proj_creation_scala/project_jsons/anchor2-author.json", "r") as file:
     text = file.read()
 
 json_data = json.loads(text)
@@ -49,5 +49,5 @@ out_text = replace_string("D:/git/source_creation/proj_creation_scala/source/poj
 print(out_text)
 
 with open(
-        "/home/thinktalentuser/GitWorkSpace/ability/ability2-react-react/src/routes/RestRoutes.jsx", "w") as out_file:
+        "D:/git/source_creation/target/react/routes/RestRoutes.jsx", "w") as out_file:
     out_file.write(out_text)

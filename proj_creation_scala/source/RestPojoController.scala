@@ -59,8 +59,8 @@ class Rest$pojo Controller {
 
   @Transactional(readOnly = true)
   @GetMapping(path = Array("/id/{$genId}"))
-  def findById(@PathVariable("$genId") enc$genId: String): String = {
-    val $genId = AESEncryption.decrypt(enc$genId).toLong
+  def findById(@PathVariable("$genId") $genId _ENCRYPTED: String): String = {
+    val $genId = AESEncryption.decrypt($genId _ENCRYPTED).toLong
 
     val $pojo_camel = $pojo_camel Repository.getOne($genId)
     $pojo_camel Json.getJson($pojo_camel)
@@ -68,11 +68,11 @@ class Rest$pojo Controller {
   }
 
 
- @Transactional(readOnly = true)
+ /*@Transactional(readOnly = true)
   @GetMapping(path = Array("/all"))
   def findAll: String = {
     $pojo_camel Json.getJson($pojo_camel Repository.findAll().asScala.toList)
-  }
+  }*/
 
   $code
 

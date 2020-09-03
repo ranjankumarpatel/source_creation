@@ -17,9 +17,9 @@ import {
   DropdownItem,
   Dropdown
 } from "reactstrap";
-import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
 
-import $pojo Controller from "../../api/controller/$pojo_lower -controller";
+
+import $pojo Controller from "../../api/controller/anchor-$pojo_lower -controller";
 
 class $pojo View extends React.Component {
   constructor(props) {
@@ -214,29 +214,7 @@ class $pojo View extends React.Component {
 
 
 
-          <Col md="12">
-            <Card>
-              <CardBody>
-                <BootstrapTable
-                  striped
-                  hover
-                  responsive
-                  search={true}
-                  data={$pojo_lower s}
-                  pagination
-                  tableHeaderClass="mb-0"
-                >
 
-{% for field in fields %}
-                  <TableHeaderColumn width="100" dataField="{{field}}" {{'isKey' if field == id_fields else ""}}>
-                   {{field}}
-                  </TableHeaderColumn>
-                  {% endfor %}
-
-                </BootstrapTable>
-              </CardBody>
-            </Card>
-          </Col>
 
           <Col md="12">
             <Card>

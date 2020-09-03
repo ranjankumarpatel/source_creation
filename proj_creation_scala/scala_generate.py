@@ -3,9 +3,9 @@ from string import Template
 
 import pandas as pd
 
-base_package = "com.ttn.integr8"
+base_package = "com.ttn.anchor"
 
-df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/nextv3-vdc.json", orient="records")
+df = pd.read_json("D:/git/source_creation/proj_creation_scala/project_jsons/anchor2-author.json", orient="records")
 print(df)
 
 target_path = "D:/git/source_creation/target"
@@ -110,7 +110,7 @@ for tup in df.itertuples():
         out_file.write(out_text)
 
     with open(
-            target_path + "/controller/Rest{0}Controller.scala".format(
+            target_path + "/controller/rest/Rest{0}Controller.scala".format(
                 tup.pojo), "w") as out_file:
 
         mone_arr = []
@@ -122,7 +122,8 @@ for tup in df.itertuples():
 
                 repo_text = Template("""\t@Transactional(readOnly = true)
                 \t@GetMapping(path = Array("/$mone_lower/{$moneid}"))
-                \tdef findBy$moneClass(@PathVariable("$moneid") $moneid : lang.Long):String = {
+                \tdef findBy$moneClass(@PathVariable("$moneid") $moneid _ENCRYPTED : String):String = {
+                        val $moneid = AESEncryption.decrypt($moneid _ENCRYPTED).toLong
                         val $pojo s = $pojo_camel Service.findBy$moneClass(new $moneClass($moneid))
                         $pojo_camel Json.getJson($pojo s)
                         }""").substitute(

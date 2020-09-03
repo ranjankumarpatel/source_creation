@@ -1,0 +1,110 @@
+[
+  {
+    "pojo": "Admin",
+    "fields": "name;email;adminId;gendate;adminType;adminId_ENCRYPTED;status;updatedTimestamp;lastIp;mobile",
+    "genCol": "adminId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Client",
+    "fields": "parentClientId;name;clientId;email;genDate;clientId_ENCRYPTED;status;updatedTimestamp;lastIp",
+    "genCol": "clientId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Competency",
+    "fields": "genDate;status;competencyId_ENCRYPTED;competencyId;competencyName",
+    "genCol": "competencyId",
+    "manyToOne": "template"
+  },
+  {
+    "pojo": "CompetencyStatementMapper",
+    "fields": "csmId;csmId_ENCRYPTED;genDate;status",
+    "genCol": "csmId",
+    "manyToOne": "competency,statement"
+  },
+  {
+    "pojo": "EmailTemplate",
+    "fields": "emailSub;timestamp;emailTitle;etid;status;emailContent;projectName",
+    "genCol": "etid",
+    "manyToOne": "client"
+  },
+  {
+    "pojo": "Locale",
+    "fields": "locales;languageId;localeScript;LanguageId_ENCRYPTED",
+    "genCol": "languageId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Option",
+    "fields": "weightage;optId;genDate;optName;status;optId_ENCRYPTED",
+    "genCol": "optId",
+    "manyToOne": "optionGroup"
+  },
+  {
+    "pojo": "OptionGroup",
+    "fields": "optGrpId_ENCRYPTED;genDate;optGrpName;status;optGrpId",
+    "genCol": "optGrpId",
+    "manyToOne": "template"
+  },
+  {
+    "pojo": "Project",
+    "fields": "projectName;authorizationCode;genDate;projectId;status;projectId_ENCRYPTED",
+    "genCol": "projectId",
+    "manyToOne": "template,client"
+  },
+  {
+    "pojo": "ProjectUserMapper",
+    "fields": "pumId;genDate;submissionDate;status;pumId_ENCRYPTED;submissionStatus",
+    "genCol": "pumId",
+    "manyToOne": "userClientMapper,project"
+  },
+  {
+    "pojo": "Statement",
+    "fields": "statementId_ENCRYPTED;name;genDate;status;statementId",
+    "genCol": "statementId",
+    "manyToOne": "template,optionGroup"
+  },
+  {
+    "pojo": "StatementLocale",
+    "fields": "slocId_ENCRYPTED;localeScript;slocId",
+    "genCol": "slocId",
+    "manyToOne": "statement,locale"
+  },
+  {
+    "pojo": "Template",
+    "fields": "description;genDate;templateName;templateId;status;templateId_ENCRYPTED",
+    "genCol": "templateId",
+    "manyToOne": "client,admin"
+  },
+  {
+    "pojo": "TemplateClientMapper",
+    "fields": "genDate;tcmId;tcmId_ENCRYPTED;status",
+    "genCol": "tcmId",
+    "manyToOne": "template,client"
+  },
+  {
+    "pojo": "TemplateOptionLocale",
+    "fields": "tolocId_ENCRYPTED;tolocId;localeScript",
+    "genCol": "tolocId",
+    "manyToOne": "locale,option"
+  },
+  {
+    "pojo": "UserClientMapper",
+    "fields": "genDate;ucmId;status;updatedTimestamp;ucmId_ENCRYPTED;userType",
+    "genCol": "ucmId",
+    "manyToOne": "userInfo,client"
+  },
+  {
+    "pojo": "UserInfo",
+    "fields": "name;email;userId_ENCRYPTED;gendate;status;lastUcmId;userId",
+    "genCol": "userId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "UserResponseStore",
+    "fields": "gendate;ursId;ursId_ENCRYPTED",
+    "genCol": "ursId",
+    "manyToOne": "projectUserMapper,statement,option"
+  }
+]

@@ -10,6 +10,15 @@
   },
   {
     "pojo": "RestAdminController",
+    "method": "updateAdmin",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/admin"
+  },
+  {
+    "pojo": "RestAdminController",
     "method": "insertAdmin",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
@@ -24,15 +33,6 @@
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{adminId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/id/{adminId}",
-    "classPath": "/rest/admin"
-  },
-  {
-    "pojo": "RestAdminController",
-    "method": "updateAdmin",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
-    "annotationMethod": "PostMapping",
-    "path": "/update",
     "classPath": "/rest/admin"
   },
   {
@@ -64,20 +64,20 @@
   },
   {
     "pojo": "RestBatchAssessorMapperController",
-    "method": "updateBatchAssessorMapper",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
-    "annotationMethod": "PostMapping",
-    "path": "/update",
-    "classPath": "/rest/batchassessormapper"
-  },
-  {
-    "pojo": "RestBatchAssessorMapperController",
     "method": "insertBatchAssessorMapper",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
     "annotationMethod": "PostMapping",
     "path": "/insert",
+    "classPath": "/rest/batchassessormapper"
+  },
+  {
+    "pojo": "RestBatchAssessorMapperController",
+    "method": "updateBatchAssessorMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
     "classPath": "/rest/batchassessormapper"
   },
   {
@@ -100,29 +100,11 @@
   },
   {
     "pojo": "RestBatchController",
-    "method": "insertBatch",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
-    "annotationMethod": "PostMapping",
-    "path": "/insert",
-    "classPath": "/rest/batch"
-  },
-  {
-    "pojo": "RestBatchController",
     "method": "findByClient",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/client/{clientId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/client/{clientId}",
-    "classPath": "/rest/batch"
-  },
-  {
-    "pojo": "RestBatchController",
-    "method": "updateBatch",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
-    "annotationMethod": "PostMapping",
-    "path": "/update",
     "classPath": "/rest/batch"
   },
   {
@@ -136,11 +118,29 @@
   },
   {
     "pojo": "RestBatchController",
+    "method": "insertBatch",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/batch"
+  },
+  {
+    "pojo": "RestBatchController",
     "method": "findByAssessor",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/assessor/{clientAdminId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/assessor/{clientAdminId}",
+    "classPath": "/rest/batch"
+  },
+  {
+    "pojo": "RestBatchController",
+    "method": "updateBatch",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
     "classPath": "/rest/batch"
   },
   {
@@ -181,6 +181,15 @@
   },
   {
     "pojo": "RestBatchParticipantMapperController",
+    "method": "updateBatchParticipantMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/batchparticipantmapper"
+  },
+  {
+    "pojo": "RestBatchParticipantMapperController",
     "method": "insertBatchParticipantMapper",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
@@ -195,15 +204,6 @@
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/bulk-insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
     "annotationMethod": "PostMapping",
     "path": "/bulk-insert",
-    "classPath": "/rest/batchparticipantmapper"
-  },
-  {
-    "pojo": "RestBatchParticipantMapperController",
-    "method": "updateBatchParticipantMapper",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
-    "annotationMethod": "PostMapping",
-    "path": "/update",
     "classPath": "/rest/batchparticipantmapper"
   },
   {
@@ -226,20 +226,11 @@
   },
   {
     "pojo": "RestBatchParticipantToolAssessorMapperController",
-    "method": "findById",
+    "method": "findByBatchAssessorMapper",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{bptamId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/assessor/{assessorId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/id/{bptamId}",
-    "classPath": "/rest/batchparticipanttoolassessormapper"
-  },
-  {
-    "pojo": "RestBatchParticipantToolAssessorMapperController",
-    "method": "findReport",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/report/{bptamId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/report/{bptamId}",
+    "path": "/assessor/{assessorId}",
     "classPath": "/rest/batchparticipanttoolassessormapper"
   },
   {
@@ -253,20 +244,20 @@
   },
   {
     "pojo": "RestBatchParticipantToolAssessorMapperController",
-    "method": "findByBatchAssessorMapper",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/assessor/{assessorId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/assessor/{assessorId}",
-    "classPath": "/rest/batchparticipanttoolassessormapper"
-  },
-  {
-    "pojo": "RestBatchParticipantToolAssessorMapperController",
     "method": "updateBatchParticipantToolAssessorMapper",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
     "annotationMethod": "PostMapping",
     "path": "/update",
+    "classPath": "/rest/batchparticipanttoolassessormapper"
+  },
+  {
+    "pojo": "RestBatchParticipantToolAssessorMapperController",
+    "method": "updateBatchParticipantToolAssessorMappersBAM",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/bam/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/bam/update",
     "classPath": "/rest/batchparticipanttoolassessormapper"
   },
   {
@@ -279,39 +270,39 @@
     "classPath": "/rest/batchparticipanttoolassessormapper"
   },
   {
+    "pojo": "RestBatchParticipantToolAssessorMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{bptamId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{bptamId}",
+    "classPath": "/rest/batchparticipanttoolassessormapper"
+  },
+  {
+    "pojo": "RestBatchParticipantToolAssessorMapperController",
+    "method": "findByBatch",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/batch/{batchId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/batch/{batchId}",
+    "classPath": "/rest/batchparticipanttoolassessormapper"
+  },
+  {
+    "pojo": "RestBatchParticipantToolAssessorMapperController",
+    "method": "findReport",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/report/{bptamId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/report/{bptamId}",
+    "classPath": "/rest/batchparticipanttoolassessormapper"
+  },
+  {
     "pojo": "RestBatchTpdMapperController",
     "method": "findAll",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/all",
-    "classPath": "/rest/batchtpdmapper"
-  },
-  {
-    "pojo": "RestBatchTpdMapperController",
-    "method": "findById",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{btmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/id/{btmId}",
-    "classPath": "/rest/batchtpdmapper"
-  },
-  {
-    "pojo": "RestBatchTpdMapperController",
-    "method": "findByBatch",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/batch/{batchId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/batch/{batchId}",
-    "classPath": "/rest/batchtpdmapper"
-  },
-  {
-    "pojo": "RestBatchTpdMapperController",
-    "method": "insertBatchTpdMapper",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
-    "annotationMethod": "PostMapping",
-    "path": "/insert",
     "classPath": "/rest/batchtpdmapper"
   },
   {
@@ -333,12 +324,345 @@
     "classPath": "/rest/batchtpdmapper"
   },
   {
+    "pojo": "RestBatchTpdMapperController",
+    "method": "insertBatchTpdMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/batchtpdmapper"
+  },
+  {
+    "pojo": "RestBatchTpdMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{btmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{btmId}",
+    "classPath": "/rest/batchtpdmapper"
+  },
+  {
+    "pojo": "RestBatchTpdMapperController",
+    "method": "findByBatch",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/batch/{batchId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/batch/{batchId}",
+    "classPath": "/rest/batchtpdmapper"
+  },
+  {
+    "pojo": "RestBplamCompetencyScoreController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/bplamcompetencyscore"
+  },
+  {
+    "pojo": "RestBplamCompetencyScoreController",
+    "method": "insertBplamCompetencyScore",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/bplamcompetencyscore"
+  },
+  {
+    "pojo": "RestBplamCompetencyScoreController",
+    "method": "findByBpmLeadAssessorMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/bpmleadassessormapper/{bplamId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/bpmleadassessormapper/{bplamId}",
+    "classPath": "/rest/bplamcompetencyscore"
+  },
+  {
+    "pojo": "RestBplamCompetencyScoreController",
+    "method": "updateBplamCompetencyScore",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/bplamcompetencyscore"
+  },
+  {
+    "pojo": "RestBplamCompetencyScoreController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{bplamcsId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{bplamcsId}",
+    "classPath": "/rest/bplamcompetencyscore"
+  },
+  {
+    "pojo": "RestBplamCompetencyScoreController",
+    "method": "findByCompetency",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/competency/{competencyId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/competency/{competencyId}",
+    "classPath": "/rest/bplamcompetencyscore"
+  },
+  {
+    "pojo": "RestBplamIndicatorScoreController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/bplamindicatorscore"
+  },
+  {
+    "pojo": "RestBplamIndicatorScoreController",
+    "method": "updateBplamIndicatorScore",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/bplamindicatorscore"
+  },
+  {
+    "pojo": "RestBplamIndicatorScoreController",
+    "method": "findByCompetencyIndicator",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/competencyindicator/{indicatorId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/competencyindicator/{indicatorId}",
+    "classPath": "/rest/bplamindicatorscore"
+  },
+  {
+    "pojo": "RestBplamIndicatorScoreController",
+    "method": "insertBplamIndicatorScore",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/bplamindicatorscore"
+  },
+  {
+    "pojo": "RestBplamIndicatorScoreController",
+    "method": "findByBpmLeadAssessorMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/bpmleadassessormapper/{bplamId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/bpmleadassessormapper/{bplamId}",
+    "classPath": "/rest/bplamindicatorscore"
+  },
+  {
+    "pojo": "RestBplamIndicatorScoreController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{bplamisId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{bplamisId}",
+    "classPath": "/rest/bplamindicatorscore"
+  },
+  {
+    "pojo": "RestBpmLeadAssessorMapperController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/bpmleadassessormapper"
+  },
+  {
+    "pojo": "RestBpmLeadAssessorMapperController",
+    "method": "updateBpmLeadAssessorMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/bpmleadassessormapper"
+  },
+  {
+    "pojo": "RestBpmLeadAssessorMapperController",
+    "method": "insertBpmLeadAssessorMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/bpmleadassessormapper"
+  },
+  {
+    "pojo": "RestBpmLeadAssessorMapperController",
+    "method": "findByBatchAssessorMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/batchassessormapper/{bamId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/batchassessormapper/{bamId}",
+    "classPath": "/rest/bpmleadassessormapper"
+  },
+  {
+    "pojo": "RestBpmLeadAssessorMapperController",
+    "method": "findByBatchParticipantMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/batchparticipantmapper/{bpmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/batchparticipantmapper/{bpmId}",
+    "classPath": "/rest/bpmleadassessormapper"
+  },
+  {
+    "pojo": "RestBpmLeadAssessorMapperController",
+    "method": "updateBatchParticipantLeadAssessorMappersBAM",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/bam/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/bam/update",
+    "classPath": "/rest/bpmleadassessormapper"
+  },
+  {
+    "pojo": "RestBpmLeadAssessorMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{bplamId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{bplamId}",
+    "classPath": "/rest/bpmleadassessormapper"
+  },
+  {
+    "pojo": "RestBpmLeadAssessorMapperController",
+    "method": "findByBatch",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/batch/{batchId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/batch/{batchId}",
+    "classPath": "/rest/bpmleadassessormapper"
+  },
+  {
+    "pojo": "RestBptamCompetencyScoreController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/bptamcompetencyscore"
+  },
+  {
+    "pojo": "RestBptamCompetencyScoreController",
+    "method": "insertBptamCompetencyScore",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/bptamcompetencyscore"
+  },
+  {
+    "pojo": "RestBptamCompetencyScoreController",
+    "method": "updateBptamCompetencyScore",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/bptamcompetencyscore"
+  },
+  {
+    "pojo": "RestBptamCompetencyScoreController",
+    "method": "findByBatchParticipantToolAssessorMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/batchparticipanttoolassessormapper/{bptamId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/batchparticipanttoolassessormapper/{bptamId}",
+    "classPath": "/rest/bptamcompetencyscore"
+  },
+  {
+    "pojo": "RestBptamCompetencyScoreController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{bcsId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{bcsId}",
+    "classPath": "/rest/bptamcompetencyscore"
+  },
+  {
+    "pojo": "RestBptamCompetencyScoreController",
+    "method": "findByCompetency",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/competency/{competencyId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/competency/{competencyId}",
+    "classPath": "/rest/bptamcompetencyscore"
+  },
+  {
+    "pojo": "RestBptamIndicatorScoreController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/bptamindicatorscore"
+  },
+  {
+    "pojo": "RestBptamIndicatorScoreController",
+    "method": "findByCompetencyIndicator",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/competencyindicator/{indicatorId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/competencyindicator/{indicatorId}",
+    "classPath": "/rest/bptamindicatorscore"
+  },
+  {
+    "pojo": "RestBptamIndicatorScoreController",
+    "method": "insertBptamIndicatorScore",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/bptamindicatorscore"
+  },
+  {
+    "pojo": "RestBptamIndicatorScoreController",
+    "method": "updateBptamIndicatorScore",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/bptamindicatorscore"
+  },
+  {
+    "pojo": "RestBptamIndicatorScoreController",
+    "method": "findByBatchParticipantToolAssessorMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/bptam/{bptamId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/bptam/{bptamId}",
+    "classPath": "/rest/bptamindicatorscore"
+  },
+  {
+    "pojo": "RestBptamIndicatorScoreController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{bisId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{bisId}",
+    "classPath": "/rest/bptamindicatorscore"
+  },
+  {
+    "pojo": "RestBptamIndicatorScoreController",
+    "method": "deleteById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/delete/{itmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/delete/{itmId}",
+    "classPath": "/rest/bptamindicatorscore"
+  },
+  {
     "pojo": "RestClientAdminController",
     "method": "findAll",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/all",
+    "classPath": "/rest/clientadmin"
+  },
+  {
+    "pojo": "RestClientAdminController",
+    "method": "findAssessorAndProjectmanagerList",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/assessor-projectmanager\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/assessor-projectmanager",
     "classPath": "/rest/clientadmin"
   },
   {
@@ -357,15 +681,6 @@
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/client/{clientId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/client/{clientId}",
-    "classPath": "/rest/clientadmin"
-  },
-  {
-    "pojo": "RestClientAdminController",
-    "method": "findAssessorAndProjectmanagerList",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/assessor-projectmanager\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/assessor-projectmanager",
     "classPath": "/rest/clientadmin"
   },
   {
@@ -406,20 +721,20 @@
   },
   {
     "pojo": "RestClientController",
-    "method": "updateClient",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
-    "annotationMethod": "PostMapping",
-    "path": "/update",
-    "classPath": "/rest/client"
-  },
-  {
-    "pojo": "RestClientController",
     "method": "insertClient",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
     "annotationMethod": "PostMapping",
     "path": "/insert",
+    "classPath": "/rest/client"
+  },
+  {
+    "pojo": "RestClientController",
+    "method": "updateClient",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
     "classPath": "/rest/client"
   },
   {
@@ -442,6 +757,15 @@
   },
   {
     "pojo": "RestCompetencyController",
+    "method": "deleteById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/delete/{competencyId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/delete/{competencyId}",
+    "classPath": "/rest/competency"
+  },
+  {
+    "pojo": "RestCompetencyController",
     "method": "findByToolPackage",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/toolpackage/{tpId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
@@ -451,20 +775,20 @@
   },
   {
     "pojo": "RestCompetencyController",
-    "method": "insertCompetency",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
-    "annotationMethod": "PostMapping",
-    "path": "/insert",
-    "classPath": "/rest/competency"
-  },
-  {
-    "pojo": "RestCompetencyController",
     "method": "updateCompetency",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
     "annotationMethod": "PostMapping",
     "path": "/update",
+    "classPath": "/rest/competency"
+  },
+  {
+    "pojo": "RestCompetencyController",
+    "method": "insertCompetency",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
     "classPath": "/rest/competency"
   },
   {
@@ -487,11 +811,11 @@
   },
   {
     "pojo": "RestCompetencyIndicatorController",
-    "method": "insertCompetencyIndicator",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
-    "annotationMethod": "PostMapping",
-    "path": "/insert",
+    "method": "deleteById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/delete/{indicatorId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/delete/{indicatorId}",
     "classPath": "/rest/competencyindicator"
   },
   {
@@ -501,6 +825,15 @@
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
     "annotationMethod": "PostMapping",
     "path": "/update",
+    "classPath": "/rest/competencyindicator"
+  },
+  {
+    "pojo": "RestCompetencyIndicatorController",
+    "method": "insertCompetencyIndicator",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
     "classPath": "/rest/competencyindicator"
   },
   {
@@ -523,20 +856,20 @@
   },
   {
     "pojo": "RestCompetencyIndicatorObservationController",
-    "method": "findById",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{observationId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/id/{observationId}",
-    "classPath": "/rest/competencyindicatorobservation"
-  },
-  {
-    "pojo": "RestCompetencyIndicatorObservationController",
     "method": "findByCompetencyIndicator",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/competencyindicator/{indicatorId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/competencyindicator/{indicatorId}",
+    "classPath": "/rest/competencyindicatorobservation"
+  },
+  {
+    "pojo": "RestCompetencyIndicatorObservationController",
+    "method": "findByBatchParticipantToolAssessorMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/bptam/{bptamId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/bptam/{bptamId}",
     "classPath": "/rest/competencyindicatorobservation"
   },
   {
@@ -555,6 +888,24 @@
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
     "annotationMethod": "PostMapping",
     "path": "/insert",
+    "classPath": "/rest/competencyindicatorobservation"
+  },
+  {
+    "pojo": "RestCompetencyIndicatorObservationController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{observationId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{observationId}",
+    "classPath": "/rest/competencyindicatorobservation"
+  },
+  {
+    "pojo": "RestCompetencyIndicatorObservationController",
+    "method": "findByToolPackage",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/toolpackage/{tpId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/toolpackage/{tpId}",
     "classPath": "/rest/competencyindicatorobservation"
   },
   {
@@ -586,20 +937,20 @@
   },
   {
     "pojo": "RestEmailServiceController",
-    "method": "insertEmailService",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
-    "annotationMethod": "PostMapping",
-    "path": "/insert",
-    "classPath": "/rest/emailservice"
-  },
-  {
-    "pojo": "RestEmailServiceController",
     "method": "updateEmailService",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
     "annotationMethod": "PostMapping",
     "path": "/update",
+    "classPath": "/rest/emailservice"
+  },
+  {
+    "pojo": "RestEmailServiceController",
+    "method": "insertEmailService",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
     "classPath": "/rest/emailservice"
   },
   {
@@ -613,11 +964,11 @@
   },
   {
     "pojo": "RestIndicatorToolMappperController",
-    "method": "findById",
+    "method": "findByCompetencyIndicator",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{itmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/competencyindicator/{indicatorId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/id/{itmId}",
+    "path": "/competencyindicator/{indicatorId}",
     "classPath": "/rest/indicatortoolmappper"
   },
   {
@@ -631,20 +982,38 @@
   },
   {
     "pojo": "RestIndicatorToolMappperController",
-    "method": "findByCompetencyIndicator",
+    "method": "findByBatchParticipantToolAssessorMapper",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/competencyindicator/{indicatorId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/bptam/{bptamId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/competencyindicator/{indicatorId}",
+    "path": "/bptam/{bptamId}",
     "classPath": "/rest/indicatortoolmappper"
   },
   {
     "pojo": "RestIndicatorToolMappperController",
-    "method": "insertIndicatorToolMappper",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
-    "annotationMethod": "PostMapping",
-    "path": "/insert",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{itmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{itmId}",
+    "classPath": "/rest/indicatortoolmappper"
+  },
+  {
+    "pojo": "RestIndicatorToolMappperController",
+    "method": "deleteById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/delete/{itmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/delete/{itmId}",
+    "classPath": "/rest/indicatortoolmappper"
+  },
+  {
+    "pojo": "RestIndicatorToolMappperController",
+    "method": "findByToolPackage",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/toolpackage/{tpId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/toolpackage/{tpId}",
     "classPath": "/rest/indicatortoolmappper"
   },
   {
@@ -654,6 +1023,15 @@
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
     "annotationMethod": "PostMapping",
     "path": "/update",
+    "classPath": "/rest/indicatortoolmappper"
+  },
+  {
+    "pojo": "RestIndicatorToolMappperController",
+    "method": "insertIndicatorToolMappper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
     "classPath": "/rest/indicatortoolmappper"
   },
   {
@@ -685,11 +1063,29 @@
   },
   {
     "pojo": "RestMaterialController",
+    "method": "findByBatch",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/batch/{batchId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/batch/{batchId}",
+    "classPath": "/rest/material"
+  },
+  {
+    "pojo": "RestMaterialController",
     "method": "findByToolPackage",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/toolpackage/{tpId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/toolpackage/{tpId}",
+    "classPath": "/rest/material"
+  },
+  {
+    "pojo": "RestMaterialController",
+    "method": "insertMaterial",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"multipart/form-data\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
     "classPath": "/rest/material"
   },
   {
@@ -703,11 +1099,11 @@
   },
   {
     "pojo": "RestMaterialController",
-    "method": "insertMaterial",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
-    "annotationMethod": "PostMapping",
-    "path": "/insert",
+    "method": "downloadById",
+    "returnType": "void",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/download/{materialId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/download/{materialId}",
     "classPath": "/rest/material"
   },
   {
@@ -730,6 +1126,15 @@
   },
   {
     "pojo": "RestToolApiController",
+    "method": "insertToolApi",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/toolapi"
+  },
+  {
+    "pojo": "RestToolApiController",
     "method": "updateToolApi",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
@@ -744,15 +1149,6 @@
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/tool/{toolId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/tool/{toolId}",
-    "classPath": "/rest/toolapi"
-  },
-  {
-    "pojo": "RestToolApiController",
-    "method": "insertToolApi",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
-    "annotationMethod": "PostMapping",
-    "path": "/insert",
     "classPath": "/rest/toolapi"
   },
   {
@@ -775,15 +1171,6 @@
   },
   {
     "pojo": "RestToolController",
-    "method": "findToolContent",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/tool-content\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
-    "annotationMethod": "PostMapping",
-    "path": "/tool-content",
-    "classPath": "/rest/tool"
-  },
-  {
-    "pojo": "RestToolController",
     "method": "updateTool",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
@@ -798,6 +1185,15 @@
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
     "annotationMethod": "PostMapping",
     "path": "/insert",
+    "classPath": "/rest/tool"
+  },
+  {
+    "pojo": "RestToolController",
+    "method": "findToolContent",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/tool-content\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/tool-content",
     "classPath": "/rest/tool"
   },
   {
@@ -820,20 +1216,20 @@
   },
   {
     "pojo": "RestToolPackageController",
-    "method": "insertToolPackage",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
-    "annotationMethod": "PostMapping",
-    "path": "/insert",
-    "classPath": "/rest/toolpackage"
-  },
-  {
-    "pojo": "RestToolPackageController",
     "method": "updateToolPackage",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
     "annotationMethod": "PostMapping",
     "path": "/update",
+    "classPath": "/rest/toolpackage"
+  },
+  {
+    "pojo": "RestToolPackageController",
+    "method": "insertToolPackage",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
     "classPath": "/rest/toolpackage"
   },
   {
@@ -919,20 +1315,20 @@
   },
   {
     "pojo": "RestUserClientMapperController",
-    "method": "updateUserClientMapper",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
-    "annotationMethod": "PostMapping",
-    "path": "/update",
-    "classPath": "/rest/userclientmapper"
-  },
-  {
-    "pojo": "RestUserClientMapperController",
     "method": "insertUserClientMapper",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
     "annotationMethod": "PostMapping",
     "path": "/insert",
+    "classPath": "/rest/userclientmapper"
+  },
+  {
+    "pojo": "RestUserClientMapperController",
+    "method": "updateUserClientMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
     "classPath": "/rest/userclientmapper"
   },
   {

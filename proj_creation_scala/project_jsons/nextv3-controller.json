@@ -1,5 +1,50 @@
 [
   {
+    "pojo": "RestAdminAccessLogController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/adminaccesslog"
+  },
+  {
+    "pojo": "RestAdminAccessLogController",
+    "method": "updateAdminAccessLog",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/adminaccesslog"
+  },
+  {
+    "pojo": "RestAdminAccessLogController",
+    "method": "insertAdminAccessLog",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/adminaccesslog"
+  },
+  {
+    "pojo": "RestAdminAccessLogController",
+    "method": "findByAdmin",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/admin/{adminId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/admin/{adminId}",
+    "classPath": "/rest/adminaccesslog"
+  },
+  {
+    "pojo": "RestAdminAccessLogController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{adminAccessId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{adminAccessId}",
+    "classPath": "/rest/adminaccesslog"
+  },
+  {
     "pojo": "RestAdminController",
     "method": "findAll",
     "returnType": "java.lang.String",
@@ -10,11 +55,11 @@
   },
   {
     "pojo": "RestAdminController",
-    "method": "updateAdmin",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "method": "validata_client_email",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/validate-email\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
     "annotationMethod": "PostMapping",
-    "path": "/update",
+    "path": "/validate-email",
     "classPath": "/rest/admin"
   },
   {
@@ -28,6 +73,15 @@
   },
   {
     "pojo": "RestAdminController",
+    "method": "updateAdmin",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/admin"
+  },
+  {
+    "pojo": "RestAdminController",
     "method": "insertAdmin",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
@@ -36,184 +90,202 @@
     "classPath": "/rest/admin"
   },
   {
-    "pojo": "RestBatchController",
+    "pojo": "RestClientAdminAccessControlController",
     "method": "findAll",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/all",
-    "classPath": "/rest/batch"
+    "classPath": "/rest/clientadminaccesscontrol"
   },
   {
-    "pojo": "RestBatchController",
-    "method": "updateBatch",
+    "pojo": "RestClientAdminAccessControlController",
+    "method": "updateClientAdminAccessControl",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
     "annotationMethod": "PostMapping",
     "path": "/update",
-    "classPath": "/rest/batch"
+    "classPath": "/rest/clientadminaccesscontrol"
   },
   {
-    "pojo": "RestBatchController",
-    "method": "insertBatch",
+    "pojo": "RestClientAdminAccessControlController",
+    "method": "insertClientAdminAccessControl",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
     "annotationMethod": "PostMapping",
     "path": "/insert",
-    "classPath": "/rest/batch"
+    "classPath": "/rest/clientadminaccesscontrol"
   },
   {
-    "pojo": "RestBatchController",
-    "method": "findByToolPackage",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/toolpackage/{tpId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/toolpackage/{tpId}",
-    "classPath": "/rest/batch"
-  },
-  {
-    "pojo": "RestBatchController",
-    "method": "findByClient",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/client/{clientId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/client/{clientId}",
-    "classPath": "/rest/batch"
-  },
-  {
-    "pojo": "RestBatchController",
-    "method": "findByAssessor",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/assessor/{clientAdminId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/assessor/{clientAdminId}",
-    "classPath": "/rest/batch"
-  },
-  {
-    "pojo": "RestBatchController",
+    "pojo": "RestClientAdminAccessControlController",
     "method": "findById",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{batchId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{controlAccessId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/id/{batchId}",
-    "classPath": "/rest/batch"
+    "path": "/id/{controlAccessId}",
+    "classPath": "/rest/clientadminaccesscontrol"
   },
   {
-    "pojo": "RestBatchController",
-    "method": "findByProjectManager",
+    "pojo": "RestClientAdminAccessControlController",
+    "method": "findByClientAdmin",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/project-manager/{clientAdminId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/clientadmin/{clientAdminId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/project-manager/{clientAdminId}",
-    "classPath": "/rest/batch"
+    "path": "/clientadmin/{clientAdminId}",
+    "classPath": "/rest/clientadminaccesscontrol"
   },
   {
-    "pojo": "RestBatchParticipantMapperController",
+    "pojo": "RestClientAdminAccessController",
     "method": "findAll",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/all",
-    "classPath": "/rest/batchparticipantmapper"
+    "classPath": "/rest/clientadminaccess"
   },
   {
-    "pojo": "RestBatchParticipantMapperController",
-    "method": "findById",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{bpmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/id/{bpmId}",
-    "classPath": "/rest/batchparticipantmapper"
-  },
-  {
-    "pojo": "RestBatchParticipantMapperController",
-    "method": "findByUserClientMapper",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/userclientmapper/{ucmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/userclientmapper/{ucmId}",
-    "classPath": "/rest/batchparticipantmapper"
-  },
-  {
-    "pojo": "RestBatchParticipantMapperController",
-    "method": "insertBatchParticipantMapper",
+    "pojo": "RestClientAdminAccessController",
+    "method": "insertClientAdminAccess",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
     "annotationMethod": "PostMapping",
     "path": "/insert",
-    "classPath": "/rest/batchparticipantmapper"
+    "classPath": "/rest/clientadminaccess"
   },
   {
-    "pojo": "RestBatchParticipantMapperController",
-    "method": "updateBatchParticipantMapper",
+    "pojo": "RestClientAdminAccessController",
+    "method": "updateClientAdminAccess",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
     "annotationMethod": "PostMapping",
     "path": "/update",
-    "classPath": "/rest/batchparticipantmapper"
+    "classPath": "/rest/clientadminaccess"
   },
   {
-    "pojo": "RestBatchParticipantMapperController",
-    "method": "findByBatch",
+    "pojo": "RestClientAdminAccessController",
+    "method": "findById",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/batch/{batchId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{caaId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/batch/{batchId}",
-    "classPath": "/rest/batchparticipantmapper"
+    "path": "/id/{caaId}",
+    "classPath": "/rest/clientadminaccess"
   },
   {
-    "pojo": "RestBatchParticipantToolAssessorMapperController",
+    "pojo": "RestClientAdminAccessController",
+    "method": "findByClientAdmin",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/clientadmin/{clientAdminId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/clientadmin/{clientAdminId}",
+    "classPath": "/rest/clientadminaccess"
+  },
+  {
+    "pojo": "RestClientAdminAccessController",
+    "method": "findByAccessKey",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/accesskey/{accessKey}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/accesskey/{accessKey}",
+    "classPath": "/rest/clientadminaccess"
+  },
+  {
+    "pojo": "RestClientAdminAccessLogController",
     "method": "findAll",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/all",
-    "classPath": "/rest/batchparticipanttoolassessormapper"
+    "classPath": "/rest/clientadminaccesslog"
   },
   {
-    "pojo": "RestBatchParticipantToolAssessorMapperController",
-    "method": "updateBatchParticipantToolAssessorMapper",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
-    "annotationMethod": "PostMapping",
-    "path": "/update",
-    "classPath": "/rest/batchparticipanttoolassessormapper"
-  },
-  {
-    "pojo": "RestBatchParticipantToolAssessorMapperController",
-    "method": "insertBatchParticipantToolAssessorMapper",
+    "pojo": "RestClientAdminAccessLogController",
+    "method": "insertClientAdminAccessLog",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
     "annotationMethod": "PostMapping",
     "path": "/insert",
-    "classPath": "/rest/batchparticipanttoolassessormapper"
+    "classPath": "/rest/clientadminaccesslog"
   },
   {
-    "pojo": "RestBatchParticipantToolAssessorMapperController",
+    "pojo": "RestClientAdminAccessLogController",
+    "method": "updateClientAdminAccessLog",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/clientadminaccesslog"
+  },
+  {
+    "pojo": "RestClientAdminAccessLogController",
     "method": "findById",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{bptamId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{logId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/id/{bptamId}",
-    "classPath": "/rest/batchparticipanttoolassessormapper"
+    "path": "/id/{logId}",
+    "classPath": "/rest/clientadminaccesslog"
   },
   {
-    "pojo": "RestBatchParticipantToolAssessorMapperController",
-    "method": "findByBatchParticipantMapper",
+    "pojo": "RestClientAdminAccessLogController",
+    "method": "findByClientAdmin",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/batchparticipantmapper/{bpmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/clientadmin/{clientAdminId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/batchparticipantmapper/{bpmId}",
-    "classPath": "/rest/batchparticipanttoolassessormapper"
+    "path": "/clientadmin/{clientAdminId}",
+    "classPath": "/rest/clientadminaccesslog"
   },
   {
-    "pojo": "RestBatchParticipantToolAssessorMapperController",
-    "method": "findByBatchAssessorMapper",
+    "pojo": "RestClientAdminAuditLogController",
+    "method": "findAll",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/assessor/{assessorId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/assessor/{assessorId}",
-    "classPath": "/rest/batchparticipanttoolassessormapper"
+    "path": "/all",
+    "classPath": "/rest/clientadminauditlog"
+  },
+  {
+    "pojo": "RestClientAdminAuditLogController",
+    "method": "insertClientAdminAuditLog",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/clientadminauditlog"
+  },
+  {
+    "pojo": "RestClientAdminAuditLogController",
+    "method": "updateClientAdminAuditLog",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/clientadminauditlog"
+  },
+  {
+    "pojo": "RestClientAdminAuditLogController",
+    "method": "findByAdmin",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/admin/{adminId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/admin/{adminId}",
+    "classPath": "/rest/clientadminauditlog"
+  },
+  {
+    "pojo": "RestClientAdminAuditLogController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{auditId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{auditId}",
+    "classPath": "/rest/clientadminauditlog"
+  },
+  {
+    "pojo": "RestClientAdminAuditLogController",
+    "method": "findByClientAdmin",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/clientadmin/{clientAdminId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/clientadmin/{clientAdminId}",
+    "classPath": "/rest/clientadminauditlog"
   },
   {
     "pojo": "RestClientAdminController",
@@ -222,15 +294,6 @@
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/all",
-    "classPath": "/rest/clientadmin"
-  },
-  {
-    "pojo": "RestClientAdminController",
-    "method": "findByClient",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/client/{clientId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/client/{clientId}",
     "classPath": "/rest/clientadmin"
   },
   {
@@ -244,6 +307,24 @@
   },
   {
     "pojo": "RestClientAdminController",
+    "method": "updateClientAdmin",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/clientadmin"
+  },
+  {
+    "pojo": "RestClientAdminController",
+    "method": "findByUserInfo",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/userinfo/{userId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/userinfo/{userId}",
+    "classPath": "/rest/clientadmin"
+  },
+  {
+    "pojo": "RestClientAdminController",
     "method": "insertClientAdmin",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
@@ -253,11 +334,20 @@
   },
   {
     "pojo": "RestClientAdminController",
-    "method": "updateClientAdmin",
+    "method": "findByClient",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/client/{clientId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/client/{clientId}",
+    "classPath": "/rest/clientadmin"
+  },
+  {
+    "pojo": "RestClientAdminController",
+    "method": "userMailingService",
     "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/user/send-email\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
     "annotationMethod": "PostMapping",
-    "path": "/update",
+    "path": "/user/send-email",
     "classPath": "/rest/clientadmin"
   },
   {
@@ -271,11 +361,29 @@
   },
   {
     "pojo": "RestClientController",
+    "method": "validata_client_email",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/validate-email\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/validate-email",
+    "classPath": "/rest/client"
+  },
+  {
+    "pojo": "RestClientController",
     "method": "findById",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{clientId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/id/{clientId}",
+    "classPath": "/rest/client"
+  },
+  {
+    "pojo": "RestClientController",
+    "method": "findByClient",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/client/{clientId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/client/{clientId}",
     "classPath": "/rest/client"
   },
   {
@@ -297,12 +405,75 @@
     "classPath": "/rest/client"
   },
   {
+    "pojo": "RestClientToolMapperController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/clienttoolmapper"
+  },
+  {
+    "pojo": "RestClientToolMapperController",
+    "method": "insertClientToolMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/clienttoolmapper"
+  },
+  {
+    "pojo": "RestClientToolMapperController",
+    "method": "updateClientToolMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/clienttoolmapper"
+  },
+  {
+    "pojo": "RestClientToolMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{ctmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{ctmId}",
+    "classPath": "/rest/clienttoolmapper"
+  },
+  {
+    "pojo": "RestClientToolMapperController",
+    "method": "findByClient",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/client/{clientId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/client/{clientId}",
+    "classPath": "/rest/clienttoolmapper"
+  },
+  {
+    "pojo": "RestClientToolMapperController",
+    "method": "findByTool",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/tool/{toolId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/tool/{toolId}",
+    "classPath": "/rest/clienttoolmapper"
+  },
+  {
     "pojo": "RestEmailServiceController",
     "method": "findAll",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/all",
+    "classPath": "/rest/emailservice"
+  },
+  {
+    "pojo": "RestEmailServiceController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{etId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{etId}",
     "classPath": "/rest/emailservice"
   },
   {
@@ -316,11 +487,11 @@
   },
   {
     "pojo": "RestEmailServiceController",
-    "method": "findById",
+    "method": "findByTool",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{etId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/tool/{toolId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/id/{etId}",
+    "path": "/tool/{toolId}",
     "classPath": "/rest/emailservice"
   },
   {
@@ -342,58 +513,193 @@
     "classPath": "/rest/emailservice"
   },
   {
-    "pojo": "RestLoginController",
-    "method": "welcome",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "",
-    "classPath": "/"
-  },
-  {
-    "pojo": "RestToolApiController",
+    "pojo": "RestLocaleController",
     "method": "findAll",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/all",
-    "classPath": "/rest/toolapi"
+    "classPath": "/rest/locale"
   },
   {
-    "pojo": "RestToolApiController",
+    "pojo": "RestLocaleController",
     "method": "findById",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{toolApiId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{localeId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/id/{toolApiId}",
-    "classPath": "/rest/toolapi"
+    "path": "/id/{localeId}",
+    "classPath": "/rest/locale"
   },
   {
-    "pojo": "RestToolApiController",
+    "pojo": "RestLocaleController",
+    "method": "updateLocale",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/locale"
+  },
+  {
+    "pojo": "RestLocaleController",
+    "method": "insertLocale",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/locale"
+  },
+  {
+    "pojo": "RestLoginController",
+    "method": "welcome",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "",
+    "classPath": "/"
+  },
+  {
+    "pojo": "RestMasterAccessListController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/masteraccesslist"
+  },
+  {
+    "pojo": "RestMasterAccessListController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{accessId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{accessId}",
+    "classPath": "/rest/masteraccesslist"
+  },
+  {
+    "pojo": "RestMasterAccessListController",
+    "method": "insertMasterAccessList",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/masteraccesslist"
+  },
+  {
+    "pojo": "RestMasterAccessListController",
+    "method": "updateMasterAccessList",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/masteraccesslist"
+  },
+  {
+    "pojo": "RestMasterAccessListController",
     "method": "findByTool",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/tool/{toolId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/tool/{toolId}",
-    "classPath": "/rest/toolapi"
+    "classPath": "/rest/masteraccesslist"
   },
   {
-    "pojo": "RestToolApiController",
-    "method": "updateToolApi",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
-    "annotationMethod": "PostMapping",
-    "path": "/update",
-    "classPath": "/rest/toolapi"
+    "pojo": "RestRoleAccessMapperController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/roleaccessmapper"
   },
   {
-    "pojo": "RestToolApiController",
-    "method": "insertToolApi",
+    "pojo": "RestRoleAccessMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{ramId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{ramId}",
+    "classPath": "/rest/roleaccessmapper"
+  },
+  {
+    "pojo": "RestRoleAccessMapperController",
+    "method": "findByRole",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/role/{roleId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/role/{roleId}",
+    "classPath": "/rest/roleaccessmapper"
+  },
+  {
+    "pojo": "RestRoleAccessMapperController",
+    "method": "insertRoleAccessMapper",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
     "annotationMethod": "PostMapping",
     "path": "/insert",
-    "classPath": "/rest/toolapi"
+    "classPath": "/rest/roleaccessmapper"
+  },
+  {
+    "pojo": "RestRoleAccessMapperController",
+    "method": "updateRoleAccessMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/roleaccessmapper"
+  },
+  {
+    "pojo": "RestRoleController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/role"
+  },
+  {
+    "pojo": "RestRoleController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{roleId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{roleId}",
+    "classPath": "/rest/role"
+  },
+  {
+    "pojo": "RestRoleController",
+    "method": "updateRole",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/role"
+  },
+  {
+    "pojo": "RestRoleController",
+    "method": "insertRole",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/role"
+  },
+  {
+    "pojo": "RestRoleController",
+    "method": "findByClientAdmin",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/clientadmin/{clientAdminId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/clientadmin/{clientAdminId}",
+    "classPath": "/rest/role"
+  },
+  {
+    "pojo": "RestRoleController",
+    "method": "findByClient",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/client/{clientId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/client/{clientId}",
+    "classPath": "/rest/role"
   },
   {
     "pojo": "RestToolController",
@@ -432,94 +738,112 @@
     "classPath": "/rest/tool"
   },
   {
-    "pojo": "RestToolPackageController",
+    "pojo": "RestUcmAccessLogController",
     "method": "findAll",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/all",
-    "classPath": "/rest/toolpackage"
+    "classPath": "/rest/ucmaccesslog"
   },
   {
-    "pojo": "RestToolPackageController",
+    "pojo": "RestUcmAccessLogController",
     "method": "findById",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{tpId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{logId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/id/{tpId}",
-    "classPath": "/rest/toolpackage"
+    "path": "/id/{logId}",
+    "classPath": "/rest/ucmaccesslog"
   },
   {
-    "pojo": "RestToolPackageController",
-    "method": "updateToolPackage",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
-    "annotationMethod": "PostMapping",
-    "path": "/update",
-    "classPath": "/rest/toolpackage"
-  },
-  {
-    "pojo": "RestToolPackageController",
-    "method": "insertToolPackage",
+    "pojo": "RestUcmAccessLogController",
+    "method": "insertUcmAccessLog",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
     "annotationMethod": "PostMapping",
     "path": "/insert",
-    "classPath": "/rest/toolpackage"
+    "classPath": "/rest/ucmaccesslog"
   },
   {
-    "pojo": "RestToolPackageDetailController",
+    "pojo": "RestUcmAccessLogController",
+    "method": "updateUcmAccessLog",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/ucmaccesslog"
+  },
+  {
+    "pojo": "RestUcmAccessLogController",
+    "method": "findByUserClientMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/userclientmapper/{ucmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/userclientmapper/{ucmId}",
+    "classPath": "/rest/ucmaccesslog"
+  },
+  {
+    "pojo": "RestUcmAuditLogController",
     "method": "findAll",
     "returnType": "java.lang.String",
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/all",
-    "classPath": "/rest/toolpackagedetail"
+    "classPath": "/rest/ucmauditlog"
   },
   {
-    "pojo": "RestToolPackageDetailController",
-    "method": "findByToolPackage",
+    "pojo": "RestUcmAuditLogController",
+    "method": "findByAdmin",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/toolpackage/{tpId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/admin/{adminId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/toolpackage/{tpId}",
-    "classPath": "/rest/toolpackagedetail"
+    "path": "/admin/{adminId}",
+    "classPath": "/rest/ucmauditlog"
   },
   {
-    "pojo": "RestToolPackageDetailController",
+    "pojo": "RestUcmAuditLogController",
     "method": "findById",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{tpdId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{auditId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/id/{tpdId}",
-    "classPath": "/rest/toolpackagedetail"
+    "path": "/id/{auditId}",
+    "classPath": "/rest/ucmauditlog"
   },
   {
-    "pojo": "RestToolPackageDetailController",
-    "method": "insertToolPackageDetail",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
-    "annotationMethod": "PostMapping",
-    "path": "/insert",
-    "classPath": "/rest/toolpackagedetail"
-  },
-  {
-    "pojo": "RestToolPackageDetailController",
-    "method": "updateToolPackageDetail",
+    "pojo": "RestUcmAuditLogController",
+    "method": "updateUcmAuditLog",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
     "annotationMethod": "PostMapping",
     "path": "/update",
-    "classPath": "/rest/toolpackagedetail"
+    "classPath": "/rest/ucmauditlog"
   },
   {
-    "pojo": "RestToolPackageDetailController",
-    "method": "findByTool",
+    "pojo": "RestUcmAuditLogController",
+    "method": "insertUcmAuditLog",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/ucmauditlog"
+  },
+  {
+    "pojo": "RestUcmAuditLogController",
+    "method": "findByClientAdmin",
     "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/tool/{toolId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/clientadmin/{clientAdminId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
-    "path": "/tool/{toolId}",
-    "classPath": "/rest/toolpackagedetail"
+    "path": "/clientadmin/{clientAdminId}",
+    "classPath": "/rest/ucmauditlog"
+  },
+  {
+    "pojo": "RestUcmAuditLogController",
+    "method": "findByUserClientMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/userclientmapper/{ucmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/userclientmapper/{ucmId}",
+    "classPath": "/rest/ucmauditlog"
   },
   {
     "pojo": "RestUserClientMapperController",
@@ -528,15 +852,6 @@
     "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
     "annotationMethod": "GetMapping",
     "path": "/all",
-    "classPath": "/rest/userclientmapper"
-  },
-  {
-    "pojo": "RestUserClientMapperController",
-    "method": "findByClient",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/client/{clientId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/client/{clientId}",
     "classPath": "/rest/userclientmapper"
   },
   {
@@ -550,11 +865,11 @@
   },
   {
     "pojo": "RestUserClientMapperController",
-    "method": "findByUserInfo",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/userinfo/{userId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/userinfo/{userId}",
+    "method": "insertUserClientMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
     "classPath": "/rest/userclientmapper"
   },
   {
@@ -568,11 +883,29 @@
   },
   {
     "pojo": "RestUserClientMapperController",
-    "method": "insertUserClientMapper",
+    "method": "findByUserInfo",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/userinfo/{userId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/userinfo/{userId}",
+    "classPath": "/rest/userclientmapper"
+  },
+  {
+    "pojo": "RestUserClientMapperController",
+    "method": "findByClient",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/client/{clientId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/client/{clientId}",
+    "classPath": "/rest/userclientmapper"
+  },
+  {
+    "pojo": "RestUserClientMapperController",
+    "method": "userMailingService",
     "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/user/send-email\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
     "annotationMethod": "PostMapping",
-    "path": "/insert",
+    "path": "/user/send-email",
     "classPath": "/rest/userclientmapper"
   },
   {
@@ -595,6 +928,15 @@
   },
   {
     "pojo": "RestUserInfoController",
+    "method": "insertUserInfo",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/userinfo"
+  },
+  {
+    "pojo": "RestUserInfoController",
     "method": "updateUserInfo",
     "returnType": "org.springframework.http.ResponseEntity",
     "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
@@ -604,47 +946,11 @@
   },
   {
     "pojo": "RestUserInfoController",
-    "method": "insertUserInfo",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "method": "validata_user_email",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/validate-email\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
     "annotationMethod": "PostMapping",
-    "path": "/insert",
+    "path": "/validate-email",
     "classPath": "/rest/userinfo"
-  },
-  {
-    "pojo": "RestVdcLocaleController",
-    "method": "findAll",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/all",
-    "classPath": "/rest/vdclocale"
-  },
-  {
-    "pojo": "RestVdcLocaleController",
-    "method": "findById",
-    "returnType": "java.lang.String",
-    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{localeId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
-    "annotationMethod": "GetMapping",
-    "path": "/id/{localeId}",
-    "classPath": "/rest/vdclocale"
-  },
-  {
-    "pojo": "RestVdcLocaleController",
-    "method": "insertVdcLocale",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
-    "annotationMethod": "PostMapping",
-    "path": "/insert",
-    "classPath": "/rest/vdclocale"
-  },
-  {
-    "pojo": "RestVdcLocaleController",
-    "method": "updateVdcLocale",
-    "returnType": "org.springframework.http.ResponseEntity",
-    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
-    "annotationMethod": "PostMapping",
-    "path": "/update",
-    "classPath": "/rest/vdclocale"
   }
 ]

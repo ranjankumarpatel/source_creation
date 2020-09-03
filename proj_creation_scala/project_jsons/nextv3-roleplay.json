@@ -1,0 +1,116 @@
+[
+  {
+    "pojo": "Admin",
+    "fields": "name;email;adminId_ENCRYPTED;status;genDate;adminId",
+    "genCol": "adminId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Client",
+    "fields": "name;clientId;email;genDate;clientId_ENCRYPTED;status",
+    "genCol": "clientId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "ClientTemplateMapper",
+    "fields": "ctmId_ENCRYPTED;genDate;ctmId;status",
+    "genCol": "ctmId",
+    "manyToOne": "template,client"
+  },
+  {
+    "pojo": "EmailService",
+    "fields": "emailSub;timestamp;emailTitle;status;etId;emailContent;projectName",
+    "genCol": "etId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Exercise",
+    "fields": "status;exerciseId_ENCRYPTED;exerciseId;question;instruction;genDate",
+    "genCol": "exerciseId",
+    "manyToOne": "template"
+  },
+  {
+    "pojo": "ExerciseLocale",
+    "fields": "exerciseLocaleId_ENCRYPTED;localeQuestion;exerciseLocaleId;localeInstruction",
+    "genCol": "exerciseLocaleId",
+    "manyToOne": "exercise,locale"
+  },
+  {
+    "pojo": "Locale",
+    "fields": "locales;languageId_ENCRYPTED;languageId;localeScript",
+    "genCol": "languageId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Project",
+    "fields": "projectName;genDate;projectId;projectInstruction;status;proctoringStatus;projectId_ENCRYPTED",
+    "genCol": "projectId",
+    "manyToOne": "template,client"
+  },
+  {
+    "pojo": "ProjectUserMapper",
+    "fields": "pumId;genDate;submissionDate;status;pumId_ENCRYPTED;submissionStatus",
+    "genCol": "pumId",
+    "manyToOne": "userClientMapper,project"
+  },
+  {
+    "pojo": "PumTimerBackup",
+    "fields": "genDate;consumedTime;timerBackupId;status;timerBackupId_ENCRYPTED",
+    "genCol": "timerBackupId",
+    "manyToOne": "projectUserMapper,templateTimer"
+  },
+  {
+    "pojo": "Template",
+    "fields": "genDate;templateName;templateId;status;templateId_ENCRYPTED",
+    "genCol": "templateId",
+    "manyToOne": "client,admin"
+  },
+  {
+    "pojo": "TemplateCaseMaterial",
+    "fields": "caseName;caseId_ENCRYPTED;caseType;caseId;genDate;caseText;status",
+    "genCol": "caseId",
+    "manyToOne": "template"
+  },
+  {
+    "pojo": "TemplateCaseMaterialLocale",
+    "fields": "localeCaseText;localeCaseName;caseLocaleId;caseLocaleId_ENCRYPTED",
+    "genCol": "caseLocaleId",
+    "manyToOne": "templateCaseMaterial,locale"
+  },
+  {
+    "pojo": "TemplateInstruction",
+    "fields": "templateInstruction;timeStamp;status;tempinstId;tempinstId_ENCRYPTED",
+    "genCol": "tempinstId",
+    "manyToOne": "template"
+  },
+  {
+    "pojo": "TemplateInstructionLocale",
+    "fields": "localeScript;tempinstLocaleId;tempinstLocaleId_ENCRYPTED",
+    "genCol": "tempinstLocaleId",
+    "manyToOne": "locale,templateInstruction"
+  },
+  {
+    "pojo": "TemplateTimer",
+    "fields": "pageNo;genDate;status;timerId;time;timerId_ENCRYPTED",
+    "genCol": "timerId",
+    "manyToOne": "template"
+  },
+  {
+    "pojo": "UserClientMapper",
+    "fields": "ucmId_ENCRYPTED;ucmId;genDate;status",
+    "genCol": "ucmId",
+    "manyToOne": "userInfo,client"
+  },
+  {
+    "pojo": "UserInfo",
+    "fields": "name;email;userId_ENCRYPTED;genDate;status;userId",
+    "genCol": "userId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "UserResponse",
+    "fields": "responseStore;genDate;responseId_ENCRYPTED;responseId;status",
+    "genCol": "responseId",
+    "manyToOne": "projectUserMapper,exercise"
+  }
+]
