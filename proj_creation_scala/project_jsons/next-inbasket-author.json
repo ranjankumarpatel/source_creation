@@ -1,0 +1,134 @@
+[
+  {
+    "pojo": "Admin",
+    "fields": "name;email;adminId_ENCRYPTED;status;genDate;adminId",
+    "genCol": "adminId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Client",
+    "fields": "name;clientId;email;genDate;clientId_ENCRYPTED;status",
+    "genCol": "clientId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "ClientTemplateMapper",
+    "fields": "ctmId_ENCRYPTED;genDate;ctmId;status",
+    "genCol": "ctmId",
+    "manyToOne": "template,client"
+  },
+  {
+    "pojo": "ContentMailerMapper",
+    "fields": "relation;genDate;cmmId_ENCRYPTED;cmmId;status",
+    "genCol": "cmmId",
+    "manyToOne": "templateMailer,templateContent"
+  },
+  {
+    "pojo": "EmailService",
+    "fields": "emailSub;clientId;emailTitle;genDate;status;etId_ENCRYPTED;etId;emailContent;projectName",
+    "genCol": "etId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Locale",
+    "fields": "locales;languageId_ENCRYPTED;languageId;localeScript",
+    "genCol": "languageId",
+    "manyToOne": ""
+  },
+  {
+    "pojo": "Project",
+    "fields": "projectName;genDate;projectId;projectId_ENCRYPTED;emailTemplate;status",
+    "genCol": "projectId",
+    "manyToOne": "clientTemplateMapper"
+  },
+  {
+    "pojo": "ProjectUserMapper",
+    "fields": "pumId;genDate;completionTime;status;pumId_ENCRYPTED;proctorStatus",
+    "genCol": "pumId",
+    "manyToOne": "userClientMapper,project"
+  },
+  {
+    "pojo": "ProjectUserMapperResponse",
+    "fields": "writeTime;readTime;genDate;response;pumrId_ENCRYPTED;status;responseType;pumrId;subject;responseAction",
+    "genCol": "pumrId",
+    "manyToOne": "projectUserMapper,templateContent"
+  },
+  {
+    "pojo": "ProjectUserResponseMailerMapper",
+    "fields": "relation;genDate;purmmId;status;purmmId_ENCRYPTED",
+    "genCol": "purmmId",
+    "manyToOne": "templateMailer,projectUserMapperResponse"
+  },
+  {
+    "pojo": "ProjectUserTimeBackUp",
+    "fields": "instructionTimeBackup;putbId;questionnaireTimeBackup;mailTimeBackup;putbId_ENCRYPTED",
+    "genCol": "putbId",
+    "manyToOne": "projectUserMapper"
+  },
+  {
+    "pojo": "Template",
+    "fields": "genDate;templateName;templateId;status;templateId_ENCRYPTED",
+    "genCol": "templateId",
+    "manyToOne": "admin"
+  },
+  {
+    "pojo": "TemplateContent",
+    "fields": "templateContentId;subject;contentDateTime;genDate;mailLinkStatus;templateContentId_ENCRYPTED;status;content;mailSlNo",
+    "genCol": "templateContentId",
+    "manyToOne": "template"
+  },
+  {
+    "pojo": "TemplateContentLocaleMapper",
+    "fields": "subject;contentDateTime;genDate;mailLinkStatus;status;tclmId;content;tclmId_ENCRYPTED;mailSlNo",
+    "genCol": "tclmId",
+    "manyToOne": "templateContent,locale"
+  },
+  {
+    "pojo": "TemplateInstruction",
+    "fields": "templateInstruction;genDate;status;tempinstId;tempinstId_ENCRYPTED",
+    "genCol": "tempinstId",
+    "manyToOne": "template"
+  },
+  {
+    "pojo": "TemplateInstructionLocale",
+    "fields": "localeScript;tempinstLocaleId;tempinstLocaleId_ENCRYPTED",
+    "genCol": "tempinstLocaleId",
+    "manyToOne": "locale,templateInstruction"
+  },
+  {
+    "pojo": "TemplateMailer",
+    "fields": "mailerName;mailerId;status;mailerId_ENCRYPTED;mailerDesignation;mailerEmail;genDate",
+    "genCol": "mailerId",
+    "manyToOne": "template"
+  },
+  {
+    "pojo": "TemplateMaterial",
+    "fields": "materialId;materialType;materialName;status;materialContent;materialMime;genDate;materialId_ENCRYPTED",
+    "genCol": "materialId",
+    "manyToOne": "template"
+  },
+  {
+    "pojo": "TemplateMaterialLocaleMapper",
+    "fields": "tmlmId;genDate;materialType;materialName;materialContent;materialMime;tmlmId_ENCRYPTED;status",
+    "genCol": "tmlmId",
+    "manyToOne": "templateMaterial,locale"
+  },
+  {
+    "pojo": "TemplateTimer",
+    "fields": "templateTimerId_ENCRYPTED;mailTime;templateTimerId;instructionTime;questionnaireTime",
+    "genCol": "templateTimerId",
+    "manyToOne": "template"
+  },
+  {
+    "pojo": "UserClientMapper",
+    "fields": "ucmId_ENCRYPTED;ucmId;genDate;status",
+    "genCol": "ucmId",
+    "manyToOne": "userInfo,client"
+  },
+  {
+    "pojo": "UserInfo",
+    "fields": "name;email;userId_ENCRYPTED;genDate;status;userId",
+    "genCol": "userId",
+    "manyToOne": ""
+  }
+]

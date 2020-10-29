@@ -2,7 +2,7 @@ import ApiUtils from '../ApiUtils';
 import conf_prop from '../../properties/properties';
 import "whatwg-fetch";
 
-const Anchor{{pojo}}Controller = {
+const Inbasket{{pojo}}Controller = {
 
 {% for tup in df.itertuples() %}
   {{tup.method}}: function({{ pojo if tup.type=='post' else tup.param }}) {
@@ -24,4 +24,4 @@ const Anchor{{pojo}}Controller = {
 {% endfor %}
 };
 
-export default Anchor{{pojo}}Controller;
+export default Inbasket{{pojo}}Controller;

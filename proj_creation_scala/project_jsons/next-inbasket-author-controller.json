@@ -1,0 +1,623 @@
+[
+  {
+    "pojo": "RestAdminController",
+    "method": "getAdmin",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/validate-email\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/validate-email",
+    "classPath": "/rest/admin"
+  },
+  {
+    "pojo": "RestAdminController",
+    "method": "allClient",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/client\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/client",
+    "classPath": "/rest/admin"
+  },
+  {
+    "pojo": "RestAdminController",
+    "method": "allTemplate",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/template\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/template",
+    "classPath": "/rest/admin"
+  },
+  {
+    "pojo": "RestAdminController",
+    "method": "allProject",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/project\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/project",
+    "classPath": "/rest/admin"
+  },
+  {
+    "pojo": "RestClientController",
+    "method": "getValidateEmail",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/validate-email\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/validate-email",
+    "classPath": "/rest/client"
+  },
+  {
+    "pojo": "RestClientController",
+    "method": "getClient",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/{clientId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/{clientId}",
+    "classPath": "/rest/client"
+  },
+  {
+    "pojo": "RestClientController",
+    "method": "insertLocale",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/client"
+  },
+  {
+    "pojo": "RestClientController",
+    "method": "updateLocale",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/client"
+  },
+  {
+    "pojo": "RestClientTemplateMapperController",
+    "method": "getAllClientTemplateMapperAndProject",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/client/{clientId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/client/{clientId}",
+    "classPath": "/rest/clienttemplatemapper"
+  },
+  {
+    "pojo": "RestLocaleController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/locale"
+  },
+  {
+    "pojo": "RestLocaleController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{languageId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{languageId}",
+    "classPath": "/rest/locale"
+  },
+  {
+    "pojo": "RestLocaleController",
+    "method": "insertLocale",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/locale"
+  },
+  {
+    "pojo": "RestLocaleController",
+    "method": "updateLocale",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/locale"
+  },
+  {
+    "pojo": "RestLocaleController",
+    "method": "findLanguage",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/selected/language\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/selected/language",
+    "classPath": "/rest/locale"
+  },
+  {
+    "pojo": "RestLoginController",
+    "method": "welcome",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/",
+    "classPath": "/"
+  },
+  {
+    "pojo": "RestProjectController",
+    "method": "getAllProjectOfClient",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/clientproject/{ctmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/clientproject/{ctmId}",
+    "classPath": "/rest/project"
+  },
+  {
+    "pojo": "RestProjectController",
+    "method": "insertProject",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/project"
+  },
+  {
+    "pojo": "RestProjectController",
+    "method": "getProjectClient",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/{projectId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/{projectId}",
+    "classPath": "/rest/project"
+  },
+  {
+    "pojo": "RestProjectController",
+    "method": "getProject",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{projectId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{projectId}",
+    "classPath": "/rest/project"
+  },
+  {
+    "pojo": "RestProjectUserMapperController",
+    "method": "getProjectUserMapper",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/user/{ucmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/user/{ucmId}",
+    "classPath": "/rest/projectusermapper"
+  },
+  {
+    "pojo": "RestProjectUserMapperController",
+    "method": "updateProjectUserMapperStatus",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/status-update\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/status-update",
+    "classPath": "/rest/projectusermapper"
+  },
+  {
+    "pojo": "RestProjectUserMapperController",
+    "method": "insertProjectUserMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/projectusermapper"
+  },
+  {
+    "pojo": "RestProjectUserMapperController",
+    "method": "getInstructionTimer",
+    "returnType": "java.lang.Integer",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/instructiontimer/{pumId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/instructiontimer/{pumId}",
+    "classPath": "/rest/projectusermapper"
+  },
+  {
+    "pojo": "RestProjectUserMapperController",
+    "method": "insertPums",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert-bulk\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert-bulk",
+    "classPath": "/rest/projectusermapper"
+  },
+  {
+    "pojo": "RestProjectUserMapperController",
+    "method": "getUsers",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/project/{projectId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/project/{projectId}",
+    "classPath": "/rest/projectusermapper"
+  },
+  {
+    "pojo": "RestProjectUserMapperController",
+    "method": "getMailTimer",
+    "returnType": "java.lang.Integer",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/mailtimer/{pumId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/mailtimer/{pumId}",
+    "classPath": "/rest/projectusermapper"
+  },
+  {
+    "pojo": "RestProjectUserMapperController",
+    "method": "saveProctoring",
+    "returnType": "void",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/user/savephoto\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/user/savephoto",
+    "classPath": "/rest/projectusermapper"
+  },
+  {
+    "pojo": "RestProjectUserMapperController",
+    "method": "getProjectClient",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{pumId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{pumId}",
+    "classPath": "/rest/projectusermapper"
+  },
+  {
+    "pojo": "RestProjectUserMapperResponseController",
+    "method": "updateProjectUserMapperResponse",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/project-user-mapper-response"
+  },
+  {
+    "pojo": "RestProjectUserMapperResponseController",
+    "method": "insertProjectUserMapperResponse",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/project-user-mapper-response"
+  },
+  {
+    "pojo": "RestProjectUserMapperResponseController",
+    "method": "getProjectUserMapperResponse",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/pum/{pumId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/pum/{pumId}",
+    "classPath": "/rest/project-user-mapper-response"
+  },
+  {
+    "pojo": "RestProjectUserMapperResponseController",
+    "method": "getProjectUserMapperResponseBypumrId",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/{pumrId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/{pumrId}",
+    "classPath": "/rest/project-user-mapper-response"
+  },
+  {
+    "pojo": "RestProjectUserTimeBackUpController",
+    "method": "getUsers",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/pum/{pumId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/pum/{pumId}",
+    "classPath": "/rest/project-user-time-backup"
+  },
+  {
+    "pojo": "RestProjectUserTimeBackUpController",
+    "method": "insertProject",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/project-user-time-backup"
+  },
+  {
+    "pojo": "RestTemplateContentController",
+    "method": "getTemplateContentByContaintId",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/{tempContaintId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/{tempContaintId}",
+    "classPath": "/rest/template-content"
+  },
+  {
+    "pojo": "RestTemplateContentController",
+    "method": "getTemplateContent",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/template/{tempId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/template/{tempId}",
+    "classPath": "/rest/template-content"
+  },
+  {
+    "pojo": "RestTemplateContentLocaleMapperController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/templatecontentlocalemapper"
+  },
+  {
+    "pojo": "RestTemplateContentLocaleMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{tclmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{tclmId}",
+    "classPath": "/rest/templatecontentlocalemapper"
+  },
+  {
+    "pojo": "RestTemplateContentLocaleMapperController",
+    "method": "findByLocale",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/locale/{languageId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/locale/{languageId}",
+    "classPath": "/rest/templatecontentlocalemapper"
+  },
+  {
+    "pojo": "RestTemplateContentLocaleMapperController",
+    "method": "updateTemplateContentLocaleMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/templatecontentlocalemapper"
+  },
+  {
+    "pojo": "RestTemplateContentLocaleMapperController",
+    "method": "findByTemplateContent",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/templatecontent/{templateContentId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/templatecontent/{templateContentId}",
+    "classPath": "/rest/templatecontentlocalemapper"
+  },
+  {
+    "pojo": "RestTemplateContentLocaleMapperController",
+    "method": "insertTemplateContentLocaleMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/templatecontentlocalemapper"
+  },
+  {
+    "pojo": "RestTemplateController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{templateId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{templateId}",
+    "classPath": "/rest/template"
+  },
+  {
+    "pojo": "RestTemplateController",
+    "method": "getAllTemplate",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/template"
+  },
+  {
+    "pojo": "RestTemplateController",
+    "method": "getProjectClient",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/{tempId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/{tempId}",
+    "classPath": "/rest/template"
+  },
+  {
+    "pojo": "RestTemplateInstructionController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/templateinstruction"
+  },
+  {
+    "pojo": "RestTemplateInstructionController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{tempinstId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{tempinstId}",
+    "classPath": "/rest/templateinstruction"
+  },
+  {
+    "pojo": "RestTemplateInstructionController",
+    "method": "findByTemplate",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/template/{tempId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/template/{tempId}",
+    "classPath": "/rest/templateinstruction"
+  },
+  {
+    "pojo": "RestTemplateInstructionController",
+    "method": "updateTemplateTimer",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/templateinstruction"
+  },
+  {
+    "pojo": "RestTemplateInstructionController",
+    "method": "insertTemplateTimer",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/templateinstruction"
+  },
+  {
+    "pojo": "RestTemplateInstructionLocaleController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/templateinstructionlocale"
+  },
+  {
+    "pojo": "RestTemplateInstructionLocaleController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{tempinstLocaleId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{tempinstLocaleId}",
+    "classPath": "/rest/templateinstructionlocale"
+  },
+  {
+    "pojo": "RestTemplateInstructionLocaleController",
+    "method": "insertTemplateInstructionLocale",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/templateinstructionlocale"
+  },
+  {
+    "pojo": "RestTemplateInstructionLocaleController",
+    "method": "updateTemplateInstructionLocale",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/templateinstructionlocale"
+  },
+  {
+    "pojo": "RestTemplateMailerController",
+    "method": "getTemplateMail",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/template/{tempId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/template/{tempId}",
+    "classPath": "/rest/template-mailer"
+  },
+  {
+    "pojo": "RestTemplateMaterialController",
+    "method": "getTemplateMaterial",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/template/{tempId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/template/{tempId}",
+    "classPath": "/rest/template-material"
+  },
+  {
+    "pojo": "RestTemplateMaterialController",
+    "method": "insertTemplateMaterial",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/template-material"
+  },
+  {
+    "pojo": "RestTemplateMaterialLocaleMapperController",
+    "method": "findAll",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/all\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/all",
+    "classPath": "/rest/templatemateriallocalemapper"
+  },
+  {
+    "pojo": "RestTemplateMaterialLocaleMapperController",
+    "method": "findById",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/id/{tmlmId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/id/{tmlmId}",
+    "classPath": "/rest/templatemateriallocalemapper"
+  },
+  {
+    "pojo": "RestTemplateMaterialLocaleMapperController",
+    "method": "findByLocale",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/locale/{languageId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/locale/{languageId}",
+    "classPath": "/rest/templatemateriallocalemapper"
+  },
+  {
+    "pojo": "RestTemplateMaterialLocaleMapperController",
+    "method": "findByTemplateMaterial",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/templatematerial/{materialId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/templatematerial/{materialId}",
+    "classPath": "/rest/templatemateriallocalemapper"
+  },
+  {
+    "pojo": "RestTemplateMaterialLocaleMapperController",
+    "method": "insertTemplateMaterialLocaleMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json;charset=UTF-8\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/templatemateriallocalemapper"
+  },
+  {
+    "pojo": "RestTemplateMaterialLocaleMapperController",
+    "method": "updateTemplateMaterialLocaleMapper",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={\"application/json;charset=UTF-8\"}, params={}, value={}, consumes={})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/templatemateriallocalemapper"
+  },
+  {
+    "pojo": "RestTemplateTimerController",
+    "method": "getUsers",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/template/{tempId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/template/{tempId}",
+    "classPath": "/rest/template-timer"
+  },
+  {
+    "pojo": "RestUserClientMapperController",
+    "method": "updateCum",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/update\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/update",
+    "classPath": "/rest/client-user-mapper"
+  },
+  {
+    "pojo": "RestUserClientMapperController",
+    "method": "insertCum",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert",
+    "classPath": "/rest/client-user-mapper"
+  },
+  {
+    "pojo": "RestUserClientMapperController",
+    "method": "insertCums",
+    "returnType": "org.springframework.http.ResponseEntity",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/insert-multiple\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/insert-multiple",
+    "classPath": "/rest/client-user-mapper"
+  },
+  {
+    "pojo": "RestUserInfoController",
+    "method": "findByEmail",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.PostMapping(path={\"/validate-user-email\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={\"application/json\"})",
+    "annotationMethod": "PostMapping",
+    "path": "/validate-user-email",
+    "classPath": "/rest/user"
+  },
+  {
+    "pojo": "RestUserInfoController",
+    "method": "getUserClient",
+    "returnType": "java.lang.String",
+    "annotation": "@org.springframework.web.bind.annotation.GetMapping(path={\"/{userId}\"}, headers={}, name=\"\", produces={}, params={}, value={}, consumes={})",
+    "annotationMethod": "GetMapping",
+    "path": "/{userId}",
+    "classPath": "/rest/user"
+  }
+]
